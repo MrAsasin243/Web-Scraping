@@ -1,8 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
 <html lang="ru">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#111827"><title>Большой курс Web Scraping, Data Acquisition и Browser Automation на Python</title>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#111827" name="theme-color"/><title>Большой курс Web Scraping, Data Acquisition и Browser Automation на Python</title>
 <style>
 :root{--bg:#f3f6fa;--paper:#fff;--ink:#182334;--muted:#5e6c7d;--line:#dce4ed;--blue:#1769aa;--blue2:#e8f3fb;--code:#101a29;--green:#eaf7ef;--amber:#fff6df;--red:#fff0ee;--shadow:0 10px 30px rgba(21,43,68,.07)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.68 Inter,Segoe UI,Arial,sans-serif}.layout{max-width:1440px;margin:0 auto;display:grid;grid-template-columns:280px minmax(0,1fr);gap:30px;padding:26px}.sidebar{position:sticky;top:20px;align-self:start;max-height:calc(100vh - 40px);overflow:auto;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow)}.brand{font-weight:850;font-size:19px;line-height:1.2}.brand small{display:block;margin-top:8px;color:var(--muted);font-size:11px;font-weight:500;line-height:1.5}.progress-label{font-size:11px;color:var(--muted);margin-top:14px}.progress{height:6px;border-radius:99px;background:#e8edf3;margin:16px 0 17px;overflow:hidden}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#1685c7,#4f7bd9);transition:width .2s}.nav-title{font-size:10px;font-weight:800;letter-spacing:.14em;color:#8190a1;text-transform:uppercase;margin:17px 0 7px}.sidebar a{display:block;text-decoration:none;color:#405167;font-size:12px;padding:6px 8px;border-radius:8px}.sidebar a:hover,.sidebar a.active{color:var(--blue);background:var(--blue2)}.main{min-width:0}.hero{background:linear-gradient(120deg,#10263c,#174e76 60%,#236e91);color:#fff;border-radius:22px;padding:38px 42px;box-shadow:var(--shadow)}.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:10px;font-weight:800;color:#a8dcfa}.hero h1{font-size:clamp(30px,4vw,46px);line-height:1.08;letter-spacing:-.04em;margin:10px 0 14px}.hero p{max-width:820px;color:#d6e9f5;margin:0}.hero .meta{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}.chip{font-size:11px;border:1px solid rgba(255,255,255,.24);color:#e5f4ff;border-radius:99px;padding:5px 9px}.content{margin-top:20px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px 30px;margin-bottom:17px;box-shadow:var(--shadow);scroll-margin-top:18px}.panel h2{margin:0 0 12px;font-size:24px;line-height:1.25;letter-spacing:-.025em}.panel h3{margin:25px 0 8px;font-size:17px}.panel p{margin:10px 0}.panel ul,.panel ol{padding-left:22px}.panel li{margin:5px 0}.muted{color:var(--muted)}.callout{border-left:4px solid var(--blue);background:var(--blue2);padding:13px 15px;border-radius:0 10px 10px 0;margin:16px 0}.callout.good{border-color:#31945a;background:var(--green)}.callout.warn{border-color:#d59a20;background:var(--amber)}.callout.danger{border-color:#d55b4c;background:var(--red)}.codewrap{position:relative;margin:13px 0 18px}.codewrap pre{overflow:auto;margin:0;border-radius:13px;background:var(--code);color:#e8f0fb;padding:17px 18px;font:12px/1.65 Consolas,Monaco,monospace;tab-size:4}.copy{position:absolute;top:9px;right:9px;background:#26384e;color:#eaf3fc;border:1px solid #49627f;border-radius:7px;padding:5px 9px;font-size:10px}.inline{background:#eef2f6;border:1px solid #e0e6ed;border-radius:5px;padding:1px 5px;font: .9em Consolas,monospace}.table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}.table th,.table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}.table th{background:#f4f7fa}.steps{counter-reset:step;list-style:none;padding:0!important}.steps li{counter-increment:step;position:relative;padding-left:39px;margin:13px 0;min-height:28px}.steps li:before{content:counter(step);position:absolute;left:0;top:0;width:25px;height:25px;border-radius:50%;background:#e6f2fb;color:#12669b;text-align:center;font-weight:800;font-size:12px;line-height:25px}.exercise{border:1px solid #cfe1ef;background:#f7fbfe;border-radius:13px;padding:15px 17px;margin:17px 0}.exercise strong{color:#145f8f}.checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0}.checklist label{background:#f6f8fb;border:1px solid var(--line);border-radius:9px;padding:9px 11px;font-size:13px}.checklist input{margin-right:7px}.refs a{color:var(--blue);overflow-wrap:anywhere}.course-done{display:flex}.course-done input{accent-color:#1769aa}.footer{color:var(--muted);font-size:12px;text-align:center;padding:20px}.topbtn{position:fixed;right:22px;bottom:22px;background:#173e5c;color:#fff;text-decoration:none;padding:9px 12px;border-radius:10px;box-shadow:var(--shadow);font-size:12px}
 @media(max-width:950px){.layout{display:block;padding:14px}.sidebar{position:relative;top:0;max-height:none;margin-bottom:15px}.sidebar nav{columns:2}.hero{padding:28px 24px}.panel{padding:22px 20px}.checklist{grid-template-columns:1fr}}@media(max-width:560px){.sidebar nav{columns:1}.hero{border-radius:16px}.panel{border-radius:14px;padding:19px 15px}.panel h2{font-size:21px}}
@@ -11,30 +17,95 @@
 <body>
 <div class="layout" id="top">
 <aside class="sidebar">
-  <div class="brand">Python Web Extraction<small>Полная учебная программа: HTTP, парсинг, Playwright, API, Scrapy и инженерия сборщиков</small></div>
-  <div class="progress"><span id="progressBar"></span></div>
-  <div class="nav-title">Уроки</div>
-  <nav id="lessonNav">
-    <a href="#map">0. Карта процесса</a><a href="#inspect">1. Разведка сайта</a><a href="#static">2. Статическая страница</a><a href="#selectors">3. Извлечение элементов</a><a href="#media">4. Аудио, изображения, файлы</a><a href="#redirects">5. Редиректы, сессии, cookies</a><a href="#dynamic">6. Динамические сайты</a><a href="#api">7. Поиск API в Network</a><a href="#pagination">8. Пагинация и infinite scroll</a><a href="#robust">9. Надёжный загрузчик</a><a href="#architecture">10. Архитектура проекта</a><a href="#ethics">11. Правила и безопасность</a><a href="#practice">12. Практикум</a><a href="#debug">13. Диагностика</a>
-    <a href="#formats-advanced">14. JSON-LD, XML, CSV, PDF</a><a href="#api-graphql">15. REST и GraphQL</a><a href="#browser-timing">16. Жизненный цикл JS и ожидания</a><a href="#browser-locators">17. Продвинутые локаторы</a><a href="#browser-special">18. iframe, Shadow DOM, popup</a><a href="#network-events">19. Сетевые события Playwright</a><a href="#auth-state">20. Авторизация и сессии</a><a href="#realtime-protocols">21. WebSocket и SSE</a><a href="#async-http">22. Асинхронные HTTP-клиенты</a><a href="#scrapy-framework">23. Scrapy</a><a href="#storage-testing">24. БД, схема и тестирование</a><a href="#reliability-ops">25. Надёжность и checkpoint</a><a href="#security-advanced">26. Безопасность сборщика</a><a href="#robots-law">27. robots.txt и права</a><a href="#deployment-advanced">28. Docker и эксплуатация</a><a href="#capstone">29. Выпускной проект I</a>
-    <a href="#python-toolbox">30. Python для сборщиков</a><a href="#http-deep">31. HTTP и сеть глубже</a><a href="#crawl-discovery">32. Обнаружение и обход страниц</a><a href="#browser-debug">33. Диагностика браузера</a><a href="#media-advanced">34. Медиа и сложные ресурсы</a><a href="#documents-ocr">35. PDF, документы и OCR</a><a href="#semantic-data">36. Семантические данные</a><a href="#data-quality">37. Нормализация и качество</a><a href="#etl-storage">38. ETL и хранилища</a><a href="#incremental">39. Инкрементальный сбор</a><a href="#async-scale">40. Асинхронность и масштаб</a><a href="#scrapy-advanced">41. Scrapy на практике</a><a href="#testing-observability">42. Тестирование и наблюдаемость</a><a href="#privacy-security">43. Безопасность и приватность</a><a href="#operations">44. Планирование и эксплуатация</a><a href="#source-strategy">45. Стратегия выбора источника</a><a href="#architecture-patterns">46. Архитектурные шаблоны</a><a href="#capstone-advanced">47. Выпускные проекты II</a><a href="#field-manual">48. Полевой справочник</a><a href="#references">Материалы</a>
-  </nav>
+<div class="brand">Python Web Extraction<small>Полная учебная программа: HTTP, парсинг, browser automation, API, data engineering и Internet data acquisition</small></div>
+<div class="progress"><span id="progressBar"></span></div>
+<div class="nav-title">Уроки</div>
+<nav id="lessonNav">
+<a href="#map">0. Карта процесса</a>
+<a href="#inspect">1. Разведка сайта</a>
+<a href="#static">2. Статическая страница</a>
+<a href="#selectors">3. Извлечение элементов</a>
+<a href="#media">4. Аудио, изображения, файлы</a>
+<a href="#redirects">5. Редиректы, сессии, cookies</a>
+<a href="#dynamic">6. Динамические сайты</a>
+<a href="#api">7. Поиск API в Network</a>
+<a href="#pagination">8. Пагинация и infinite scroll</a>
+<a href="#robust">9. Надёжный загрузчик</a>
+<a href="#architecture">10. Архитектура проекта</a>
+<a href="#ethics">11. Правила и безопасность</a>
+<a href="#practice">12. Практикум</a>
+<a href="#debug">13. Диагностика</a>
+<a href="#formats-advanced">14. JSON-LD, XML, CSV, PDF</a>
+<a href="#api-graphql">15. REST и GraphQL</a>
+<a href="#browser-timing">16. Жизненный цикл JS и ожидания</a>
+<a href="#browser-locators">17. Продвинутые локаторы</a>
+<a href="#browser-special">18. iframe, Shadow DOM, popup</a>
+<a href="#network-events">19. Сетевые события Playwright</a>
+<a href="#auth-state">20. Авторизация и сессии</a>
+<a href="#realtime-protocols">21. WebSocket и SSE</a>
+<a href="#async-http">22. Асинхронные HTTP-клиенты</a>
+<a href="#scrapy-framework">23. Scrapy</a>
+<a href="#storage-testing">24. БД, схема и тестирование</a>
+<a href="#reliability-ops">25. Надёжность и checkpoint</a>
+<a href="#security-advanced">26. Безопасность сборщика</a>
+<a href="#robots-law">27. robots.txt и права</a>
+<a href="#deployment-advanced">28. Docker и эксплуатация</a>
+<a href="#capstone">29. Выпускной проект I</a>
+<a href="#python-toolbox">30. Python для сборщиков</a>
+<a href="#http-deep">31. HTTP и сеть глубже</a>
+<a href="#crawl-discovery">32. Обнаружение и обход страниц</a>
+<a href="#browser-debug">33. Диагностика браузера</a>
+<a href="#media-advanced">34. Медиа и сложные ресурсы</a>
+<a href="#documents-ocr">35. PDF, документы и OCR</a>
+<a href="#semantic-data">36. Семантические данные</a>
+<a href="#data-quality">37. Нормализация и качество</a>
+<a href="#etl-storage">38. ETL и хранилища</a>
+<a href="#incremental">39. Инкрементальный сбор</a>
+<a href="#async-scale">40. Асинхронность и масштаб</a>
+<a href="#scrapy-advanced">41. Scrapy на практике</a>
+<a href="#testing-observability">42. Тестирование и наблюдаемость</a>
+<a href="#privacy-security">43. Безопасность и приватность</a>
+<a href="#operations">44. Планирование и эксплуатация</a>
+<a href="#source-strategy">45. Стратегия выбора источника</a>
+<a href="#architecture-patterns">46. Архитектурные шаблоны</a>
+<a href="#capstone-advanced">47. Выпускные проекты II</a>
+<a href="#field-manual">48. Полевой справочник</a>
+<a href="#selenium-alternatives">49. Selenium, WebDriver и выбор браузерного инструмента</a>
+<a href="#browser-protocols">50. CDP, WebDriver BiDi и исследование сетевого трафика</a>
+<a href="#browser-storage">51. Хранилища браузера, Service Workers и HAR</a>
+<a href="#crawlee-parsers">52. Crawlee, Parsel, Selectolax и извлечение основного текста</a>
+<a href="#non-rest-protocols">53. gRPC, Protobuf, SOAP, OData и бинарные форматы</a>
+<a href="#identity-protocols">54. OAuth 2.0, OpenID Connect, SAML, JWT и MFA</a>
+<a href="#content-extraction">55. Извлечение статей и документов: специализированные парсеры</a>
+<a href="#columnar-analytics">56. Polars, DuckDB, Arrow и Parquet для больших наборов данных</a>
+<a href="#streaming-media">57. HLS, MPEG-DASH, MSE и сегментированные медиапотоки</a>
+<a href="#complex-workflows">58. Сложные браузерные рабочие процессы и устойчивые сценарии</a>
+<a href="#network-forensics">59. Сетевые сбои, прокси, TLS и диагностика на уровне соединения</a>
+<a href="#tool-selection-matrix">60. Матрица выбора инструментов и итоговый практикум</a>
+<a href="#http-clients-advanced">61. HTTPX, aiohttp, curl_cffi и современные HTTP-клиенты</a>
+<a href="#modern-app-architecture">62. SSR, CSR, hydration, Next.js и Nuxt</a>
+<a href="#api-contracts-workflows">63. OpenAPI, AsyncAPI, Arazzo и JSON-RPC</a>
+<a href="#webtransport-webrtc-quic">64. WebTransport, WebRTC и QUIC</a>
+<a href="#ai-browser-agents">65. AI Browser Automation и агенты</a>
+<a href="#distributed-collection">66. Celery, Redis и распределённый сбор</a>
+<a href="#pipeline-orchestration">67. Prefect, Airflow и Dagster</a>
+<a href="#source-discovery-archives">68. Common Crawl, Wayback и обнаружение источников</a>
+<a href="#references">Материалы</a>
+</nav>
 </aside>
 <main class="main">
 <section class="hero">
-  <div class="eyebrow">Python · HTTP · HTML · JavaScript · APIs · Browser Automation</div>
-  <h1>Большой курс Web Scraping, Data Acquisition и Browser Automation</h1>
-  <p>От исследования незнакомого ресурса до устойчивой системы сбора информации. Помимо HTTP, HTML, API, JavaScript, Playwright и Scrapy, курс охватывает обнаружение страниц, протоколы, документы, OCR, качество данных, инкрементальные обновления, масштабирование, тестирование и эксплуатацию. Каждый новый раздел содержит объяснение, рабочие шаблоны кода, упражнения и критерии проверки.</p>
-  <div class="meta"><span class="chip">48 учебных разделов</span><span class="chip">Практические примеры</span><span class="chip">Requests + BeautifulSoup + Playwright</span><span class="chip">От базового уровня до самостоятельных data-collection систем</span></div>
+<div class="eyebrow">Python · HTTP · HTML · JavaScript · APIs · Browser Automation</div>
+<h1>Большой курс Web Scraping, Data Acquisition и Browser Automation</h1>
+<p>От исследования неизвестного разрешённого источника до устойчивой системы сбора информации. Курс охватывает HTTP-клиенты, HTML/DOM, API-контракты, современные архитектуры сайтов, браузерную и AI-автоматизацию, realtime-протоколы, документы и мультимедиа, ETL, распределённую обработку, оркестрацию, архивы интернета, качество данных и эксплуатацию. В каждом разделе есть объяснение, код, практика и критерии проверки.</p>
+<div class="meta"><span class="chip">68 учебных разделов</span><span class="chip">Практические примеры</span><span class="chip">Requests + BeautifulSoup + Playwright</span><span class="chip">От базового уровня до самостоятельных data-collection систем</span></div>
 </section>
 <div class="content">
-<section class="panel" id="course-roadmap">
-<h2>Структура и маршрут курса</h2>
-<p>Курс теперь состоит из двух уровней. Уровень I (разделы 0–29) даёт фундамент и первые рабочие сборщики. Уровень II (разделы 30–48) превращает эти навыки в полноценную инженерную практику: Python-инструментарий, сетевые механизмы, crawling, диагностика браузера, медиа и документы, нормализация, ETL, инкрементальные обновления, асинхронная обработка, Scrapy, наблюдаемость, приватность и эксплуатация.</p>
-<p><b>Рекомендуемый порядок:</b> пройди разделы 0–13, затем 14–21, после этого 22–29. Не перескакивай к распределённым задачам, пока не умеешь собрать небольшой набор данных последовательно, проверить его и повторить запуск без дубликатов. Затем пройди разделы 30–48. Каждый новый инструмент вводи только после того, как можешь объяснить, какую конкретную проблему он решает.</p>
-<div class="callout good"><b>Критерий универсальной компетенции:</b> не запомнить все сайты и библиотеки, а уметь обследовать неизвестный разрешённый источник, построить проверяемую гипотезу, выбрать минимально сложный метод, получить данные и доказать их качество.</div>
-<p><b>Рекомендуемый порядок:</b> сначала пройти разделы 0–13, затем 14–21 (сложные источники и браузер), после этого 22–25 (инженерия), 26–28 (безопасность и запуск) и закончить разделом 29. Не переходи к асинхронности, пока не умеешь надёжно написать последовательный запрос и проверить ответ.</p>
-<div class="callout warn"><b>Область курса:</b> это широкий практический курс по извлечению данных и автоматизации браузера, но не каталог всех существующих веб-технологий и не руководство по обходу любых механизмов защиты. Для каждого конкретного сайта всё равно потребуется отдельная разведка.</div>
+<section class="panel" id="course-roadmap"><h2>Структура и маршрут курса</h2>
+<p>Программа содержит три уровня. <b>Уровень I (0–29)</b> — основы и первые работающие сборщики. <b>Уровень II (30–60)</b> — инженерная практика: сеть, crawling, медиа, документы, качество, хранилища, масштабирование, безопасность и архитектура. <b>Уровень III (61–68)</b> — специализированные современные направления: расширенный HTTP-клиентский стек, SSR/RSC, контракты API, realtime-транспорт, AI browser agents, распределённые workers, оркестрация и открытые веб-архивы.</p>
+<p><b>Рекомендуемый маршрут:</b> сначала освой последовательный Requests + BeautifulSoup сборщик; затем API и Playwright; далее Scrapy, нормализацию, тестирование и хранилища. После этого изучай специализированные темы 49–68 по потребности. Распределённую архитектуру и оркестраторы изучай после того, как локальный pipeline работает корректно и повторяемо.</p>
+<div class="callout good"><b>Критерий универсальной компетенции:</b> самостоятельно исследовать неизвестный разрешённый источник, выбрать минимально сложный способ получения, доказать полноту и качество результата, обеспечить повторяемость и документировать происхождение данных.</div>
+<div class="callout warn"><b>Граница применимости:</b> курс охватывает основные современные классы технологий и практических подходов, но не гарантирует доступ к закрытым/недоступным данным и не заменяет изучение неизвестного частного протокола конкретного сайта. Новые версии фреймворков сверяй с официальной документацией и фиксируй в проекте.</div>
 </section>
 <section class="panel" id="map">
 <h2>0. Карта процесса: что именно делает сборщик</h2>
@@ -43,7 +114,6 @@
 <div class="callout good"><b>Главный принцип:</b> сначала выясните, откуда браузер получает нужные данные. Самый надёжный путь часто не «распарсить весь сайт», а найти JSON API или прямую публичную ссылку на ресурс и аккуратно использовать её.</div>
 <p>Сборщик не угадывает содержимое страницы. Он получает конкретный HTTP-ответ или состояние браузера и затем извлекает из него данные.</p>
 </section>
-
 <section class="panel" id="inspect">
 <h2>1. Разведка сайта до написания кода</h2>
 <p>Самая важная привычка — не начинать сразу с Python. Сначала откройте страницу в браузере и выясните, где реально лежат интересующие данные.</p>
@@ -56,7 +126,6 @@
 <table class="table"><tr><th>Признак</th><th>Что проверить</th></tr><tr><td>Кнопка воспроизведения</td><td><span class="inline">button</span>, <span class="inline">audio</span>, <span class="inline">onclick</span>, <span class="inline">data-audio</span>, aria-label, class/id.</td></tr><tr><td>Звук загружается после клика</td><td>Network → Media/Fetch/XHR; какой URL запрашивается после нажатия.</td></tr><tr><td>Символ есть визуально, но не копируется</td><td>Elements: текстовый узел, SVG, псевдоэлемент CSS, иконочный шрифт или картинка.</td></tr><tr><td>Список карточек пополняется при прокрутке</td><td>Network → Fetch/XHR; повторяющиеся запросы с offset/page/cursor.</td></tr><tr><td>Адрес меняется несколько раз</td><td>Preserve log, Status 301/302/303/307/308, Location, Initiator.</td></tr></table>
 <div class="exercise"><strong>Практика 1.</strong> Откройте целевую страницу транскрипции. Найдите хотя бы одну кнопку воспроизведения. Запишите: HTML-элемент кнопки, где хранится символ, какой запрос выполняется при клике, какой Content-Type у ответа. Не начинайте массовую загрузку, пока не поняли эту связь.</div>
 </section>
-
 <section class="panel" id="static">
 <h2>2. Статическая страница: requests + BeautifulSoup</h2>
 <p>Если нужная информация присутствует в исходном HTML, используйте обычные HTTP-запросы. Это быстрее и легче браузерной автоматизации.</p>
@@ -109,7 +178,6 @@ other = session.get("https://example.com/next", timeout=20)
 other.raise_for_status()</code></pre></div>
 <div class="callout"><b>Проверка:</b> если в браузере видно десять карточек, а в <span class="inline">response.text</span> их нет, проблема не в BeautifulSoup. Значит, нужен другой endpoint или браузер, исполняющий JavaScript.</div>
 </section>
-
 <section class="panel" id="selectors">
 <h2>3. Как извлекать нужные элементы из HTML</h2>
 <p>Не выбирайте элементы «по номеру», например третий <span class="inline">div</span> на странице. Ищите стабильные признаки: id, класс, семантические теги, data-атрибуты, aria-label или связь с известным текстом.</p>
@@ -157,7 +225,6 @@ for script in soup.find_all("script"):
         print(script_text[:1000])</code></pre></div>
 <div class="callout warn"><b>Не полагайтесь на один CSS-селектор.</b> Дизайн сайта может измениться. Лучше выделить отдельную функцию <span class="inline">parse_card()</span> и проверять, что извлечённые значения имеют ожидаемый формат.</div>
 </section>
-
 <section class="panel" id="media">
 <h2>4. Аудио, изображения и другие файлы</h2>
 <p>Загрузить HTML и сохранить MP3 — две разные операции. Медиафайл является бинарным содержимым HTTP-ответа; не записывайте его через <span class="inline">response.text</span>.</p>
@@ -199,7 +266,7 @@ with requests.get(url, stream=True, timeout=(10, 30)) as response:
             if not chunk:
                 continue
             total += len(chunk)
-            if total > 30 * 1024 * 1024:
+            if total &gt; 30 * 1024 * 1024:
                 raise ValueError("Файл превысил допустимый размер")
             file.write(chunk)
 
@@ -210,7 +277,6 @@ print("Сохранено:", out, "байт:", out.stat().st_size)</code></pre><
 <p>Большинство IPA-символов — это символы Unicode, а не отдельные изображения. Их лучше хранить как текст в UTF-8: например <span class="inline">θ</span>, <span class="inline">ð</span>, <span class="inline">ʃ</span>, <span class="inline">ŋ</span>. Отдельный SVG/PNG нужен только если на исходном сайте символ представлен рисунком или специальным спрайтом. В таком случае сначала проверьте Elements: может быть это SVG, CSS-псевдоэлемент либо web-font.</p>
 <div class="exercise"><strong>Практика 2.</strong> Скачайте один MP3-файл и проверьте его: размер больше нуля, браузер его открывает, начало файла не содержит HTML. Только после этого масштабируйте загрузку на весь список.</div>
 </section>
-
 <section class="panel" id="redirects">
 <h2>5. Редиректы, сессии, cookies и HTTP-заголовки</h2>
 <p>Перенаправление — обычный ответ HTTP, который сообщает клиенту, куда отправить следующий запрос. Несколько последовательных редиректов — это цепочка, а не ошибка сама по себе.</p>
@@ -240,7 +306,6 @@ next_response = session.get("https://example.com/account", timeout=20)
 next_response.raise_for_status()</code></pre></div>
 <div class="callout danger"><b>Граница автоматизации:</b> не используйте код для обхода платной подписки, CAPTCHA, блокировок доступа, аутентификации, ограничений частоты или технических средств защиты. Если ресурс требует входа, работайте только с собственным аккаунтом, разрешённым способом и в рамках условий сервиса.</div>
 </section>
-
 <section class="panel" id="dynamic">
 <h2>6. Динамические сайты: Playwright</h2>
 <p>Если содержимое появляется после выполнения JavaScript, обычный запрос может вернуть «пустой каркас». Тогда используйте настоящий браузер — например, Playwright. Он исполняет JavaScript, ждёт элементы, кликает, прокручивает страницу и позволяет получить итоговый DOM.</p>
@@ -305,7 +370,6 @@ print("Audio source:", source)</code></pre></div>
 <p>Playwright различает события запроса, ответа и завершения запроса. У перенаправления появляется новый запрос; его можно связать с предыдущим через <span class="inline">redirected_from</span>. HTTP-ответ 404 всё равно является завершившимся HTTP-обменом — проверяйте статус отдельно.</p>
 <div class="callout"><b>Когда браузер не нужен:</b> если Network показывает публичный JSON endpoint, часто проще запросить его напрямую. Playwright нужен для выполнения сценария браузера, а не как замена любому HTTP-запросу.</div>
 </section>
-
 <section class="panel" id="api">
 <h2>7. Найти API, через которое сайт получает данные</h2>
 <p>Многие страницы получают карточки, списки, профили и аудиоссылки из JSON API. Браузер посылает запрос, сервер возвращает JSON, JavaScript строит интерфейс. Часто это проще парсинга DOM.</p>
@@ -330,7 +394,6 @@ for item in data.get("items", []):
 <ul><li>Структурированные поля уже отделены друг от друга.</li><li>Меньше зависимости от дизайна и CSS-классов.</li><li>Обычно меньше объём ответа.</li><li>Проще пагинация, сортировка и проверка типов.</li></ul>
 <p>Но endpoint может быть внутренним, недокументированным или защищённым. Не считайте обнаружение URL разрешением на массовый сбор. Учитывайте условия сайта и ограничения использования API.</p>
 </section>
-
 <section class="panel" id="pagination">
 <h2>8. Пагинация, бесконечная прокрутка и несколько страниц</h2>
 <p>Данные редко ограничиваются одной страницей. Сайт может использовать обычные адреса <span class="inline">?page=2</span>, кнопки «Далее», API-параметры <span class="inline">offset</span>/<span class="inline">limit</span> или cursor pagination.</p>
@@ -367,7 +430,7 @@ for page_number in range(1, 51):  # жёсткий лимит
 limit = 50
 all_items = []
 
-while offset < 5000:
+while offset &lt; 5000:
     response = session.get(
         "https://example.com/api/items",
         params={"offset": offset, "limit": limit},
@@ -391,7 +454,6 @@ for _ in range(20):
     previous = current</code></pre></div>
 <div class="callout warn"><b>Обязательные ограничители:</b> максимальное число страниц, максимальное число элементов, дедупликация, таймаут, пауза между запросами и условие остановки. Бесконечный цикл в сборщике — это не мелкая ошибка: он может перегрузить сайт и ваш компьютер.</div>
 </section>
-
 <section class="panel" id="robust">
 <h2>9. Как сделать загрузчик устойчивым</h2>
 <p>Одноразовый скрипт может работать случайно. Надёжная программа должна переживать сетевые ошибки, временные блокировки, частично повреждённые данные и повторный запуск.</p>
@@ -426,14 +488,13 @@ MAX_ITEMS = 100
 DELAY_SECONDS = 1.0
 
 for index, item in enumerate(items):
-    if index >= MAX_ITEMS:
+    if index &gt;= MAX_ITEMS:
         break
     process(item)
     time.sleep(DELAY_SECONDS)</code></pre></div>
 <h3>9.5. Кеширование</h3>
 <p>Сохраняйте уже обработанные URL в JSON/SQLite. При повторном запуске не загружайте повторно то, что успешно скачано и прошло проверку. Для больших проектов используйте SQLite: уникальный ключ по нормализованному URL или ID источника.</p>
 </section>
-
 <section class="panel" id="architecture">
 <h2>10. Архитектура универсального проекта</h2>
 <p>Разделите программу на небольшие уровни. Тогда смена сайта не заставит переписывать загрузчик, обработку ошибок и экспорт.</p>
@@ -454,31 +515,27 @@ class Sound:
 <h3>10.2. Как устроен созданный комплект IPA</h3>
 <p>Файл <span class="inline">download_ipa.py</span> использует этот принцип в компактном виде: сначала проверяет исходную страницу и редиректы, ищет аудио в HTML/атрибутах/скриптах, при необходимости запускает Playwright, скачивает обнаруженные публичные медиа, создаёт <span class="inline">audio-map.js</span> для локального сайта и формирует <span class="inline">anki_import.tsv</span>. Он не считает неизвестный HTML аудиофайлом и сохраняет отчёт о том, что удалось сопоставить.</p>
 </section>
-
 <section class="panel" id="ethics">
 <h2>11. Доступ, ограничения и безопасное обращение с данными</h2>
 <ul><li>Сначала ищите официальный API, открытые данные или кнопку экспорта.</li><li>Проверьте Terms of Service, лицензию, robots.txt и правила использования медиа. robots.txt — техническая подсказка о предпочтениях обхода, а не универсальная лицензия на сбор и не замена правовой оценке.</li><li>Ограничивайте скорость запросов. Не отправляйте десятки параллельных запросов к небольшому сайту без необходимости.</li><li>Не обходите paywall, CAPTCHA, аутентификацию, антибот-защиту или ограничения API.</li><li>Не собирайте персональные или чувствительные данные без законного основания и необходимости.</li><li>Не публикуйте cookies, access tokens, session IDs, личные данные и приватные URL с временными токенами.</li><li>Не загружайте и не распространяйте чужие аудио/изображения публично без разрешения или подходящей лицензии. Для личного использования всё равно проверяйте условия источника и применимое право.</li></ul>
 <div class="callout danger"><b>Уважайте отказ сервера.</b> Если сервер возвращает 403/429, просит войти или прямо блокирует автоматизированный доступ, не пытайтесь маскировать или обходить ограничения. Уменьшите частоту, найдите официальный канал доступа либо остановитесь.</div>
 </section>
-
 <section class="panel" id="practice">
 <h2>12. Практикум: от простого к самостоятельному</h2>
-<div class="exercise"><strong>Задание A — статическая страница.</strong><br>Откройте учебный ресурс с открытым HTML. Скачайте страницу Requests, найдите 5 заголовков через BeautifulSoup и сохраните их в JSON. Убедитесь, что у каждого объекта есть обязательное поле.</div>
-<div class="exercise"><strong>Задание B — загрузка картинок.</strong><br>Найдите все изображения на учебной странице. Преобразуйте относительные URL в абсолютные, скачайте в папку, проверьте Content-Type и исключите дубликаты.</div>
-<div class="exercise"><strong>Задание C — пагинация.</strong><br>Соберите первые 3 страницы тестового каталога. Добавьте лимит страниц, задержку, уникальный ключ и лог количества элементов.</div>
-<div class="exercise"><strong>Задание D — динамическая страница.</strong><br>Найдите элемент, который появляется после JavaScript. Сначала посмотрите Network. Если есть открытый JSON endpoint — запросите его; в противном случае откройте страницу Playwright и дождитесь конкретного локатора.</div>
-<div class="exercise"><strong>Задание E — аудиобиблиотека.</strong><br>Соберите только разрешённые звуковые файлы с одного учебного ресурса. Сопоставьте каждый URL с символом/словом. Экспортируйте CSV/TSV, создайте локальную HTML-страницу и отчёт по отсутствующим файлам.</div>
+<div class="exercise"><strong>Задание A — статическая страница.</strong><br/>Откройте учебный ресурс с открытым HTML. Скачайте страницу Requests, найдите 5 заголовков через BeautifulSoup и сохраните их в JSON. Убедитесь, что у каждого объекта есть обязательное поле.</div>
+<div class="exercise"><strong>Задание B — загрузка картинок.</strong><br/>Найдите все изображения на учебной странице. Преобразуйте относительные URL в абсолютные, скачайте в папку, проверьте Content-Type и исключите дубликаты.</div>
+<div class="exercise"><strong>Задание C — пагинация.</strong><br/>Соберите первые 3 страницы тестового каталога. Добавьте лимит страниц, задержку, уникальный ключ и лог количества элементов.</div>
+<div class="exercise"><strong>Задание D — динамическая страница.</strong><br/>Найдите элемент, который появляется после JavaScript. Сначала посмотрите Network. Если есть открытый JSON endpoint — запросите его; в противном случае откройте страницу Playwright и дождитесь конкретного локатора.</div>
+<div class="exercise"><strong>Задание E — аудиобиблиотека.</strong><br/>Соберите только разрешённые звуковые файлы с одного учебного ресурса. Сопоставьте каждый URL с символом/словом. Экспортируйте CSV/TSV, создайте локальную HTML-страницу и отчёт по отсутствующим файлам.</div>
 <h3>Критерии готовности</h3>
-<div class="checklist"><label><input type="checkbox">У каждого URL есть источник и статус.</label><label><input type="checkbox">Редиректы и финальный URL записываются.</label><label><input type="checkbox">Ссылки нормализованы.</label><label><input type="checkbox">Дубликаты удалены.</label><label><input type="checkbox">HTML не сохраняется как MP3.</label><label><input type="checkbox">Есть таймауты и лимиты.</label><label><input type="checkbox">Повторный запуск не дублирует загрузки.</label><label><input type="checkbox">Экспорт проверен вручную.</label></div>
+<div class="checklist"><label><input type="checkbox"/>У каждого URL есть источник и статус.</label><label><input type="checkbox"/>Редиректы и финальный URL записываются.</label><label><input type="checkbox"/>Ссылки нормализованы.</label><label><input type="checkbox"/>Дубликаты удалены.</label><label><input type="checkbox"/>HTML не сохраняется как MP3.</label><label><input type="checkbox"/>Есть таймауты и лимиты.</label><label><input type="checkbox"/>Повторный запуск не дублирует загрузки.</label><label><input type="checkbox"/>Экспорт проверен вручную.</label></div>
 </section>
-
 <section class="panel" id="debug">
 <h2>13. Типичные проблемы и диагностика</h2>
 <table class="table"><tr><th>Симптом</th><th>Вероятная причина</th><th>Что проверить</th></tr><tr><td>В браузере данные есть, Requests их не видит</td><td>JavaScript/API</td><td>View Source, Network → Fetch/XHR; затем Playwright или API.</td></tr><tr><td>Получен HTTP 200, но аудио не открывается</td><td>Ответ HTML/JSON, а не аудио; неправильный endpoint</td><td>Content-Type, первые байты, финальный URL, размер.</td></tr><tr><td>403 Forbidden</td><td>Нет доступа/неподходящий метод/ограничение</td><td>Документация и правила сайта; не обходить запрет.</td></tr><tr><td>429 Too Many Requests</td><td>Слишком частые запросы</td><td>Остановиться, уважить Retry-After, снизить частоту.</td></tr><tr><td>404 Not Found</td><td>Ссылка устарела или сформирована неверно</td><td>Относительный путь, кодирование URL, источник ссылки.</td></tr><tr><td>Timeout</td><td>Медленный сервер, слишком короткий таймаут, зависший браузер</td><td>Разделить connect/read timeout, локализовать этап и повторять ограниченно.</td></tr><tr><td>Playwright не видит элемент</td><td>Неверный селектор, iframe, shadow DOM, элемент ещё не появился</td><td>Проверьте DOM, frame, wait_for, доступность элемента.</td></tr><tr><td>Кириллица/IPA отображаются неверно</td><td>Кодировка или шрифт</td><td>UTF-8, meta charset, response encoding, шрифт с поддержкой IPA.</td></tr></table>
 <h3>Минимальный чек перед публикацией скрипта</h3>
 <ul><li>Нет секретов, cookies и токенов в исходниках.</li><li>Есть понятные ошибки и логирование.</li><li>Скрипт ограничивает объём запросов и скачивания.</li><li>Результаты имеют ожидаемую структуру и прошли проверку.</li><li>Пользователь знает, какие каталоги программа создаёт и что может перезаписать.</li></ul>
 </section>
-
 <section class="panel" id="formats-advanced">
 <h2>14. Форматы данных за пределами HTML</h2>
 <p>Сайт может отдавать не HTML, а JSON, XML, CSV, RSS/Atom, JSON-LD, PDF или архив. Сначала определи формат по заголовку <code>Content-Type</code> и содержимому, а уже потом выбирай парсер. Расширение URL не является надёжным признаком формата.</p>
@@ -511,7 +568,6 @@ for item in root.findall(".//item"):
 <div class="exercise"><strong>Практика.</strong> Найди по одному открытом примеру JSON-LD, XML/RSS и CSV. Для каждого определи MIME, распарси минимум три поля и сохрани в единую модель Python.</div>
 <div class="callout warn"><b>Важно:</b> не считай PDF или архив безопасным только потому, что сервер вернул 200. Проверяй формат, размер и происхождение файла.</div>
 </section>
-
 <section class="panel" id="api-graphql">
 <h2>15. REST, GraphQL и исследование контрактов API</h2>
 <p>Если сайт получает данные через JSON, изучи не только URL, но и весь контракт: HTTP-метод, query-параметры, тело, заголовки, авторизацию, схему ответа, ошибки, лимиты и пагинацию. Обнаруженный через DevTools endpoint может быть внутренним и нестабильным; наличие запроса в браузере не делает его публичным API.</p>
@@ -569,7 +625,6 @@ while True:
         break</code></pre></div>
 <div class="exercise"><strong>Практика.</strong> Изучи открытый API. Зафиксируй его контракт в README: метод, endpoint, параметры, схема ответа, пагинация, ограничения, правила доступа и возможные ошибки.</div>
 </section>
-
 <section class="panel" id="browser-timing">
 <h2>16. Время выполнения JavaScript и правильные ожидания</h2>
 <p>Динамическая страница не имеет одного универсального момента «готовности». <code>DOMContentLoaded</code> означает, что исходный HTML разобран; <code>load</code> ждёт загрузку основных зависимостей; SPA может продолжать подгружать данные после обоих событий. Сайты с аналитикой, polling или WebSocket могут никогда не достигать сетевого idle.</p>
@@ -589,7 +644,6 @@ await page.get_by_text("Page 2", exact=True).wait_for()</code></pre></div>
 <p>Для infinite scroll используй лимит итераций, таймаут, дедупликацию и контроль роста списка. Прокрутка до конца страницы не гарантирует, что все записи загружены: контент может подгружаться в отдельном scroll-контейнере.</p>
 <div class="exercise"><strong>Практика.</strong> Найди динамический фильтр. Реализуй ожидание через locator и сравни с вариантом через sleep. Проверь поведение при медленной сети и пустом результате.</div>
 </section>
-
 <section class="panel" id="browser-locators">
 <h2>17. Продвинутая автоматизация: локаторы, действия и Page Object</h2>
 <p>В Playwright локатор повторно ищет соответствующий элемент при каждом действии и использует auto-waiting. Предпочитай пользовательские признаки: роль, доступное имя, label, placeholder, test id. CSS/XPath используй, если семантического признака нет. Проверяй уникальность локатора: действие должно быть направлено на один конкретный элемент.</p>
@@ -620,7 +674,6 @@ print("results:", await results.count())</code></pre></div>
         await self.results.first.wait_for(state="visible")</code></pre></div>
 <div class="exercise"><strong>Практика.</strong> Перепиши небольшой Playwright-сценарий через класс SearchPage. Добавь проверку нулевого результата и случай, когда локатор неоднозначен.</div>
 </section>
-
 <section class="panel" id="browser-special">
 <h2>18. iframe, Shadow DOM, вкладки, popup, диалоги и скачивания</h2>
 <h3>18.1. iframe</h3>
@@ -644,7 +697,6 @@ download = await download_info.value
 await download.save_as("downloads/report.pdf")</code></pre></div>
 <div class="exercise"><strong>Практика.</strong> На собственном тестовом приложении автоматизируй кнопку, открывающую popup, и кнопку загрузки. Проверь, что файл существует и имеет ожидаемый размер.</div>
 </section>
-
 <section class="panel" id="network-events">
 <h2>19. Сетевые события Playwright и анализ запросов</h2>
 <p>Слушай request, response, requestfailed и события WebSocket. Полезный сценарий — одновременно с кликом ждать ожидаемый ответ: так ты связываешь действие и сетевой результат, не теряя быстрый запрос.</p>
@@ -660,7 +712,6 @@ print(response.url, response.status, len(payload["items"]))</code></pre></div>
 <p>Не пытайся автоматически повторять каждый внутренний endpoint. Он может зависеть от CSRF, временного токена, пользовательского состояния или версии интерфейса. Лучше пользоваться документированным API, если он есть.</p>
 <div class="exercise"><strong>Практика.</strong> Запиши, какой запрос появляется после поиска. Получи его ответ через expect_response и сравни структуру JSON со списком карточек, отображённых в DOM.</div>
 </section>
-
 <section class="panel" id="auth-state">
 <h2>20. Авторизация, CSRF, OAuth и состояние сессии</h2>
 <p>Сайты используют формы, cookies, CSRF-токены, bearer tokens, API keys, OAuth/OIDC и MFA. Это разные механизмы; единой универсальной схемы входа нет. Для своего аккаунта и разрешённых автоматизаций используй официальную интеграцию, документированный API или штатный storage state Playwright.</p>
@@ -678,7 +729,6 @@ context = await browser.new_context(
 <div class="callout danger"><b>Запрещённая цель для этого курса:</b> не обходи CAPTCHA, MFA, paywall, чужую авторизацию, ограничения доступа или антибот-защиту. Если ресурс требует разрешения или официального доступа, получи его или остановись.</div>
 <div class="exercise"><strong>Практика.</strong> На локальном учебном приложении войди в тестовый аккаунт, сохрани storage state, повторно открой контекст, проверь сессию и удали файл после упражнения.</div>
 </section>
-
 <section class="panel" id="realtime-protocols">
 <h2>21. WebSocket и Server-Sent Events</h2>
 <p>WebSocket после HTTP-handshake создаёт двусторонний канал сообщений. SSE (Server-Sent Events) передаёт события от сервера клиенту через HTTP и обычно является однонаправленным потоком. В Network ищи фильтр WS или EventStream.</p>
@@ -697,11 +747,10 @@ async def read_sse(url, max_events=20):
                 if text.startswith("data:"):
                     print(text[5:].strip())
                     count += 1
-                    if count >= max_events:
+                    if count &gt;= max_events:
                         break</code></pre></div>
 <div class="exercise"><strong>Практика.</strong> На демонстрационном ресурсе найди WS или SSE. Опиши handshake, направление обмена, формат сообщений, механизм переподключения и способ завершения клиента.</div>
 </section>
-
 <section class="panel" id="async-http">
 <h2>22. Асинхронные HTTP-клиенты и контроль конкуренции</h2>
 <p>Асинхронность полезна, когда много сетевых операций и время тратится на ожидание. <code>asyncio</code> координирует корутины; для HTTP можно использовать httpx или aiohttp. Асинхронность не означает отсутствие ограничений: используй Semaphore, таймауты и лимиты на домен.</p>
@@ -724,7 +773,6 @@ async def main(urls):
 <p>CPU-bound задачи требуют другого подхода, например process pool. Не запускай сотни запросов одновременно. Сравнивай скорость с количеством ошибок и допустимой нагрузкой, а не только по времени завершения.</p>
 <div class="exercise"><strong>Практика.</strong> Сравни последовательный режим и Semaphore(2) на локальном сервере/учебном API. Измерь время, число ошибок и максимальное число одновременных запросов.</div>
 </section>
-
 <section class="panel" id="scrapy-framework">
 <h2>23. Scrapy: фреймворк для обхода множества страниц</h2>
 <p>Requests + BeautifulSoup подходит для небольших задач. Scrapy становится полезен, когда требуется обход ссылок, очередь запросов, middleware, pipelines, статистика, экспорт и управление большим количеством страниц.</p>
@@ -747,7 +795,6 @@ class CatalogSpider(scrapy.Spider):
 <p>Scrapy сам по себе не является браузером и не исполняет JavaScript. Если требуется отрисовка, браузерная автоматизация добавляется отдельно. В настройках включай соблюдение robots.txt, ограничивай скорость и задавай domain allowlist.</p>
 <div class="exercise"><strong>Практика.</strong> Создай spider для учебного каталога, добавь pipeline, экспорт JSON и ограничение обхода. Сравни получившуюся архитектуру с однофайловым Requests-скриптом.</div>
 </section>
-
 <section class="panel" id="storage-testing">
 <h2>24. Схема данных, SQLite, тесты и контроль качества</h2>
 <h3>24.1. Сначала модель записи</h3>
@@ -770,11 +817,10 @@ class Sound:
     return [x.get_text(strip=True) for x in soup.select(".ipa")]
 
 def test_parse_symbols():
-    html = '<span class="ipa">θ</span><span class="ipa">ð</span>'
+    html = '&lt;span class="ipa"&gt;θ&lt;/span&gt;&lt;span class="ipa"&gt;ð&lt;/span&gt;'
     assert parse_symbols(html) == ["θ", "ð"]</code></pre></div>
 <div class="exercise"><strong>Практика.</strong> Напиши тесты на сохранённой fixture из трёх карточек. Докажи, что все карточки найдены, Unicode сохранён, а отсутствие аудио отражено явно в manifest.</div>
 </section>
-
 <section class="panel" id="reliability-ops">
 <h2>25. Надёжность: retry, Retry-After, checkpoint и возобновление</h2>
 <p>Разделяй временные и постоянные ошибки. Для 429 учитывай Retry-After и уменьшай интенсивность. Для сетевых ошибок используй ограниченный exponential backoff с jitter. Не повторяй автоматически неидемпотентный POST без продуманной схемы идемпотентности. 401/403 чаще требуют остановки и проверки доступа, а не повторов.</p>
@@ -798,7 +844,6 @@ def get_with_retry(url, attempts=4):
 <p>Логируй ID обрабатываемой записи, статус, размер и причину ошибки. Checkpoint может хранить обработанные ID, последний cursor, номер страницы и статус каждой загрузки. При повторном запуске программа должна безопасно пропускать уже проверенные файлы и продолжать незавершённые.</p><p>Заголовок <code>Retry-After</code> может содержать число секунд или HTTP-date. Если используешь собственную реализацию retry, обрабатывай оба формата и ограничивай максимальное ожидание. Не делай несколько параллельных повторов после одного 429.</p>
 <div class="exercise"><strong>Практика.</strong> Создай статусы pending/running/ok/failed в SQLite. Прерви процесс после нескольких записей и запусти повторно. Докажи, что файлы не повреждаются и завершённые задачи не дублируются.</div>
 </section>
-
 <section class="panel" id="security-advanced">
 <h2>26. Безопасность: SSRF, path traversal, архивы и секреты</h2>
 <p>Сборщик может стать уязвимым, если скачивает адреса из внешнего HTML или строит путь на диске из пользовательского ввода. SSRF — ситуация, когда программа по недоверенному URL обращается к неожиданному серверу, например localhost или внутреннему IP. Проверяй схему, host, адрес назначения и каждый редирект; в серверных приложениях одной проверки строкового hostname может быть недостаточно из-за DNS rebinding.</p>
@@ -823,7 +868,6 @@ def safe_path(root, filename):
 <p>Cookies, bearer tokens, storage state и API keys храни в переменных окружения или секрет-хранилище, не в исходниках. Не логируй Authorization. Ограничивай размеры, типы и глубину распаковки. Для ZIP учитывай zip-slip и архивные бомбы. Не запускай скачанные скрипты и не открывай неизвестные файлы автоматически.</p>
 <div class="exercise"><strong>Практика.</strong> Проверь URL с localhost, private IP, внешним доменом и редиректом на внешний домен. Проверь имя файла с <code>../</code> и абсолютным путём. Все опасные случаи должны быть отклонены.</div>
 </section>
-
 <section class="panel" id="robots-law">
 <h2>27. robots.txt, условия сайта, лицензии и допустимая нагрузка</h2>
 <p><code>robots.txt</code> — стандартный механизм сообщения crawler предпочтений. Он не является аутентификацией и не предоставляет лицензию на копирование. Отдельно проверяй условия использования сайта, права на текст/аудио/изображения, персональные данные, условия API и применимое право.</p>
@@ -841,7 +885,6 @@ print("robots allows URL:", allowed)
 <div class="callout danger"><b>Остановка — корректный результат.</b> Если у тебя нет права получать данные или ресурс запрещает автоматизацию, задокументируй ограничение и найди официальный способ доступа. Не превращай техническую задачу в обход контроля доступа.</div>
 <div class="exercise"><strong>Практика.</strong> Составь короткую оценку источника: robots.txt, условия использования, лицензия медиа, API, ограничения частоты и основание для хранения.</div>
 </section>
-
 <section class="panel" id="deployment-advanced">
 <h2>28. Архитектура, CLI, Docker, планировщик и эксплуатация</h2>
 <p>Для растущего проекта разделяй transport/client, parser, models, validator, storage/repository и runner. Храни настройки отдельно от кода. Добавь <code>--dry-run</code>, <code>--limit</code> и <code>--resume</code>. Закрепляй версии зависимостей и документируй чистую установку.</p>
@@ -849,7 +892,7 @@ print("robots allows URL:", allowed)
   config.py       # URL, таймауты, лимиты
   client.py       # HTTP и retry policy
   browser.py      # Playwright-сценарии
-  parser.py       # HTML/JSON -> records
+  parser.py       # HTML/JSON -&gt; records
   models.py       # схема данных
   repository.py   # SQLite/JSONL
   downloader.py   # бинарные файлы
@@ -859,7 +902,6 @@ print("robots allows URL:", allowed)
 <p>Docker помогает воспроизводить окружение, но данные следует хранить во внешнем volume/каталоге, а не в эфемерном слое контейнера. Запускай приложение с минимальными правами, не под root; секреты передавай через безопасную конфигурацию. Планировщик выбирай по среде: Task Scheduler в Windows, cron/systemd timer в Linux или оркестратор для больших систем.</p>
 <div class="exercise"><strong>Практика.</strong> Подготовь .env.example, .gitignore, requirements.txt/lock-файл, README и команду запуска с --dry-run. Опиши бэкап базы и восстановление после сбоя.</div>
 </section>
-
 <section class="panel" id="capstone">
 <h2>29. Выпускной проект: самостоятельное исследование неизвестного сайта</h2>
 <p>Выбери сайт, который ранее не исследовал, и сформулируй задачу с конкретными полями. Не подглядывай в готовый чужой скрипт. Пройди весь цикл: постановка задачи → проверка правил → DevTools → выбор источника → прототип → парсер → валидация → хранение → отчёт.</p>
@@ -869,9 +911,6 @@ print("robots allows URL:", allowed)
 <table class="table"><tr><th>Критерий</th><th>Баллы</th><th>Что считается хорошим результатом</th></tr><tr><td>Разведка и выбор метода</td><td>20</td><td>Есть аргументы выбора HTML/API/Playwright/Scrapy.</td></tr><tr><td>Корректность данных</td><td>20</td><td>Проверены схема, полнота, уникальность и типы.</td></tr><tr><td>Устойчивость</td><td>20</td><td>Таймауты, ограниченный retry, checkpoint, повторный запуск.</td></tr><tr><td>Архитектура и тесты</td><td>20</td><td>Компоненты разделены, есть fixtures и тесты.</td></tr><tr><td>Безопасность и правила</td><td>10</td><td>Нет обхода доступа, секреты защищены, лимиты соблюдаются.</td></tr><tr><td>Документация</td><td>10</td><td>Чистая установка и воспроизводимый запуск.</td></tr></table>
 <div class="callout good"><b>Главный итоговый навык:</b> не «знать все библиотеки», а уметь диагностировать новый сайт, задавать проверяемые гипотезы, выбирать простой разрешённый метод и доказывать качество результата.</div>
 </section>
-
-
-
 <section class="panel" id="python-toolbox">
 <h2>30. Python как инженерный инструмент для автоматизации</h2>
 <p>Скрипт для одного URL может состоять из десяти строк. Сборщик, который работает часами, обрабатывает тысячи объектов и должен продолжать работу после сбоя, требует дисциплины проекта. Цель этого раздела — научиться превращать экспериментальный код в программу, которую можно запускать повторно и диагностировать.</p>
@@ -899,7 +938,7 @@ python -m pip install scrapy pytest pymupdf python-docx openpyxl pandas</code></
   config.py         # настройки и переменные окружения
   http_client.py    # HTTP, таймауты, retry policy
   discovery.py      # sitemap и ссылки
-  parsers.py        # HTML/JSON -> записи
+  parsers.py        # HTML/JSON -&gt; записи
   models.py         # типы и схема
   validation.py     # проверки качества
   repository.py     # SQLite/JSONL
@@ -919,7 +958,7 @@ class ProductRecord:
     price: Optional[str]
 
 
-def validate_record(record: ProductRecord) -> None:
+def validate_record(record: ProductRecord) -&gt; None:
     if not record.source_id.strip():
         raise ValueError("source_id is empty")
     if not record.title.strip():
@@ -944,7 +983,7 @@ parser.add_argument("--limit", type=int, default=100)
 parser.add_argument("--dry-run", action="store_true")
 args = parser.parse_args()
 
-if args.limit <= 0:
+if args.limit &lt;= 0:
     parser.error("--limit must be positive")
 args.output.mkdir(parents=True, exist_ok=True)
 log.info("Start: output=%s limit=%d", args.output, args.limit)</code></pre></div>
@@ -952,7 +991,6 @@ log.info("Start: output=%s limit=%d", args.output, args.limit)</code></pre></div
 <div class="exercise"><strong>Практика.</strong> Возьми один из предыдущих парсеров и раздели его на 4 части: загрузка, парсинг, валидация, экспорт. Добавь --limit, --output и --dry-run. Напиши README с точной командой запуска на Windows.</div>
 <div class="callout"><b>Самопроверка:</b> можно ли тестировать парсер без интернета? Можно ли заменить Requests на Playwright, не переписывая модель данных и хранилище? Если нет — границы модулей пока выбраны неудачно.</div>
 </section>
-
 <section class="panel" id="http-deep">
 <h2>31. HTTP и сеть глубже: что происходит между Python и сайтом</h2>
 <p>Requests скрывает значительную часть сетевой механики. Это удобно, но для диагностики нужно понимать уровни: DNS находит адрес узла; TCP или QUIC обеспечивает транспорт; TLS защищает соединение; HTTP передаёт запрос и ответ; приложение сайта интерпретирует маршрут, заголовки, cookies и тело. Ошибку одного уровня нельзя исправить изменением CSS-селектора.</p>
@@ -1001,7 +1039,6 @@ else:
 <div class="exercise"><strong>Практика.</strong> На собственном тестовом сервере или публичном ресурсе, разрешающем такие запросы, исследуй: цепочку редиректов, ETag, условный запрос и Range. Сохрани журнал с кодами ответов и объясни каждый переход.</div>
 <div class="callout warn"><b>Диагностический принцип:</b> при ошибке сначала классифицируй слой: DNS, соединение, TLS, HTTP, авторизация, формат ответа, JavaScript или парсер. Это сокращает число случайных изменений.</div>
 </section>
-
 <section class="panel" id="crawl-discovery">
 <h2>32. Обнаружение страниц и стратегия обхода сайта (crawling)</h2>
 <p>Scraping извлекает данные из конкретного ответа; crawling обнаруживает, какие страницы нужно запросить. Для каталога, документации или архива публикаций это разные задачи. Не начинай обход с «скачать все ссылки»: сначала определи допустимую область, типы страниц, глубину, максимальное число запросов и критерий остановки.</p>
@@ -1022,7 +1059,7 @@ MAX_DEPTH = 2
 queue = deque([(START, 0)])
 seen = set()
 
-while queue and len(seen) < MAX_PAGES:
+while queue and len(seen) &lt; MAX_PAGES:
     url, depth = queue.popleft()
     url, _fragment = urldefrag(url)
     if url in seen:
@@ -1037,7 +1074,7 @@ while queue and len(seen) < MAX_PAGES:
     soup = BeautifulSoup(response.content, "html.parser")
     parse_page(url, soup)  # ваша функция, без сетевых побочных эффектов
 
-    if depth < MAX_DEPTH:
+    if depth &lt; MAX_DEPTH:
         for link in soup.select("a[href]"):
             next_url = urljoin(url, link["href"])
             next_url, _ = urldefrag(next_url)
@@ -1048,7 +1085,6 @@ while queue and len(seen) < MAX_PAGES:
 <p>Sitemap помогает обнаружить известные адреса, но не гарантирует полноту, актуальность или право на автоматический сбор. Canonical — подсказка о предпочтительном адресе среди вариантов, а не универсальное разрешение удалять query-параметры. Сохраняй исходный URL и канонический URL отдельно, чтобы можно было проверить решение.</p>
 <div class="exercise"><strong>Практика.</strong> Возьми небольшой сайт, разрешающий автоматическое исследование. Составь карту типов URL, найди sitemap (если существует), запусти обход с лимитом в 30 страниц и глубиной 2. Докажи, что внешние домены и повторные URL не обходятся.</div>
 </section>
-
 <section class="panel" id="browser-debug">
 <h2>33. Диагностика браузера: Playwright как исследовательский инструмент</h2>
 <p>Playwright полезен не только для кликов. Он позволяет записать сетевые события, консольные ошибки, снимки DOM, скриншоты и временную линию действий. Это превращает нестабильный сценарий в наблюдаемую последовательность, которую можно анализировать.</p>
@@ -1100,12 +1136,11 @@ print(payload.keys())</code></pre></div>
 <p>Предпочитай семантические локаторы <code>get_by_role</code>, <code>get_by_label</code> и <code>get_by_test_id</code>, когда они доступны. Locator повторно разрешается в актуальном DOM и поддерживает auto-waiting. Не сохраняй старый ElementHandle на долгое время, если интерфейс перерисовывается. Отдельный BrowserContext изолирует cookies и storage между сценариями.</p>
 <div class="exercise"><strong>Практика.</strong> На тестовой странице запиши trace, console, pageerror и requestfailed. Найди один клик, который вызывает API-запрос, и извлеки соответствующий JSON. Затем смоделируй таймаут или отсутствующий элемент и определи причину через trace, а не увеличивая sleep наугад.</div>
 </section>
-
 <section class="panel" id="media-advanced">
 <h2>34. Медиа и сложные ресурсы: srcset, lazy loading, blob и потоки</h2>
 <p>Медиа может быть спрятано не в очевидном <code>src</code>. Для изображений проверь <code>picture/source/srcset</code>, <code>currentSrc</code>, <code>data-src</code>, CSS background и lazy-loading. Для аудио/видео — <code>audio</code>, <code>video</code>, <code>source</code>, Network → Media и запросы после пользовательского действия.</p>
 <h3>34.1. Получить фактический адрес выбранного изображения</h3>
-<div class="codewrap"><button class="copy">Копировать</button><pre><code>images = await page.locator("img").evaluate_all("els => els.map(img => ({
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>images = await page.locator("img").evaluate_all("els =&gt; els.map(img =&gt; ({
   alt: img.alt,
   src: img.getAttribute('src'),
   dataSrc: img.getAttribute('data-src'),
@@ -1142,7 +1177,7 @@ with requests.get(url, stream=True, timeout=(10, 30)) as response:
             if not chunk:
                 continue
             total += len(chunk)
-            if total > MAX_BYTES:
+            if total &gt; MAX_BYTES:
                 raise ValueError("Resource too large")
             sha256.update(chunk)
             target.write(chunk)
@@ -1150,7 +1185,6 @@ print("bytes:", total, "sha256:", sha256.hexdigest())</code></pre></div>
 <p>Для больших файлов добавь Range/resume только после изучения поддержки сервера и валидаторов ресурса. Для HLS/DASH изучай manifest и сегменты только в пределах лицензированного или явно разрешённого доступа. DRM и технические средства ограничения доступа не обходи.</p>
 <div class="exercise"><strong>Практика.</strong> На собственной тестовой странице найди responsive image, lazy image и аудио после клика. Для каждого укажи: DOM-атрибут, реальный сетевой URL, MIME-тип, размер и SHA-256.</div>
 </section>
-
 <section class="panel" id="documents-ocr">
 <h2>35. PDF, документы, таблицы и OCR</h2>
 <p>Не вся информация в интернете находится в HTML. PDF может содержать текстовый слой, векторные таблицы или только изображения страниц. DOCX и XLSX — ZIP-контейнеры со структурированными XML-файлами. Выбор инструмента зависит от типа содержимого.</p>
@@ -1188,11 +1222,10 @@ paragraphs = [p.text for p in word.paragraphs if p.text.strip()]
 book = load_workbook("report.xlsx", read_only=True, data_only=True)
 for sheet in book.worksheets:
     for row in sheet.iter_rows(values_only=True):
-        print(row)</nbook.close()</code></pre></div>
+        print(row)&lt;/nbook.close()</code></pre></div>
 <p>У XLSX режим <code>data_only=True</code> читает сохранённые вычисленные значения формул, если они присутствуют в файле; он не пересчитывает формулы как Excel. Для больших файлов используй read-only режим, а для CSV задавай encoding, delimiter и decimal явно.</p>
 <div class="exercise"><strong>Практика.</strong> Возьми один PDF с текстовым слоем и один скан. Сравни объём извлечённого текста, найди одну таблицу и проверь 20 случайных значений вручную. Сохрани номер страницы и источник каждого извлечённого поля.</div>
 </section>
-
 <section class="panel" id="semantic-data">
 <h2>36. Семантическая разметка: JSON-LD, Microdata и RDFa</h2>
 <p>Сайт может содержать структурированное описание сущности отдельно от визуального HTML. JSON-LD часто находится в <code>&lt;script type="application/ld+json"&gt;</code>; Microdata использует атрибуты <code>itemscope</code>/<code>itemprop</code>; RDFa — атрибуты вроде <code>typeof</code>/<code>property</code>. Это полезные сигналы, но их наличие не гарантирует полноту или актуальность.</p>
@@ -1233,7 +1266,6 @@ for block in objects:
 <p>Если нужно объединять сущности, используй <code>@id</code> как возможный идентификатор в пределах модели источника, но проверь его устойчивость. Сравни structured data с видимым содержимым: разметка может быть устаревшей, неполной или ошибочной.</p>
 <div class="exercise"><strong>Практика.</strong> Найди JSON-LD на трёх разрешённых страницах: статья, товар и организация. Сравни поля JSON-LD с видимым DOM. Составь список совпадений, расхождений и пустых полей.</div>
 </section>
-
 <section class="panel" id="data-quality">
 <h2>37. Нормализация, сопоставление записей и качество данных</h2>
 <p>Две строки с разным написанием могут описывать один объект. И наоборот, одинаковое название может относиться к разным объектам. Перед объединением источников определи ключ записи, правила нормализации и поля, которые должны оставаться без изменений.</p>
@@ -1241,7 +1273,7 @@ for block in objects:
 <div class="codewrap"><button class="copy">Копировать</button><pre><code>import unicodedata
 import re
 
-def normalize_text(value: str) -> str:
+def normalize_text(value: str) -&gt; str:
     value = unicodedata.normalize("NFC", value)
     value = value.replace("\u00a0", " ")
     value = re.sub(r"\s+", " ", value)
@@ -1264,7 +1296,6 @@ print(price, normalized_utc.isoformat())</code></pre></div>
 <ul><li>Обязательные поля не пусты.</li><li>Тип и диапазон значений ожидаемы.</li><li>URL относится к ожидаемому домену и ресурсу.</li><li>Уникальный ключ не дублируется.</li><li>Число записей не падает неожиданно.</li><li>Доля отсутствующих полей и ошибок отслеживается.</li><li>Скачанные файлы имеют допустимый размер, MIME и контрольную сумму.</li></ul>
 <div class="exercise"><strong>Практика.</strong> Объедини два маленьких набора записей с разным форматированием названий, цен и дат. Сохрани raw и normalized значения. Создай отчёт о точных дубликатах, вероятных совпадениях и неразрешённых случаях.</div>
 </section>
-
 <section class="panel" id="etl-storage">
 <h2>38. ETL, хранилища и идемпотентная запись</h2>
 <p>ETL означает Extract → Transform → Load: извлечь данные, преобразовать, загрузить в хранилище. Хорошая система сохраняет не только итоговый CSV, но и происхождение данных: URL, время сбора, идентификатор источника, версию парсера и результат проверки. Это позволяет объяснить, откуда появилась запись.</p>
@@ -1298,7 +1329,6 @@ con.close()</code></pre></div>
 <p>Идемпотентный запуск не создаёт дубликаты и не портит состояние при повторном выполнении. Используй стабильный business key, UPSERT, уникальные ограничения, атомарную запись во временный файл с последующим rename и checkpoint. Не используй порядковый номер строки как устойчивый идентификатор, если порядок источника может измениться.</p>
 <div class="exercise"><strong>Практика.</strong> Загрузи один и тот же тестовый набор три раза, изменив одно поле в одной записи. После каждого запуска проверь число строк, ключи, изменённые поля и историю. Повторный идентичный запуск не должен создавать новые строки.</div>
 </section>
-
 <section class="panel" id="incremental">
 <h2>39. Инкрементальный сбор и обнаружение изменений</h2>
 <p>Полный повторный обход сайта часто дорог. Инкрементальный сбор проверяет, что изменилось с прошлого запуска, и обновляет только необходимые записи. Возможные сигналы: ETag, Last-Modified, дата публикации, идентификатор версии, hash нормализованного содержимого.</p>
@@ -1306,7 +1336,7 @@ con.close()</code></pre></div>
 <div class="codewrap"><button class="copy">Копировать</button><pre><code>import hashlib
 import json
 
-def fingerprint(record: dict) -> str:
+def fingerprint(record: dict) -&gt; str:
     canonical = json.dumps(
         record,
         ensure_ascii=False,
@@ -1321,7 +1351,6 @@ def fingerprint(record: dict) -> str:
 <p>Отсутствие записи в одном запуске ещё не доказывает удаление: пагинация могла оборваться, часть страниц могла вернуть ошибку, а фильтр — изменить состав. Используй завершённый контрольный обход, grace period или несколько подтверждающих наблюдений перед tombstone/deleted статусом.</p>
 <div class="exercise"><strong>Практика.</strong> Сделай три снимка небольшого каталога: исходный, с изменённой ценой, с исчезнувшей записью. Классифицируй new/unchanged/updated/missing и покажи, как программа отличает отсутствие из-за сбоя от реального удаления.</div>
 </section>
-
 <section class="panel" id="async-scale">
 <h2>40. Асинхронность, ограничение нагрузки и backpressure</h2>
 <p>Асинхронность ускоряет задачи с ожиданием сети, но не делает сервер быстрее и не отменяет лимиты источника. Не запускай тысячи запросов одновременно. Ограничивай in-flight запросы, скорость на домен, общий размер очереди и объём данных в памяти.</p>
@@ -1362,7 +1391,6 @@ async def main(urls: list[str]):
 <ul><li>Ограничивай число одновременных запросов отдельно для каждого host.</li><li>Добавляй задержки и соблюдай документированные rate limits.</li><li>Не скачивай следующий пакет быстрее, чем хранилище успевает записывать предыдущий.</li><li>Используй bounded queue и прекращай producer при перегрузке.</li><li>Отслеживай latency, error rate, queue depth и объём памяти.</li></ul>
 <div class="exercise"><strong>Практика.</strong> Создай очередь из 100 тестовых URL и 3 worker-задачи. Измерь максимальное число одновременных запросов, частоту ошибок и время завершения. Сравни с неограниченным запуском на локальном тестовом сервере, а не на чужом сайте.</div>
 </section>
-
 <section class="panel" id="scrapy-advanced">
 <h2>41. Scrapy на практике: spider, middleware, pipeline и AutoThrottle</h2>
 <p>Scrapy полезен, когда нужно обходить много страниц по графу ссылок, а не просто запросить несколько URL. Его архитектура разделяет Spider, Engine, Scheduler, Downloader, Middleware, Item Pipeline и Feed Export. Это позволяет вынести повторяющееся поведение в общий компонент.</p>
@@ -1400,7 +1428,6 @@ class CatalogSpider(scrapy.Spider):
 <p>Изучи JOBDIR для сохранения состояния задания, HTTP cache для разработки, AutoThrottle для динамического ограничения скорости, SitemapSpider для sitemap-ориентированного обхода, FilesPipeline/ImagesPipeline для официально доступных медиа и feed exports для JSON/CSV/XML. Настройки проверяй по актуальной документации своей версии Scrapy.</p>
 <div class="exercise"><strong>Практика.</strong> Создай spider для локального тестового каталога из 10 страниц. Добавь pipeline, который отклоняет запись без title/url, удаляет повторяющийся source_id и пишет JSONL. Прерви и возобнови задачу с JOBDIR.</div>
 </section>
-
 <section class="panel" id="testing-observability">
 <h2>42. Тестирование, мониторинг и наблюдаемость сборщика</h2>
 <p>Скрипт, который однажды собрал данные, ещё не доказал надёжность. Нужны проверки парсера, тесты контракта ответа, интеграционные тесты и отчёт о каждом запуске. Наблюдаемость отвечает на вопросы: что происходило, сколько заняло времени, где возник сбой и насколько результат отличается от нормы.</p>
@@ -1409,10 +1436,10 @@ class CatalogSpider(scrapy.Spider):
 from collector.parsers import parse_cards
 
 HTML = """
-<article class="card">
-  <h2>Example item</h2>
-  <a href="/item/42">Open</a>
-</article>
+&lt;article class="card"&gt;
+  &lt;h2&gt;Example item&lt;/h2&gt;
+  &lt;a href="/item/42"&gt;Open&lt;/a&gt;
+&lt;/article&gt;
 """
 
 def test_parse_cards():
@@ -1427,7 +1454,6 @@ def test_parse_cards():
 <p>Логируй run_id, source_id, URL без секретных query-параметров, статус, время и категорию ошибки. Не записывай пароли, cookies, Authorization, полные персональные записи или содержимое закрытых страниц. Сырые сетевые дампы храни ограниченное время и с контролем доступа.</p>
 <div class="exercise"><strong>Практика.</strong> Напиши 8 тестов для парсера: нормальная запись, отсутствующее имя, относительная ссылка, неправильный тип, дубликат, пустой список, повреждённый JSON и неожиданный HTML. Сформируй JSON-отчёт каждого запуска с метриками качества.</div>
 </section>
-
 <section class="panel" id="privacy-security">
 <h2>43. Безопасность и приватность данных</h2>
 <p>Сборщик обрабатывает и сетевые ответы, и недоверенные данные. Безопасность должна быть частью архитектуры, а не исправлением в конце. Разделяй техническую возможность получить данные и право их собирать, хранить, объединять и использовать.</p>
@@ -1439,7 +1465,6 @@ def test_parse_cards():
 <p>Публично видимая страница не означает, что массовое копирование, повторная публикация или построение профилей разрешено. Проверяй официальные API, условия, лицензии, robots.txt, ограничения частоты и права на контент. Не обходи CAPTCHA, MFA, paywall, DRM, антибот-защиту или отказ в доступе; при необходимости получи разрешённый API-доступ или останови сбор.</p>
 <div class="exercise"><strong>Практика.</strong> Для выбранного проекта напиши data protection note: какие поля собираются, зачем, откуда, на каком основании, кто имеет доступ, сколько хранятся и как удаляются. Проведи threat-model: SSRF, утечка токена, опасный архив, избыточный сбор и случайный публичный экспорт.</div>
 </section>
-
 <section class="panel" id="operations">
 <h2>44. Планирование, развёртывание и эксплуатация</h2>
 <p>Автоматизация может запускаться вручную, по расписанию или как постоянный worker. Выбор зависит от частоты, объёма, требований к возобновлению и допустимой задержки. Для начала часто достаточно Windows Task Scheduler, cron или systemd timer. Очередь задач и оркестратор нужны не каждому проекту.</p>
@@ -1458,7 +1483,6 @@ CMD ["python", "-m", "collector", "--output", "/data"]</code></pre></div>
 <p>Если предыдущий сбор ещё выполняется, новый запуск не должен бесконтрольно стартовать второй раз. Используй lock/lease, уникальный run_id и таймаут выполнения. После сбоя lock должен истекать или освобождаться безопасно. Предусмотри уведомление о неуспешном запуске и автоматическое сохранение отчёта.</p>
 <div class="exercise"><strong>Практика.</strong> Запусти сборщик по расписанию на локальной машине. Имитируй отключение сети, повторный запуск и одновременный старт двух экземпляров. Убедись, что данные не теряются и конкурентные процессы не портят одну задачу.</div>
 </section>
-
 <section class="panel" id="source-strategy">
 <h2>45. Как выбрать лучший способ получения данных</h2>
 <p>Начинай с самого простого источника, который даёт нужную полноту и разрешён для использования. Браузерная автоматизация не является обязательным признаком профессионального решения: если официальный API или статический JSON полностью решает задачу, это обычно проще сопровождать.</p>
@@ -1468,7 +1492,6 @@ CMD ["python", "-m", "collector", "--output", "/data"]</code></pre></div>
 <div class="callout good"><b>Правило простоты:</b> предпочитай API → HTML → браузерное извлечение, если каждый предыдущий способ действительно покрывает задачу и разрешён. Это не жёсткая иерархия: реальная доступность и качество данных важнее.</div>
 <div class="exercise"><strong>Практика.</strong> Возьми три разных разрешённых сайта: статический контент, SPA-каталог, сайт с PDF-документами. Для каждого составь decision record: проверенные варианты, выбранный способ, почему отвергнуты альтернативы и как измеряется полнота.</div>
 </section>
-
 <section class="panel" id="architecture-patterns">
 <h2>46. Архитектурные шаблоны для разных задач сбора</h2>
 <p>Одна архитектура не подходит всем объёмам. Начинай с минимальной, затем добавляй компоненты по мере появления измеримой потребности.</p>
@@ -1480,7 +1503,6 @@ CMD ["python", "-m", "collector", "--output", "/data"]</code></pre></div>
 <p>Orchestrator решает, что и когда собирать; worker получает URL и извлекает данные; parser преобразует документ; validator проверяет; repository сохраняет. Каждый компонент должен иметь ясный вход, выход и ограниченную ответственность. Для обмена между этапами используй простые типизированные сообщения, а не глобальные переменные.</p>
 <div class="exercise"><strong>Практика.</strong> Спроектируй сбор одного типа сущности из двух источников. Напиши два адаптера, единый dataclass, validator и SQLite repository. Подмени один адаптер тестовой фикстурой и проверь, что остальная система продолжает работать.</div>
 </section>
-
 <section class="panel" id="capstone-advanced">
 <h2>47. Выпускные проекты II: от навыка к самостоятельной системе</h2>
 <p>Выбери один большой проект и один короткий диагностический проект. Источники должны разрешать автоматизированный доступ. Цель — не максимальное число скачанных страниц, а корректность, воспроизводимость и документация.</p>
@@ -1494,26 +1516,25 @@ CMD ["python", "-m", "collector", "--output", "/data"]</code></pre></div>
 <table class="table"><tr><th>Критерий</th><th>Баллы</th></tr><tr><td>Исследование источника и выбор метода</td><td>15</td></tr><tr><td>Полнота и корректность данных</td><td>20</td></tr><tr><td>Нормализация и сопоставление</td><td>10</td></tr><tr><td>Надёжность, resume и инкрементальность</td><td>15</td></tr><tr><td>Тестирование и наблюдаемость</td><td>15</td></tr><tr><td>Безопасность, приватность и правила источника</td><td>10</td></tr><tr><td>Архитектура, эксплуатация и документация</td><td>15</td></tr></table>
 <div class="exercise"><strong>Критерий самостоятельности.</strong> Перед началом проекта не ищи готовый scraper именно для выбранного сайта. Сначала напиши отчёт разведки, сформулируй гипотезы и проверь их. Готовые библиотеки и официальную документацию использовать можно и нужно.</div>
 </section>
-
 <section class="panel" id="field-manual">
 <h2>48. Полевой справочник: алгоритм решения неизвестной задачи</h2>
 <p>Этот раздел должен стать рабочим чек-листом, к которому ты возвращаешься при каждом новом сборе. Он не заменяет исследование, а помогает не пропустить обязательные этапы.</p>
 <h3>48.1. Карточка исследования источника</h3>
 <div class="checklist">
-<label><input type="checkbox"> Цель и поля сформулированы</label>
-<label><input type="checkbox"> Проверен официальный API/export</label>
-<label><input type="checkbox"> Изучены условия, robots.txt и лицензии</label>
-<label><input type="checkbox"> Сравнены исходный HTML и живой DOM</label>
-<label><input type="checkbox"> Изучены Network requests</label>
-<label><input type="checkbox"> Поняты редиректы и финальный host</label>
-<label><input type="checkbox"> Проверены пагинация и остановка</label>
-<label><input type="checkbox"> Проверены файлы и MIME-типы</label>
-<label><input type="checkbox"> Описана модель данных</label>
-<label><input type="checkbox"> Проверены дубликаты и пропуски</label>
-<label><input type="checkbox"> Установлены лимиты и retry policy</label>
-<label><input type="checkbox"> Есть checkpoint и повторный запуск</label>
-<label><input type="checkbox"> Есть тесты и отчёт качества</label>
-<label><input type="checkbox"> Исключены секреты и лишние персональные данные</label>
+<label><input type="checkbox"/> Цель и поля сформулированы</label>
+<label><input type="checkbox"/> Проверен официальный API/export</label>
+<label><input type="checkbox"/> Изучены условия, robots.txt и лицензии</label>
+<label><input type="checkbox"/> Сравнены исходный HTML и живой DOM</label>
+<label><input type="checkbox"/> Изучены Network requests</label>
+<label><input type="checkbox"/> Поняты редиректы и финальный host</label>
+<label><input type="checkbox"/> Проверены пагинация и остановка</label>
+<label><input type="checkbox"/> Проверены файлы и MIME-типы</label>
+<label><input type="checkbox"/> Описана модель данных</label>
+<label><input type="checkbox"/> Проверены дубликаты и пропуски</label>
+<label><input type="checkbox"/> Установлены лимиты и retry policy</label>
+<label><input type="checkbox"/> Есть checkpoint и повторный запуск</label>
+<label><input type="checkbox"/> Есть тесты и отчёт качества</label>
+<label><input type="checkbox"/> Исключены секреты и лишние персональные данные</label>
 </div>
 <h3>48.2. Диагностическая таблица</h3>
 <table class="table"><tr><th>Симптом</th><th>Проверка</th><th>Вероятное направление</th></tr><tr><td>200, но данные пустые</td><td>Content-Type, body, final URL, HTML/JSON</td><td>Не тот endpoint, JS, согласование формата или прикладная ошибка</td></tr><tr><td>В браузере есть, в Requests нет</td><td>Network, cookies, XHR/fetch, JS</td><td>Найти endpoint или использовать браузер</td></tr><tr><td>После клика открывается новая вкладка</td><td>Popup event и target URL</td><td>Playwright page.expect_popup</td></tr><tr><td>Ссылка начинается с blob:</td><td>Network initiator и исходные media requests</td><td>Объект создан внутри браузера</td></tr><tr><td>Сбор периодически обрывается</td><td>Логи, timeout, status, checkpoint</td><td>Retry budget, backoff, resume</td></tr><tr><td>Количество записей меньше ожидаемого</td><td>Пагинация, фильтры, глубина, ошибки</td><td>Проверка покрытия и полноты</td></tr><tr><td>Много дублей</td><td>URL normalization и business key</td><td>Исправить ключ и правила canonical</td></tr><tr><td>Данные неожиданно изменились</td><td>Raw response и parser version</td><td>Отличить изменение источника от изменения парсера</td></tr></table>
@@ -1522,47 +1543,862 @@ CMD ["python", "-m", "collector", "--output", "/data"]</code></pre></div>
 <div class="exercise"><strong>Практика.</strong> Используй этот список при следующей задаче. Заполни отчёт разведки, выбери способ получения, собери небольшой sample, проверь его вручную и только затем увеличивай объём. Зафиксируй один неожиданный симптом и путь диагностики.</div>
 <div class="callout good"><b>Главное правило курса:</b> не угадывай. Наблюдай, формулируй гипотезу, проверяй её отдельным экспериментом и сохраняй доказательства того, что сборщик действительно получил нужные данные.</div>
 </section>
+<section class="panel" id="selenium-alternatives">
+<h2>49. Selenium, WebDriver и альтернативы Playwright</h2>
+<p>Playwright — сильный вариант по умолчанию для новых Python-проектов, но не единственный. Selenium важен для существующих тестовых инфраструктур, браузерных ферм, корпоративных систем и сценариев, где уже используются WebDriver/Grid. Puppeteer полезен прежде всего в JavaScript/TypeScript-проектах. Выбирать инструмент нужно по требованиям, а не по популярности.</p>
+<h3>49.1. Модель Selenium WebDriver</h3>
+<p>WebDriver управляет браузером через стандартизированный интерфейс. Сценарий отправляет команды драйверу, драйвер взаимодействует с браузером. Для Python используется пакет <code class="inline">selenium</code>. В новых проектах применяй явные ожидания, а не фиксированные задержки.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
-<section class="panel refs" id="references">
+options = webdriver.ChromeOptions()
+options.add_argument("--headless=new")
+
+driver = webdriver.Chrome(options=options)
+try:
+    driver.get("https://example.com")
+    heading = WebDriverWait(driver, 10).until(
+        EC.visibility_of_element_located((By.CSS_SELECTOR, "h1"))
+    )
+    print(heading.text)
+finally:
+    driver.quit()</code></pre></div>
+<h3>49.2. Сравнение инструментов</h3>
+<table class="table"><tr><th>Инструмент</th><th>Экосистема</th><th>Когда выбирать</th><th>Ограничения и нюансы</th></tr>
+<tr><td>Playwright</td><td>Python, JS/TS, .NET, Java</td><td>Новые сценарии, контексты, ожидания, сетевые события, трассировки</td><td>Нужно установить браузерные бинарники; поведение зависит от browser engine</td></tr>
+<tr><td>Selenium</td><td>Python и другие языки</td><td>WebDriver-совместимость, существующие тесты, Grid и удалённые браузеры</td><td>Сложные сценарии требуют внимательной настройки ожиданий и инфраструктуры</td></tr>
+<tr><td>Puppeteer</td><td>JavaScript/TypeScript</td><td>Проект уже построен на Node.js и нужен API Puppeteer</td><td>Не является Python-библиотекой; поддержка протоколов и браузеров различается</td></tr>
+<tr><td>CDP</td><td>Низкоуровневый протокол Chromium</td><td>Специфическая диагностика Chromium и его внутренних доменов</td><td>Не универсальный стабильный кросс-браузерный API</td></tr>
+<tr><td>WebDriver BiDi</td><td>Стандартизированный двунаправленный протокол</td><td>Потоковые события браузера и кросс-браузерная автоматизация по мере поддержки</td><td>Проверять реализацию конкретной функции в конкретном браузере/драйвере</td></tr></table>
+<h3>49.3. Удалённые браузеры и Grid</h3>
+<p>Selenium Grid распределяет браузерные сессии по удалённым узлам. Это полезно, когда нужны разные браузеры, ОС или параллельные тестовые агенты. Для одного личного сборщика Grid обычно избыточен. Не запускай десятки браузеров до измерения реальной потребности.</p>
+<div class="callout warn"><b>Правило:</b> не переписывай работающий Playwright-сценарий на Selenium только ради «универсальности». Добавляй второй инструмент, когда есть конкретная совместимость или инфраструктурная причина.</div>
+<div class="exercise"><strong>Практика.</strong> Реализуй один и тот же безопасный сценарий открытия тестовой страницы и чтения заголовка в Playwright и Selenium. Сравни код, диагностику, время запуска и стабильность на трёх повторах. Запиши, какие требования оправдывают выбор каждого инструмента.</div>
+</section>
+<section class="panel" id="browser-protocols">
+<h2>50. CDP, WebDriver BiDi и исследование сетевого трафика</h2>
+<p>Браузерные библиотеки высокого уровня скрывают детали протокола. Иногда для диагностики нужно увидеть события ниже уровня DOM: запросы, ответы, консоль, ошибки JavaScript, кадры WebSocket и тайминги. Для Chromium применяется Chrome DevTools Protocol (CDP); WebDriver BiDi создаётся как стандартизированный двунаправленный протокол браузерной автоматизации.</p>
+<h3>50.1. CDP через Playwright</h3>
+<p>В Playwright для Python CDP-сессия создаётся для Chromium. Это низкоуровневый инструмент; команды и события зависят от версии Chromium. Не строй весь сборщик на недокументированных внутренних командах, если высокоуровневый API решает задачу.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>import asyncio
+from playwright.async_api import async_playwright
+
+async def main():
+    async with async_playwright() as p:
+        browser = await p.chromium.launch()
+        page = await browser.new_page()
+        client = await browser.new_cdp_session(page)
+        await client.send("Network.enable")
+
+        client.on("Network.responseReceived", lambda event: print(
+            event["response"]["status"],
+            event["response"]["url"]
+        ))
+        await page.goto("https://example.com")
+        await browser.close()
+
+asyncio.run(main())</code></pre></div>
+<h3>50.2. WebDriver BiDi</h3>
+<p>BiDi позволяет получать события от браузера по двунаправленному соединению. Изучай доступные высокоуровневые API Selenium и матрицу поддержки конкретных браузеров. Наличие стандарта не означает, что каждая функция уже одинаково реализована во всех браузерах.</p>
+<h3>50.3. HAR, mitmproxy и Wireshark</h3>
+<ul><li><b>HAR</b> — запись HTTP-обмена браузера; полезна для воспроизведения и сравнения запросов.</li><li><b>mitmproxy</b> — локальный HTTP(S)-прокси с просмотром и сохранением потоков; сертификат доверия нужно устанавливать только в контролируемой тестовой среде.</li><li><b>Wireshark</b> — анализ сетевых пакетов и соединений; при HTTPS без ключей/доступа к расшифровке содержимое обычно не видно.</li></ul>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code># Запустить mitmweb для локальной отладки
+mitmweb --listen-host 127.0.0.1 --listen-port 8080
+
+# Сохранить трафик в файл из терминального режима
+mitmdump --listen-host 127.0.0.1 --listen-port 8080 -w session.mitm</code></pre></div>
+<div class="callout danger"><b>Безопасность:</b> не устанавливай перехватывающий CA-сертификат на чужие устройства и не перехватывай чужие учётные данные. Исследуй только собственные приложения, тестовые стенды или трафик, на обработку которого у тебя есть явное разрешение.</div>
+<div class="exercise"><strong>Практика.</strong> Запиши HAR собственного тестового сайта, найди один запрос данных, сравни URL, метод, статус, заголовки, payload и initiator. Затем повтори наблюдение через mitmproxy на localhost и объясни различие между HAR и сетевым захватом пакетов.</div>
+</section>
+<section class="panel" id="browser-storage">
+<h2>51. Хранилища браузера, Service Workers и Cache Storage</h2>
+<p>Не всякое состояние страницы хранится в cookies. Веб-приложение может сохранять настройки, кэш, офлайн-данные и часть состояния сессии в Web Storage, IndexedDB, Cache Storage или через Service Worker. Это важно при диагностике: одинаковый URL в двух чистых и двух ранее использованных профилях может давать разное поведение.</p>
+<h3>51.1. Какие хранилища различать</h3>
+<table class="table"><tr><th>Механизм</th><th>Назначение</th><th>Что помнить</th></tr>
+<tr><td>Cookies</td><td>Состояние, которое браузер может отправлять серверу</td><td>Domain, Path, Secure, HttpOnly, SameSite, срок действия</td></tr>
+<tr><td>localStorage</td><td>Небольшие строковые значения для origin</td><td>Синхронный API; не предназначен для секретов</td></tr>
+<tr><td>sessionStorage</td><td>Строковое состояние вкладки/сессии</td><td>Не путать с серверной HTTP-сессией</td></tr>
+<tr><td>IndexedDB</td><td>Структурированные объёмы данных, включая Blob</td><td>Асинхронная транзакционная БД браузера</td></tr>
+<tr><td>Cache Storage</td><td>Кэширование запросов и ответов</td><td>Часто используется Service Worker</td></tr>
+<tr><td>Service Worker</td><td>Фоновый посредник между приложением и сетью</td><td>Может перехватывать fetch и отдавать закэшированный ответ</td></tr></table>
+<h3>51.2. Диагностика localStorage и sessionStorage</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>from playwright.async_api import async_playwright
+import asyncio
+
+async def main():
+    async with async_playwright() as p:
+        browser = await p.chromium.launch()
+        context = await browser.new_context()
+        page = await context.new_page()
+        await page.goto("https://example.com")
+
+        state = await page.evaluate("""() =&gt; ({
+          local: Object.fromEntries(Object.entries(localStorage)),
+          session: Object.fromEntries(Object.entries(sessionStorage))
+        })""")
+        print(state)
+        await browser.close()
+
+asyncio.run(main())</code></pre></div>
+<h3>51.3. IndexedDB, Service Workers и HAR</h3>
+<p>IndexedDB исследуется через Application в DevTools или соответствующие JavaScript API. В Playwright сохранение состояния браузера поддерживает IndexedDB в актуальных версиях API; проверь версию установленного Playwright и параметры <code class="inline">storage_state</code>. HAR помогает воспроизвести HTTP-обмен, но Service Worker может влиять на перехват и replay. При сравнительных тестах полезно отдельно проверять профиль с Service Worker и без него.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code># Playwright: сохранить cookies и localStorage;
+# IndexedDB включать только если это требуется и поддерживается версией.
+state = await context.storage_state(
+    path="auth-state.json",
+    indexed_db=True
+)
+
+# В диагностическом тесте можно создать контекст без Service Worker:
+context = await browser.new_context(service_workers="block")</code></pre></div>
+<div class="callout danger"><b>Защита состояния.</b> Файлы storage state, HAR и дампы IndexedDB могут содержать сессионные идентификаторы и персональные данные. Не коммить их в Git, не публикуй и ограничивай срок хранения. Для воспроизводимых тестов предпочитай тестовые аккаунты.</div>
+<div class="exercise"><strong>Практика.</strong> На собственном локальном приложении создай значение в localStorage, запись в IndexedDB и Service Worker-кэш. Сравни холодный запуск, повторный запуск и новый browser context. Определи, какие данные сохраняются между ними.</div>
+</section>
+<section class="panel" id="crawlee-parsers">
+<h2>52. Crawlee, Parsel, Selectolax и выбор парсера</h2>
+<p>BeautifulSoup не единственный парсер. В больших проектах полезно выбирать инструмент по типу документа, скорости и удобству поддержки. Crawlee for Python объединяет интерфейс crawler с разными способами загрузки: обычный HTTP, Beautiful Soup/Parsel и Playwright. Parsel и Selectolax — альтернативы для извлечения из HTML/XML.</p>
+<h3>52.1. Сравнение инструментов извлечения</h3>
+<table class="table"><tr><th>Инструмент</th><th>Сильная сторона</th><th>Типичная задача</th></tr>
+<tr><td>BeautifulSoup</td><td>Простой и понятный API</td><td>Небольшие и средние HTML-парсеры</td></tr>
+<tr><td>lxml</td><td>Быстрый HTML/XML и XPath</td><td>Большие документы, строгая работа с XPath</td></tr>
+<tr><td>Parsel</td><td>CSS, XPath, JMESPath для JSON</td><td>Scrapy-проекты и повторно используемые селекторы</td></tr>
+<tr><td>Selectolax</td><td>Быстрый HTML5-парсер с CSS-селекторами</td><td>Высокая скорость при обработке большого числа HTML</td></tr>
+<tr><td>Trafilatura</td><td>Извлечение основного текста и метаданных</td><td>Статьи, новости, блоги</td></tr>
+<tr><td>Crawlee</td><td>Планирование обхода и общий интерфейс crawler</td><td>Сбор многих страниц с управлением очередью и хранилищем</td></tr></table>
+<h3>52.2. Parsel: CSS, XPath и JSON</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>from parsel import Selector
+
+html = """&lt;article&gt;&lt;h1&gt;Example&lt;/h1&gt;
+&lt;a href="/item/7"&gt;Open item&lt;/a&gt;&lt;/article&gt;"""
+sel = Selector(text=html)
+
+title = sel.css("article h1::text").get()
+from urllib.parse import urljoin
+
+relative_url = sel.css("article a::attr(href)").get()
+absolute_url = urljoin("https://example.com/catalog/", relative_url)
+print(title, absolute_url)</code></pre></div>
+<h3>52.3. Selectolax</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>from selectolax.lexbor import LexborHTMLParser
+
+html = "&lt;main&gt;&lt;h1&gt;Catalog&lt;/h1&gt;&lt;a href='/p/1'&gt;Product&lt;/a&gt;&lt;/main&gt;"
+tree = LexborHTMLParser(html)
+heading = tree.css_first("main h1")
+link = tree.css_first("main a")
+print(heading.text() if heading else None)
+print(link.attributes.get("href") if link else None)</code></pre></div>
+<h3>52.4. Crawlee for Python</h3>
+<p>Выбирай <code class="inline">BeautifulSoupCrawler</code> или <code class="inline">ParselCrawler</code>, если страница отдаёт данные в HTML; <code class="inline">PlaywrightCrawler</code> — когда требуется выполнение JavaScript. Общая модель crawler избавляет от необходимости вручную строить очередь URL, повторные попытки и хранилище для каждого проекта. Не используй браузерный crawler, если достаточно обычного HTTP.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code># Установка базового пакета и нужного extra:
+python -m pip install "crawlee[beautifulsoup]"
+
+# Браузерный режим при необходимости:
+python -m pip install "crawlee[playwright]"
+playwright install</code></pre></div>
+<p>Минимальный рабочий пример по актуальному Quick Start Crawlee. Ограничь число запросов и используй только разрешённый тестовый источник.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>import asyncio
+from crawlee.crawlers import BeautifulSoupCrawler, BeautifulSoupCrawlingContext
+
+async def main() -&gt; None:
+    crawler = BeautifulSoupCrawler(max_requests_per_crawl=10)
+
+    @crawler.router.default_handler
+    async def handle_page(context: BeautifulSoupCrawlingContext) -&gt; None:
+        title = context.soup.title.string if context.soup.title else None
+        await context.push_data({
+            "url": context.request.url,
+            "title": title,
+        })
+        await context.enqueue_links()
+
+    await crawler.run(["https://crawlee.dev"])
+
+if __name__ == "__main__":
+    asyncio.run(main())</code></pre></div>
+<div class="exercise"><strong>Практика.</strong> Возьми локально сохранённый HTML одного каталога. Напиши одинаковое извлечение 100 карточек через BeautifulSoup, Parsel и Selectolax. Проверь идентичность результатов, скорость и обработку отсутствующих полей. Затем определи, нужен ли Crawlee для перехода по ссылкам.</div>
+</section>
+<section class="panel" id="non-rest-protocols">
+<h2>53. gRPC, Protocol Buffers, SOAP, OData и бинарные форматы</h2>
+<p>Не каждый сетевой интерфейс является REST/JSON. Если в Network виден необычный content type, бинарное тело, XML envelope или gRPC-вызов, сначала определи протокол. Не пытайся бездумно декодировать байты как UTF-8: формат может быть бинарным, сжатым или содержать фреймирование протокола.</p>
+<h3>53.1. gRPC и Protocol Buffers</h3>
+<p>gRPC описывает сервисы и методы, а Protobuf — структуру сообщений. Для Python обычно нужны файл <code class="inline">.proto</code>, сгенерированные классы и stub-клиент. Простого URL и Requests недостаточно: важны HTTP/2, тип контента, сериализация и контракт сервиса.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code># Типовой клиент после генерации Python-кода из .proto:
+import grpc
+import catalog_pb2
+import catalog_pb2_grpc
+
+channel = grpc.insecure_channel("localhost:50051")  # только локальный учебный стенд
+stub = catalog_pb2_grpc.CatalogStub(channel)
+response = stub.GetItem(catalog_pb2.GetItemRequest(id="42"))
+print(response)</code></pre></div>
+<p>Для реального сервиса используй TLS, проверку сертификата и официальный способ авторизации. Reflection может быть отключён; отсутствие reflection не означает, что сервис недоступен — но без схемы нельзя надёжно интерпретировать сообщения.</p>
+<h3>53.2. SOAP</h3>
+<p>SOAP использует XML-конверт и определённую структуру сообщения; описание сервиса часто доступно через WSDL. В HTTP-запросе могут использоваться специальные заголовки и SOAPAction. XML следует разбирать безопасным парсером с отключёнными внешними сущностями (XXE).</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>import requests
+
+endpoint = "https://example.test/service"  # замени на разрешённый endpoint
+soap_body = """&lt;?xml version="1.0"?&gt;
+&lt;soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"&gt;
+  &lt;soap:Body&gt;
+    &lt;GetItem xmlns="urn:example"&gt;&lt;Id&gt;42&lt;/Id&gt;&lt;/GetItem&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;"""
+
+response = requests.post(
+    endpoint,
+    data=soap_body.encode("utf-8"),
+    headers={"Content-Type": "application/soap+xml; charset=utf-8"},
+    timeout=(5, 20),
+)
+response.raise_for_status()
+print(response.text[:500])</code></pre></div>
+<h3>53.3. OData</h3>
+<p>OData — стандартизированный протокол доступа к данным. Его URL-конвенции могут поддерживать фильтрацию, выбор полей, сортировку, расширение связанных сущностей и постраничный переход. Например, параметры <code class="inline">$select</code>, <code class="inline">$filter</code>, <code class="inline">$orderby</code>, <code class="inline">$top</code> и <code class="inline">$skip</code> нужно изучить по документации конкретного сервиса.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>import requests
+
+url = "https://services.odata.org/V4/OData/OData.svc/Products"
+params = {
+    "$select": "ID,Name,Price",
+    "$top": 20,
+    "$orderby": "ID",
+}
+response = requests.get(url, params=params, timeout=20)
+response.raise_for_status()
+data = response.json()
+print(data)</code></pre></div>
+<h3>53.4. MessagePack, multipart и content types</h3>
+<ul><li><b>MessagePack</b> — компактная бинарная сериализация структур данных; Python-пакет <code class="inline">msgpack</code>.</li><li><b>multipart/form-data</b> — отправка полей и файлов в одном теле запроса; в Requests используется параметр <code class="inline">files=</code>.</li><li><b>Protocol Buffers</b> — схема и сериализация, а не просто формат «JSON в бинарном виде».</li><li><b>Content-Type</b> и <b>Content-Encoding</b> — разные понятия: первое описывает тип содержимого, второе — способ кодирования/сжатия представления.</li></ul>
+<div class="exercise"><strong>Практика.</strong> На локальных или публичных учебных сервисах определи по документации и Network, какой протокол используется. Для OData сформируй запрос с выбором полей и сортировкой. Для собственного SOAP/gRPC стенда прочитай схему и создай типизированный запрос. Не делай вывод о формате только по расширению URL.</div>
+</section>
+<section class="panel" id="identity-protocols">
+<h2>54. OAuth 2.0, OpenID Connect, SAML, JWT, MFA и WebAuthn</h2>
+<p>Авторизация — один из самых сложных участков автоматизации. Сначала нужно понять, кто проверяет личность пользователя, кто выдаёт разрешения и как приложение подтверждает запросы. Используй только свои тестовые аккаунты, официальные API и разрешённые сценарии. Не пытайся обходить MFA, CAPTCHA, защиту учётной записи или ограничения доступа.</p>
+<h3>54.1. Не смешивай понятия</h3>
+<table class="table"><tr><th>Технология</th><th>Роль</th><th>Что изучить</th></tr>
+<tr><td>OAuth 2.0</td><td>Делегированная авторизация</td><td>Authorization Code + PKCE, scopes, access/refresh tokens</td></tr>
+<tr><td>OpenID Connect</td><td>Аутентификация поверх OAuth 2.0</td><td>ID Token, issuer, audience, nonce, discovery metadata</td></tr>
+<tr><td>JWT</td><td>Формат токена (claims + подпись/криптографическая защита)</td><td>Алгоритм, issuer, audience, exp; декодирование не означает проверку подписи</td></tr>
+<tr><td>SAML 2.0</td><td>Федеративный обмен утверждениями, часто корпоративный SSO</td><td>Metadata, redirect/POST binding, XML assertion, подпись</td></tr>
+<tr><td>MFA / TOTP</td><td>Дополнительный фактор</td><td>Официальные тестовые механизмы и ручное подтверждение</td></tr>
+<tr><td>WebAuthn / passkeys</td><td>Криптографическая аутентификация через authenticator</td><td>Challenge, RP ID, origin, credential; автоматизация только в тестовой конфигурации</td></tr></table>
+<h3>54.2. Разрешённый OAuth/OIDC-процесс</h3>
+<ol><li>Проверь документацию провайдера и зарегистрируй приложение законным способом.</li><li>Используй рекомендованный flow; для публичных клиентов обычно рассматривается Authorization Code с PKCE.</li><li>Запрашивай минимальные scopes.</li><li>Проверяй issuer, audience, срок действия и подпись токена там, где это требуется.</li><li>Обновляй токены только через предусмотренный token endpoint.</li><li>Не записывай access/refresh tokens в логи и не помещай их в публичный репозиторий.</li></ol>
+<h3>54.3. Автоматизация сессии — только для собственного аккаунта</h3>
+<p>Для повторных UI-тестов допустимо сохранять состояние тестового браузерного контекста. Но такой файл эквивалентен секрету доступа. Для производственного сбора предпочитай официальный OAuth/API-интерфейс, а не постоянное копирование cookies из пользовательского браузера.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code># Пример для собственного тестового приложения:
+await page.goto("https://test-app.example/login")
+# Ввести тестовые реквизиты, выполнить предусмотренное MFA-подтверждение
+# и сохранить state после успешного входа:
+await context.storage_state(path="test-auth-state.json")
+
+# Не добавляй файл в Git. В .gitignore:
+# test-auth-state.json
+# *.har
+# .env</code></pre></div>
+<div class="callout danger"><b>Граница применения.</b> Нельзя превращать этот раздел в инструкции по краже токенов, обходу второго фактора, подделке assertions или использованию чужой сессии. При доступе к данным стороннего сервиса используй его официальный API и выданные разрешения.</div>
+<div class="exercise"><strong>Практика.</strong> На локальном OAuth/OIDC demo-provider нарисуй sequence diagram: браузер, клиент, authorization server, token endpoint и resource server. Отдельно подпиши, чем access token отличается от ID token и почему простое декодирование JWT не проверяет его подлинность.</div>
+</section>
+<section class="panel" id="content-extraction">
+<h2>55. Извлечение статей и документов: специализированные парсеры</h2>
+<p>У статей, новостей и блогов есть особая проблема: нужно отделить основной текст от меню, рекламы, рекомендаций и футера. Для этого существуют специализированные extractors. Они не заменяют crawler: сначала нужно обнаружить разрешённые URL, скачать страницу, а затем извлечь основное содержимое.</p>
+<h3>55.1. Trafilatura для основного текста</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>import requests
+import trafilatura
+
+url = "https://example.com/article"
+response = requests.get(url, timeout=20)
+response.raise_for_status()
+html = response.text
+
+result = trafilatura.extract(
+    html,
+    output_format="json",
+    with_metadata=True,
+    include_links=False,
+)
+print(result)</code></pre></div>
+<h3>55.2. Parsel, Readability и Selectolax</h3>
+<p>Trafilatura подходит для основного текста и метаданных. Readability-подобные алгоритмы пытаются выделять читаемую область. Parsel нужен для точных структурированных полей через CSS/XPath/JMESPath. Selectolax помогает быстро разбирать большое число HTML-документов. Для каждого набора страниц измеряй precision и recall на вручную размеченной выборке.</p>
+<h3>55.3. Документы и текстовые слои</h3>
+<ul><li>PDF с текстовым слоем: PyMuPDF, pdfplumber, pypdf — выбор зависит от таблиц, геометрии и потребности в метаданных.</li><li>Сканированный PDF: рендер страницы и OCR; проверяй язык, качество и координаты распознанных блоков.</li><li>DOCX: абзацы, таблицы, заголовки, hyperlinks и metadata.</li><li>XLSX: листы, формулы, значения, объединённые ячейки и скрытые листы.</li><li>EPUB: ZIP-контейнер с XHTML и метаданными; соблюдай лицензию и ограничения доступа.</li></ul>
+<div class="callout warn"><b>Проверяй границы.</b> Извлечение основного текста может потерять подписи к изображениям, списки, таблицы и боковые примечания. Храни исходный HTML/документ вместе с нормализованным результатом, когда это разрешено политикой хранения.</div>
+<div class="exercise"><strong>Практика.</strong> Возьми 20 статей с разрешённого источника, вручную разметь основной текст и метаданные, сравни результат Trafilatura и собственного селектора. Составь таблицу ошибок: пропущенные абзацы, лишнее меню, неверная дата, неверный автор.</div>
+</section>
+<section class="panel" id="columnar-analytics">
+<h2>56. Polars, DuckDB, Arrow и Parquet для больших наборов данных</h2>
+<p>Когда данные перестают помещаться в простой CSV или требуют аналитики по миллионам строк, стоит рассмотреть колоночные инструменты. Pandas остаётся полезным, но Polars, DuckDB и Arrow решают другие задачи и могут лучше подходить для больших файлов и аналитических запросов.</p>
+<h3>56.1. Выбор инструмента</h3>
+<table class="table"><tr><th>Инструмент</th><th>Назначение</th><th>Когда полезен</th></tr>
+<tr><td>Pandas</td><td>Универсальные DataFrame-операции</td><td>Экосистема, быстрый анализ, небольшие/средние таблицы</td></tr>
+<tr><td>Polars</td><td>Колонночные DataFrame и lazy query</td><td>Быстрая обработка, оптимизация запросов, большие табличные наборы</td></tr>
+<tr><td>DuckDB</td><td>Встраиваемая аналитическая SQL-БД</td><td>SQL по CSV, JSON, Parquet и DataFrame без отдельного сервера</td></tr>
+<tr><td>Apache Arrow</td><td>Колонночное представление в памяти и обмен</td><td>Совместимость между аналитическими библиотеками</td></tr>
+<tr><td>Parquet</td><td>Колоночный файловый формат</td><td>Сжатое долговременное хранение аналитических данных</td></tr></table>
+<h3>56.2. Запись и чтение Parquet через Polars</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>import polars as pl
+
+records = [
+    {"source": "site-a", "item_id": "101", "price": 12.5},
+    {"source": "site-b", "item_id": "202", "price": 18.0},
+]
+
+df = pl.DataFrame(records)
+df.write_parquet("items.parquet", compression="zstd")
+loaded = pl.read_parquet("items.parquet")
+print(loaded.select("source", "price"))</code></pre></div>
+<h3>56.3. SQL через DuckDB</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>import duckdb
+
+result = duckdb.sql("""
+    SELECT source, COUNT(*) AS rows, AVG(price) AS avg_price
+    FROM 'items.parquet'
+    GROUP BY source
+    ORDER BY rows DESC
+""").df()
+print(result)</code></pre></div>
+<h3>56.4. Raw, staging и analytics</h3>
+<p>Raw-слой сохраняет извлечённые исходные поля и происхождение; staging приводит типы и имена к согласованной схеме; analytics содержит очищенные таблицы для запросов. Не удаляй сырьё до проверки результата. Партиционируй данные по стабильным ключам (например, дате сбора или источнику), а не по высококардинальным значениям без необходимости.</p>
+<div class="exercise"><strong>Практика.</strong> Сохрани набор из 100 000 синтетических записей в CSV и Parquet. Выполни одинаковый запрос фильтрации и группировки через Pandas, Polars и DuckDB. Сравни время, размер файлов, типы данных и точность результата; не делай вывод только по одному запуску.</div>
+</section>
+<section class="panel" id="streaming-media">
+<h2>57. HLS, MPEG-DASH, MSE и сегментированные медиапотоки</h2>
+<p>Видео на сайте может быть не одним MP4-файлом. Браузер может загружать манифест, выбирать вариант качества и последовательно получать сегменты. Для HLS часто используется playlist M3U8; для MPEG-DASH — MPD manifest. Media Source Extensions (MSE) позволяют приложению добавлять сегменты в SourceBuffer.</p>
+<h3>57.1. Как распознать поток</h3>
+<ol><li>Открой Network и включи фильтр Media.</li><li>Посмотри типы и имена ресурсов: <code class="inline">.m3u8</code>, <code class="inline">.mpd</code>, <code class="inline">.ts</code>, <code class="inline">.m4s</code>, аудио- и видео-сегменты.</li><li>Открой вкладку Initiator и выясни, какой скрипт инициирует запросы.</li><li>Сохрани манифест и изучи относительные URL, варианты качества, таймкоды и сегменты.</li><li>Проверь, есть ли отдельные аудиодорожки, субтитры и live-обновление манифеста.</li></ol>
+<h3>57.2. Разбор доступного потока</h3>
+<p>Для собственных или явно разрешённых ресурсов можно использовать FFmpeg. Он умеет читать многие HLS/DASH-манифесты и собирать медиапоток. Команда ниже не обходит DRM, авторизацию или иные ограничения; входной URL должен быть доступен тебе законным способом.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code># Информация о дорожках и кодеках
+ffprobe -hide_banner -i "https://media.example.test/playlist.m3u8"
+
+# Перемультиплексировать доступный поток без повторного кодирования
+ffmpeg -i "https://media.example.test/playlist.m3u8" -c copy output.mp4</code></pre></div>
+<h3>57.3. Что может пойти не так</h3>
+<ul><li>Манифест содержит относительные адреса, которые нужно разрешать относительно URL самого манифеста.</li><li>Live-плейлист меняется во времени; конечного списка сегментов может не быть.</li><li>Сегменты могут требовать заголовки, cookies или токены согласно разрешённому доступу.</li><li>Раздельные аудио/видео дорожки могут требовать объединения и синхронизации.</li><li>DRM — отдельная система защиты контента; курс не обучает обходить DRM или извлекать ключи.</li></ul>
+<div class="exercise"><strong>Практика.</strong> Создай HLS-поток из собственного тестового видео с помощью FFmpeg. Исследуй manifest, варианты качества, сегменты и субтитры. Затем скачай только свой поток и сравни итоговый файл с оригиналом по длительности, дорожкам и контрольной сумме после декодирования.</div>
+</section>
+<section class="panel" id="complex-workflows">
+<h2>58. Сложные браузерные рабочие процессы и устойчивые сценарии</h2>
+<p>Реальные задачи часто состоят не из одного клика, а из последовательности состояний: открыть каталог, выбрать фильтр, раскрыть карточку, переключить вкладку, дождаться API-ответа, скачать документ и вернуться к списку. Надёжный сценарий моделирует состояния и проверяет результат каждого перехода.</p>
+<h3>58.1. Page Object и конечный автомат</h3>
+<p>Page Object хранит селекторы и действия для конкретной страницы. Для длинных процессов полезно описывать состояние явно: <code class="inline">START → FILTERED → DETAIL → DOWNLOADED</code>. Каждый шаг должен иметь предусловия, ожидаемый переход и восстановление при ошибке.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>from enum import Enum, auto
+
+class State(Enum):
+    START = auto()
+    FILTERED = auto()
+    DETAIL = auto()
+    DOWNLOADED = auto()
+
+async def run_flow(page):
+    state = State.START
+
+    await page.get_by_label("Category").select_option("books")
+    await page.get_by_role("button", name="Apply").click()
+    await page.get_by_role("heading", name="Books").wait_for()
+    state = State.FILTERED
+
+    await page.get_by_role("link", name="Open first item").click()
+    await page.get_by_test_id("item-detail").wait_for()
+    state = State.DETAIL
+
+    async with page.expect_download() as download_info:
+        await page.get_by_role("button", name="Download").click()
+    download = await download_info.value
+    await download.save_as("downloads/item.pdf")
+    state = State.DOWNLOADED
+    return state</code></pre></div>
+<h3>58.2. Виды интерактивных элементов</h3>
+<table class="table"><tr><th>Элемент</th><th>Playwright-подход</th><th>Что проверить</th></tr>
+<tr><td>Форма</td><td>label/role locator, заполнение и submit</td><td>Ошибки валидации и серверный результат</td></tr>
+<tr><td>Новая вкладка</td><td>expect_page / context.pages</td><td>Правильный URL и связь с действием</td></tr>
+<tr><td>Popup/dialog</td><td>обработчик dialog или ожидание popup</td><td>Не закрывать неожиданный диалог вслепую</td></tr>
+<tr><td>Файл</td><td>expect_download и save_as</td><td>Размер, тип, checksum</td></tr>
+<tr><td>Загрузка файла</td><td>set_input_files</td><td>Успешная серверная обработка</td></tr>
+<tr><td>Виртуализированный список</td><td>поиск элемента после прокрутки/фильтра</td><td>DOM содержит только видимую часть списка</td></tr></table>
+<h3>58.3. Возобновление многошаговой операции</h3>
+<p>Не храни состояние только в памяти браузера. Записывай прогресс операции в собственную БД: идентификатор объекта, последний завершённый шаг, время, результат, причина ошибки. После перезапуска проверяй, можно ли безопасно повторить последний шаг. Не повторяй неидемпотентные действия (например, создание заказа) без проверки их результата.</p>
+<div class="exercise"><strong>Практика.</strong> На локальном demo-сайте реализуй процесс фильтрации каталога, открытия карточки, загрузки документа и записи метаданных в SQLite. Искусственно прерви выполнение после каждого шага и добейся безопасного возобновления без дубликатов.</div>
+</section>
+<section class="panel" id="network-forensics">
+<h2>59. Сетевые сбои, прокси, DNS и TLS-диагностика</h2>
+<p>Когда запрос не работает, не начинай с подмены User-Agent или бесконечных повторов. Сначала определи слой отказа: DNS, TCP, TLS, прокси, HTTP, авторизация, формат ответа или логика приложения. Один и тот же симптом «страница не открывается» может иметь совершенно разные причины.</p>
+<h3>59.1. Диагностическая последовательность</h3>
+<table class="table"><tr><th>Симптом</th><th>Проверка</th><th>Типичная область причины</th></tr>
+<tr><td>Не разрешается домен</td><td>nslookup/dig, настройки DNS</td><td>DNS, локальная сеть, неверный hostname</td></tr>
+<tr><td>Connection refused/timeout</td><td>Проверить host/port, curl, сетевой маршрут</td><td>Сервер недоступен, firewall, неверный порт</td></tr>
+<tr><td>Ошибка сертификата</td><td>Проверить цепочку сертификата, дату, доверенный CA</td><td>TLS, корпоративный proxy, системное время</td></tr>
+<tr><td>407 Proxy Authentication Required</td><td>Проверить конфигурацию proxy и credentials</td><td>Прокси-аутентификация</td></tr>
+<tr><td>403/429</td><td>Прочитать тело ответа, Retry-After, условия доступа</td><td>Политика доступа, лимит запросов</td></tr>
+<tr><td>200, но пусто/не те поля</td><td>Проверить content-type, payload, состояние UI</td><td>Неверный endpoint, кэш, JS, ошибка приложения</td></tr></table>
+<h3>59.2. Базовые системные команды</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code># DNS
+nslookup example.com
+
+# TLS/HTTP детали и заголовки
+curl -vI https://example.com/
+
+# TCP-доступность порта (PowerShell)
+Test-NetConnection example.com -Port 443
+
+# Информация о сертификате через OpenSSL, если установлен
+openssl s_client -connect example.com:443 -servername example.com</code></pre></div>
+<h3>59.3. Прокси: назначение и ограничения</h3>
+<p>Прокси применяются для корпоративного доступа, тестирования собственных приложений, маршрутизации и соблюдения сетевой архитектуры. Явно задавай proxy для HTTP-клиента и браузера, понимай, где завершается TLS, и не отправляй секреты непроверенному посреднику. Прокси не являются способом обходить ограничения доступа сайта.</p>
+<h3>59.4. Таймауты и типы ошибок</h3>
+<p>Разделяй connect timeout, read timeout и общий deadline. Логируй тип исключения, домен, метод, статус и correlation/request ID, если он есть. Не записывай в лог Authorization, cookies, токены, персональные поля и полные тела приватных ответов.</p>
+<div class="exercise"><strong>Практика.</strong> На собственном тестовом сервере воспроизведи DNS-ошибку, неверный порт, истёкший сертификат в тестовой среде, 404, 429 и 200 с некорректным JSON. Для каждого случая составь диагностическую запись и определи, на каком уровне отказ.</div>
+</section>
+<section class="panel" id="tool-selection-matrix">
+<h2>60. Матрица выбора инструментов и итоговый практикум</h2>
+<p>К концу курса важно не просто знать названия библиотек, а быстро выбирать минимальный достаточный стек. Один сайт может требовать только HTTP-клиент, другой — браузер, третий — документный парсер или специализированный протокол.</p>
+<h3>60.1. Установка дополнительных инструментов по профилям</h3>
+<p>Не устанавливай все библиотеки сразу в один глобальный Python. Создавай отдельное виртуальное окружение для проекта и добавляй только нужный стек. Основные зависимости комплекта указаны в <code class="inline">requirements.txt</code>; следующие команды — дополнительные профили для соответствующих глав.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code># Браузерная автоматизация и сетевой анализ
+python -m pip install selenium mitmproxy
+python -m pip install "crawlee[beautifulsoup]" "crawlee[playwright]"
+playwright install
+
+# HTTP-клиенты (выбери нужные, не обязательно все)
+python -m pip install httpx aiohttp curl_cffi
+
+# AI browser agent (требует настроенного LLM provider/key)
+python -m pip install browser-use langchain-openai
+
+# Очереди и распределённые задачи
+python -m pip install "celery[redis]"
+
+# Оркестрация (выбери один подход)
+python -m pip install prefect
+# Apache Airflow: устанавливай по официальной инструкции с constraints
+# Dagster: python -m pip install dagster dagster-webserver
+
+# Парсеры и извлечение текстов
+python -m pip install parsel selectolax trafilatura
+
+# Аналитика и колоночное хранение
+python -m pip install polars duckdb pyarrow
+
+# Протоколы и сериализация
+python -m pip install grpcio grpcio-tools protobuf msgpack
+python -m pip install aiortc warcio
+
+# Документы: устанавливай только нужные пакеты
+python -m pip install pymupdf pdfplumber python-docx openpyxl
+
+# Stagehand относится к Node.js/TypeScript, а не к Python:
+npm install @browserbasehq/stagehand</code></pre></div><p>Для глав 61–68 команды выше — дополнительные профили, а не единый обязательный стек. Не ставь всё в одно окружение. Для совместимых версий зафиксируй зависимости в lock-файле. Stagehand запускается в Node.js/TypeScript; Browser Use требует провайдера языковой модели. Airflow устанавливай по официальной инструкции с версионными constraints.</p>
+<p><b>Отдельные системные инструменты:</b> FFmpeg/ffprobe устанавливаются отдельно от Python-пакетов; для OCR нужен движок Tesseract и соответствующие языковые данные. Puppeteer относится к Node.js: используй его в JS/TS-проекте через npm, а не пытайся импортировать как Python-модуль.</p>
+<h3>60.2. Матрица выбора</h3>
+<table class="table"><tr><th>Задача</th><th>Начальный выбор</th><th>Когда усложнять</th></tr>
+<tr><td>Обычная HTML-страница</td><td>HTTPX/Requests + BeautifulSoup/Parsel</td><td>Selectolax/lxml при больших объёмах или XPath</td></tr>
+<tr><td>Статья/новость</td><td>Trafilatura</td><td>Собственные правила, Readability, ручная разметка</td></tr>
+<tr><td>Каталог со множеством страниц</td><td>Scrapy или Crawlee</td><td>Очереди, распределённые workers, собственное хранилище</td></tr>
+<tr><td>JS-приложение</td><td>Сначала Network/API; затем Playwright</td><td>CDP/BiDi для низкоуровневой диагностики</td></tr>
+<tr><td>Совместимость WebDriver/Grid</td><td>Selenium</td><td>Удалённые узлы и браузерная ферма</td></tr>
+<tr><td>Документы</td><td>PyMuPDF, python-docx, openpyxl</td><td>OCR, геометрия, специализированная обработка</td></tr>
+<tr><td>Большие таблицы</td><td>Polars / DuckDB / Parquet</td><td>Arrow, распределённые системы при доказанной необходимости</td></tr>
+<tr><td>Потоковое видео</td><td>DevTools + FFmpeg для разрешённых потоков</td><td>Исследование контейнера/кодеков и сегментации</td></tr>
+<tr><td>gRPC/SOAP/OData</td><td>Официальная схема и клиент соответствующего протокола</td><td>Инструменты трассировки и контрактные тесты</td></tr></table>
+<h3>60.3. Универсальный алгоритм решения задачи</h3>
+<ol class="steps"><li><b>Сформулируй результат.</b> Какие конкретные поля, файлы и связи нужны? Как будет проверена полнота?</li><li><b>Исследуй источник.</b> Проверь публичную документацию, условия доступа, HTML, Network, редиректы и поведение после действий.</li><li><b>Определи канал.</b> API, HTML, браузерный DOM, поток, документ или их комбинация.</li><li><b>Сделай минимальный эксперимент.</b> Получи 3–10 записей и сравни их с источником вручную.</li><li><b>Зафиксируй контракт.</b> Схема, типы, обязательные поля, правила пагинации и условия остановки.</li><li><b>Построй устойчивый сбор.</b> Timeouts, ограничение параллельности, retry с backoff, checkpoint, dedupe.</li><li><b>Сохраняй provenance.</b> Источник, URL, время сбора, статус, версия парсера и контрольная сумма ресурса.</li><li><b>Проверяй качество.</b> Полнота, уникальность, диапазоны, связи, свежесть и аномалии.</li><li><b>Организуй повторное выполнение.</b> Инкрементальность, idempotency, логирование и сигнализация сбоев.</li><li><b>Документируй решение.</b> Почему выбран инструмент, что может сломаться и как диагностировать.</li></ol>
+<h3>60.4. Итоговый проект</h3>
+<p>Создай систему сбора из трёх разрешённых источников разного типа: один статический HTML-каталог, одно JavaScript-приложение с публичным API и один набор документов. Система должна собирать записи по расписанию, скачивать относящиеся к ним файлы, нормализовать поля, сохранять результат в SQLite и Parquet, находить изменения между запусками и формировать отчёт качества.</p>
+<ul><li>У каждого адаптера — отдельные тесты на сохранённых fixtures.</li><li>Все HTTP-запросы имеют таймауты и ограничение скорости.</li><li>Повторный запуск не создаёт дубликаты.</li><li>Ошибки одного источника не уничтожают результаты остальных.</li><li>В отчёте есть число обнаруженных, загруженных, пропущенных и ошибочных объектов.</li><li>Секреты, персональные данные и session state не попадают в Git и обычные логи.</li></ul>
+<div class="callout good"><b>Критерий завершения:</b> ты способен самостоятельно исследовать незнакомый, доступный для автоматизированной обработки источник, доказать корректность выбранного метода, построить воспроизводимый сбор и объяснить ограничения решения. Это и есть практическая универсальность — не один магический скрипт для всего интернета, а системный способ решать разные задачи.</div>
+<div class="exercise"><strong>Финальная защита проекта.</strong> Подготовь README, диаграмму архитектуры, схему данных, образцы исходных ответов, результаты тестов, отчёт полноты и список известных ограничений. Другой разработчик должен суметь развернуть систему и повторить сбор по инструкции.</div>
+</section>
+<section class="panel" id="http-clients-advanced"><h2>61. Современные HTTP-клиенты: HTTPX, aiohttp, curl_cffi и streaming</h2>
+<p>Requests остаётся простым синхронным инструментом; HTTPX поддерживает синхронный и асинхронный интерфейсы и HTTP/2; aiohttp — зрелый асинхронный клиент с потоковым чтением и WebSocket; curl_cffi основан на libcurl и даёт дополнительные варианты транспортной совместимости, включая HTTP/2 и HTTP/3 в поддерживаемых сборках. Это не взаимозаменяемые «улучшенные requests»: выбор зависит от протокола, нагрузки, потока данных и диагностики.</p>
+<table class="table"><tr><th>Инструмент</th><th>Выбирай, когда</th><th>Учитывай</th></tr>
+<tr><td>requests</td><td>Небольшой/средний синхронный сбор, простой код</td><td>Нет async API; HTTP/2 не является его основной возможностью</td></tr>
+<tr><td>httpx</td><td>Нужен один API для sync/async, connection pools, HTTP/2</td><td>HTTP/2 требует соответствующей настройки/зависимостей</td></tr>
+<tr><td>aiohttp</td><td>Асинхронный сбор, streaming, WebSocket-клиент</td><td>Следи за жизненным циклом ClientSession</td></tr>
+<tr><td>curl_cffi</td><td>Нужны специфические возможности libcurl или совместимость TLS/HTTP fingerprint для диагностики интеграции</td><td>Не является разрешением обходить блокировки или правила доступа; сравнивай версии и платформы</td></tr></table>
+<h3>61.1. Переиспользуй клиент и ограничивай соединения</h3>
+<p>Создавай один клиент на логическую сессию, а не новый на каждый URL. Явно задай connect/read/write/pool timeout, лимиты соединений, проверку TLS и redirect policy. Таймауты должны быть конечными. Повторяй только безопасные операции и только по ограниченной политике.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>import asyncio
+from pathlib import Path
+import httpx
+
+async def download(url: str, destination: Path) -&gt; None:
+    timeout = httpx.Timeout(30.0, connect=8.0)
+    limits = httpx.Limits(max_connections=8, max_keepalive_connections=4)
+    async with httpx.AsyncClient(
+        timeout=timeout,
+        limits=limits,
+        follow_redirects=True,
+        headers={"User-Agent": "ResearchCollector/1.0 (contact: you@example.org)"},
+    ) as client:
+        async with client.stream("GET", url) as response:
+            response.raise_for_status()
+            content_type = response.headers.get("content-type", "")
+            if content_type.startswith("text/html"):
+                raise ValueError("Expected a file, received HTML")
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            with destination.open("wb") as output:
+                async for chunk in response.aiter_bytes(64 * 1024):
+                    output.write(chunk)
+
+async def main():
+    await download("https://example.org/data.bin", Path("downloads/data.bin"))
+
+if __name__ == "__main__":
+    asyncio.run(main())</code></pre></div>
+<h3>61.2. Потоковое чтение и WebSocket</h3>
+<p>Не вызывай <code>response.content</code>, <code>response.json()</code> или <code>response.text()</code> для многогигабайтного ответа без оценки памяти: многие удобные методы читают тело целиком. Используй итерацию по chunks. Для aiohttp WebSocket-клиент подключается через <code>ClientSession.ws_connect()</code>; отделяй чтение сообщений от записи, учитывай ping/pong, закрытие соединения, reconnect и backoff.</p>
+<div class="callout warn"><b>О curl_cffi.</b> Имитация TLS/HTTP fingerprint может использоваться для совместимости и диагностики легитимного клиента. Она не превращает запрещённый endpoint в разрешённый и не должна применяться для обхода CAPTCHA, paywall, MFA, доступа или rate limits. При отказе сервера сначала выясни причину и используй официальный API/разрешённый способ.</div>
+<div class="exercise"><strong>Практика.</strong> Реализуй один и тот же запрос тремя способами: requests, httpx и aiohttp. Сравни время, объём памяти, поведение при timeout, redirect и 429. Затем скачай тестовый бинарный файл потоково и проверь размер и SHA-256.</div>
+<div class="callout"><b>Критерий:</b> ты можешь объяснить, почему выбран конкретный клиент, как ограничены соединения и что произойдёт при обрыве передачи.</div>
+</section><section class="panel" id="modern-app-architecture"><h2>62. Архитектура современных сайтов: SSR, CSR, hydration, Next.js и Nuxt</h2>
+<p>Современная страница может сочетать статический HTML, серверный рендеринг, клиентский JavaScript, предварительно загруженные данные и последующие сетевые запросы. Термины нужно различать:</p>
+<table class="table"><tr><th>Модель</th><th>Что получает браузер</th><th>Что это значит для сборщика</th></tr>
+<tr><td>CSR</td><td>HTML-оболочку и JS, который строит интерфейс</td><td>Изучай Fetch/XHR и состояние после выполнения JS</td></tr>
+<tr><td>SSR</td><td>HTML, сформированный сервером для запроса</td><td>Часть текста доступна сразу, но могут быть последующие запросы</td></tr>
+<tr><td>SSG</td><td>Заранее созданные HTML-файлы</td><td>Проверяй кеширование, обновление и статические ресурсы</td></tr>
+<tr><td>ISR / revalidation</td><td>Статическая страница с периодическим обновлением</td><td>Сохраняй время получения и проверяй актуальность</td></tr>
+<tr><td>Streaming SSR</td><td>Ответ HTML/RSC приходит частями</td><td>Не считай первую порцию полным документом</td></tr>
+<tr><td>React Server Components</td><td>HTML и специальный RSC payload для обновления дерева</td><td>Внутренний payload не следует считать стабильным публичным API</td></tr></table>
+<h3>62.1. Hydration и RSC — не одно и то же</h3>
+<p>Hydration связывает серверно отрисованный HTML с клиентскими обработчиками. React Server Components добавляют границу между серверной и клиентской частями приложения и передают представление дерева компонентов. В Next.js это может сопровождаться RSC payload и streaming. Nuxt/Vue имеют собственные механизмы SSR и hydration. Не делай вывод о доступности данных только по наличию HTML.</p>
+<h3>62.2. Алгоритм исследования</h3>
+<ol class="steps"><li>Сохрани исходный HTML через View Source и обычный HTTP-запрос.</li><li>Сравни с DOM после выполнения JavaScript.</li><li>Проверь встроенные JSON/JSON-LD и script data blocks.</li><li>Запиши Network при первой загрузке и при переходе между страницами.</li><li>Отдельно проверь hydration, lazy loading и streaming.</li><li>Ищи документированный API или серверный endpoint; не привязывайся к недокументированному формату фреймворка без необходимости.</li></ol>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>from bs4 import BeautifulSoup
+import json
+import requests
+
+url = "https://example.org/catalog"
+response = requests.get(url, timeout=20)
+response.raise_for_status()
+soup = BeautifulSoup(response.text, "html.parser")
+
+# Сначала исследуем публичные структурированные данные.
+for node in soup.select('script[type="application/ld+json"]'):
+    try:
+        data = json.loads(node.string or node.get_text())
+    except json.JSONDecodeError:
+        continue
+    print("JSON-LD type:", type(data).__name__)
+
+# Сохраняем исходный HTML для воспроизводимого анализа.
+open("page-source.html", "w", encoding="utf-8").write(response.text)
+print("status:", response.status_code, "final URL:", response.url)</code></pre></div>
+<div class="callout danger"><b>Не делай так:</b> не считай внутренние RSC/Flight chunk identifiers, webpack chunks или приватные hydration internals стабильным API. Они могут меняться между сборками. Если endpoint не документирован, ограничь использование разрешённым исследованием, добавь тесты и fallback на пользовательски наблюдаемое содержимое.</div>
+<div class="exercise"><strong>Практика.</strong> Возьми учебное приложение на Next.js или Nuxt. Сравни View Source, DOM после hydration и сетевые ответы. Отметь, какие поля видны в HTML, какие приходят из API и какие вообще не отправляются браузеру.</div>
+<div class="callout"><b>Критерий:</b> ты умеешь классифицировать страницу по модели рендеринга и выбираешь источник данных, не предполагая, что вся информация обязана быть в DOM.</div>
+</section><section class="panel" id="api-contracts-workflows"><h2>63. Контракты API и workflows: OpenAPI, AsyncAPI, Arazzo и JSON-RPC</h2>
+<p>Не каждый JSON endpoint — REST. Перед разработкой клиента выясни, есть ли контракт, схема или описание последовательности операций. Это уменьшает число догадок и помогает проверить типы, обязательные поля, пагинацию, авторизацию и ошибки.</p>
+<table class="table"><tr><th>Описание</th><th>Для чего служит</th><th>Что искать</th></tr>
+<tr><td>OpenAPI</td><td>HTTP API: пути, методы, схемы, security schemes</td><td><code>openapi.json</code>, <code>swagger.json</code>, <code>/api-docs</code></td></tr>
+<tr><td>AsyncAPI</td><td>Асинхронные сообщения и каналы</td><td>WebSocket, MQTT, Kafka и другие message channels</td></tr>
+<tr><td>Arazzo</td><td>Сценарии и последовательности API-вызовов</td><td>Workflow, зависимости шагов, источники API-описаний</td></tr>
+<tr><td>JSON-RPC 2.0</td><td>Вызов именованных методов поверх JSON</td><td><code>jsonrpc</code>, <code>method</code>, <code>params</code>, <code>id</code></td></tr>
+<tr><td>GraphQL schema</td><td>Типы, поля, аргументы и связи</td><td>SDL, introspection, документация схемы</td></tr></table>
+<h3>63.1. Обнаружение контракта</h3>
+<p>Проверь официальную документацию, developer portal, OpenAPI/Swagger endpoint, HTML-ссылки на спецификацию и заголовки ответов. Контракт может быть неполным или устаревшим: сверяй его с реальными ответами. Не запускай неизвестные операции записи только ради исследования.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>import httpx
+
+endpoint = "https://api.example.org/rpc"
+payload = {
+    "jsonrpc": "2.0",
+    "method": "catalog.getItem",
+    "params": {"itemId": "demo-123"},
+    "id": 1,
+}
+
+response = httpx.post(endpoint, json=payload, timeout=20)
+response.raise_for_status()
+message = response.json()
+if message.get("id") != payload["id"]:
+    raise ValueError("JSON-RPC response id does not match request")
+if "error" in message:
+    raise RuntimeError(f"RPC error: {message['error']}")
+if "result" not in message:
+    raise ValueError("JSON-RPC response has no result")
+print(message["result"])</code></pre></div>
+<h3>63.2. Валидация ответа по схеме</h3>
+<p>Сохраняй исходный JSON отдельно от нормализованной модели. Проверяй обязательные поля, типы, диапазоны, nullable и неизвестные поля. Различай транспортную ошибку, ошибку протокола и ошибку бизнес-данных. Для больших API изучи генерацию клиента из OpenAPI, но не принимай автоматически сгенерированный клиент за доказательство корректности сервера.</p>
+<div class="callout warn"><b>Актуальность версий.</b> В курсе указаны опубликованные версии OpenAPI 3.2.1 и Arazzo 1.1.0; AsyncAPI следует изучать по текущей стабильной спецификации 3.x. В рабочих проектах фиксируй версию спецификации и валидатора, а не полагайся на слово latest.</div>
+<div class="exercise"><strong>Практика.</strong> Найди публичный OpenAPI документ. Построй таблицу endpoint → method → параметры → auth → response schema. Сгенерируй тестовый клиент или напиши небольшой ручной клиент и проверь минимум три успешных и три ошибочных ответа.</div>
+<div class="callout"><b>Критерий:</b> ты умеешь понять не только куда отправлять запрос, но и что запрос означает, какую последовательность вызовов он требует и как проверить ответ.</div>
+</section><section class="panel" id="webtransport-webrtc-quic"><h2>64. WebTransport, WebRTC, QUIC и современные realtime-каналы</h2>
+<p>WebSocket, WebTransport и WebRTC решают разные задачи. Их нельзя считать тремя способами получить одну и ту же страницу.</p>
+<table class="table"><tr><th>Технология</th><th>Модель</th><th>Когда встретишь</th></tr>
+<tr><td>WebSocket</td><td>Двунаправленный постоянный канал поверх TCP-соединения</td><td>Чаты, обновления, события интерфейса</td></tr>
+<tr><td>WebTransport</td><td>API браузера для HTTP/3 transport: streams и datagrams</td><td>Низколатентные приложения, realtime-сценарии</td></tr>
+<tr><td>WebRTC</td><td>Peer connection для real-time media и data channels, с signalling и ICE/STUN/TURN</td><td>Видеосвязь, peer-to-peer передача</td></tr>
+<tr><td>QUIC / HTTP/3</td><td>Транспорт и HTTP поверх QUIC/UDP</td><td>Обычные HTTP-запросы, но транспорт отличается</td></tr></table>
+<h3>64.1. WebTransport — не просто новый WebSocket</h3>
+<p>WebTransport предоставляет несколько потоков, однонаправленные потоки и datagrams с различными гарантиями доставки. Он использует HTTP/3 и защищённый контекст. Поддержка браузеров и серверная реализация должны проверяться по конкретной платформе. Сам факт поддержки API в браузере не означает, что произвольный сайт использует его.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>// Запускать в консоли DevTools на собственном тестовом сайте.
+const report = {
+  webSocket: typeof WebSocket !== "undefined",
+  webTransport: typeof WebTransport !== "undefined",
+  webRTC: typeof RTCPeerConnection !== "undefined",
+};
+console.table(report);
+
+// Подключение возможно только к известному endpoint,
+// предназначенному сервером для WebTransport.
+async function openTransport(authorizedEndpoint) {
+  if (!("WebTransport" in window)) {
+    throw new Error("WebTransport is not supported in this browser");
+  }
+  const transport = new WebTransport(authorizedEndpoint);
+  await transport.ready;
+  return transport;
+}</code></pre></div>
+<h3>64.2. WebRTC требует signalling</h3>
+<p>Для WebRTC приложение обменивается SDP/ICE параметрами через отдельный signalling-механизм; затем ICE выбирает маршрут, при необходимости с STUN/TURN. DataChannel передаёт произвольные данные между peer, но это не HTTP endpoint, который можно просто опросить Requests. Для Python могут применяться реализации вроде aiortc, если ты разрабатываешь или легитимно интегрируешься с соответствующей системой.</p>
+<h3>64.3. Что должен сделать исследователь</h3>
+<ol><li>Зафиксировать тип соединения и инициатора.</li><li>Понять, какой канал несёт именно нужные данные: текстовые события, бинарные кадры, audio/video или signalling.</li><li>Проверить формат payload, частоту сообщений, backpressure и reconnect.</li><li>Не перехватывать чужую коммуникацию и не обходить требования к авторизации.</li></ol>
+<div class="exercise"><strong>Практика.</strong> Создай локальные демонстрации WebSocket, WebTransport (если среда поддерживается) и WebRTC DataChannel. Запиши различия в установлении соединения, двусторонней передаче, надёжности и диагностике.</div>
+<div class="callout"><b>Критерий:</b> ты можешь распознать транспорт и понять, является ли он вообще подходящим источником для задачи сбора данных.</div>
+</section><section class="panel" id="ai-browser-agents"><h2>65. AI Browser Automation: Browser Use, Stagehand и агентные сценарии</h2>
+<p>AI browser agents — надстройка над браузерной автоматизацией: модель получает наблюдение о странице, выбирает действие, получает новый результат и повторяет цикл. Browser Use предоставляет Python-ориентированный подход; Stagehand — AI-powered browser automation, преимущественно в TypeScript/Node.js экосистеме. Это не замена Playwright для всех случаев.</p>
+<table class="table"><tr><th>Подход</th><th>Сильная сторона</th><th>Слабая сторона</th></tr>
+<tr><td>Playwright с явными локаторами</td><td>Предсказуемость, скорость, тестируемость</td><td>Нужно заранее описать сценарий</td></tr>
+<tr><td>Browser Use / агент</td><td>Может планировать действия по естественно-языковой задаче</td><td>Нестабильность, стоимость модели, непредсказуемые действия</td></tr>
+<tr><td>Stagehand</td><td>Смешивает кодовые действия с AI-ориентированным управлением</td><td>Отдельный runtime/SDK; проверь актуальную совместимость</td></tr></table>
+<h3>65.1. Агент должен иметь границы</h3>
+<ul><li>Задавай узкую задачу и конечные критерии остановки.</li><li>Передавай только необходимый доступ и не помещай секреты в prompt.</li><li>Считай текст страницы недоверенными данными: инструкции сайта не должны менять системную задачу агента.</li><li>Запрещай агенту произвольные платежи, публикации, отправку форм и изменение аккаунта без явного подтверждения человека.</li><li>Сохраняй trace, скриншоты и доказательства для каждого извлечённого поля.</li><li>Валидируй результат по схеме; модельная уверенность не заменяет проверку.</li></ul>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code># Пример Browser Use: API быстро развивается — закрепи версию пакета
+# и проверь сигнатуру Agent/LLM по документации установленной версии.
+import asyncio
+import os
+from browser_use import Agent
+from langchain_openai import ChatOpenAI
+
+async def main():
+    if not os.getenv("OPENAI_API_KEY") or not os.getenv("BROWSER_AGENT_MODEL"):
+        raise RuntimeError("Set OPENAI_API_KEY and BROWSER_AGENT_MODEL in the environment")
+
+    agent = Agent(
+        task=(
+            "Открой публичный учебный каталог, извлеки первые 5 названий "
+            "и URL. Ничего не покупай, не входи в аккаунт и не отправляй формы. "
+            "Верни только структурированный список с источниками."
+        ),
+        llm=ChatOpenAI(model=os.environ["BROWSER_AGENT_MODEL"]),
+    )
+    result = await agent.run()
+    print(result)
+
+if __name__ == "__main__":
+    asyncio.run(main())</code></pre></div>
+<h3>65.2. Детерминированная проверка после агента</h3>
+<p>После агентского этапа открой источник обычным HTTP-клиентом или Playwright и повторно проверь URL, заголовок, идентификатор и другие важные поля. Для критичных данных сохраняй фрагмент текста/DOM, URL, timestamp и результат проверки. Там, где структура стабильна, замени agent action на явный Playwright locator.</p>
+<div class="callout danger"><b>Риск prompt injection.</b> Страница может содержать текст «игнорируй предыдущие инструкции» или просить раскрыть секреты. Для агента это содержимое страницы, а не команда владельца системы. Разделяй доверенные инструкции, данные сайта и доступные инструменты. Не подключай аккаунты с широкими правами для простого извлечения публичной информации.</div>
+<div class="exercise"><strong>Практика.</strong> Реши одну задачу двумя способами: Playwright с явными локаторами и browser agent. Сравни точность, стоимость, время, число ошибочных действий и воспроизводимость. Добавь схему результата и проверку evidence.</div>
+<div class="callout"><b>Критерий:</b> ты понимаешь, когда агент экономит разработку, а когда обычный код надёжнее и дешевле.</div>
+</section><section class="panel" id="distributed-collection"><h2>66. Распределённый сбор: Celery, Redis, очереди и worker-процессы</h2>
+<p>Распределённый сбор нужен не потому, что «больше процессов всегда быстрее», а когда есть независимые задачи, долгий runtime, требования к очередям, повторным попыткам и отдельным worker-процессам. Celery — распределённая очередь задач; Redis может выступать broker/result backend. Для многих задач достаточно одного процесса asyncio или Scrapy: добавляй распределённость только после измерения узкого места.</p>
+<h3>66.1. Передавай в очередь идентификатор работы, а не гигабайты HTML</h3>
+<p>Задача worker должна быть идемпотентной: повторное выполнение не создаёт дубликаты и не портит результат. Храни полезные данные в файлах/object storage/БД, а в очереди передавай source id, URL из разрешённого scope и параметры обработки. Ошибки дели на retryable и permanent. Для постоянных ошибок используй dead-letter/manual review механизм.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code># tasks.py — пример Celery 5.x + Redis
+import os
+from celery import Celery
+
+app = Celery(
+    "collector",
+    broker=os.environ["REDIS_BROKER_URL"],
+    backend=os.environ.get("REDIS_RESULT_URL"),
+)
+app.conf.update(
+    task_acks_late=True,
+    worker_prefetch_multiplier=1,
+    task_track_started=True,
+    task_serializer="json",
+    accept_content=["json"],
+    result_serializer="json",
+)
+
+@app.task(
+    bind=True,
+    autoretry_for=(TimeoutError, ConnectionError),
+    retry_backoff=True,
+    retry_jitter=True,
+    retry_kwargs={"max_retries": 5},
+)
+def fetch_source(self, source_id: str, url: str):
+    # Здесь: validate allowed host -&gt; fetch with timeout -&gt; parse -&gt; upsert.
+    # Не записывай пароль/токены или полный приватный response в task args.
+    return {"source_id": source_id, "status": "scheduled-for-adapter"}
+
+# Запуск worker отдельно:
+# celery -A tasks worker --loglevel=INFO --concurrency=4</code></pre></div>
+<h3>66.2. Координация и контроль нагрузки</h3>
+<ul><li>Лимитируй частоту по hostname, а не только глобально.</li><li>Учитывай 429 и Retry-After; не запускай синхронный retry storm.</li><li>Используй уникальные task keys и идемпотентный UPSERT.</li><li>Планируй visibility timeout, acknowledgement, worker crash и повтор после потери результата.</li><li>Разделяй очередь обнаружения URL, извлечения, обработки файлов и нормализации.</li><li>Добавь лимиты размера ответа, времени, глубины обхода и числа URL на домен.</li></ul>
+<div class="callout warn"><b>Важное различие.</b> Очередь задач не является хранилищем данных и не гарантирует exactly-once выполнение. Практически проектируй at-least-once delivery + идемпотентную обработку. Не ставь десятки worker на один домен, если это увеличивает нагрузку или нарушает условия использования.</div>
+<div class="exercise"><strong>Практика.</strong> Раздели локальный crawler на producer и worker. Сымитируй падение worker после скачивания, но до записи; запусти задачу повторно и докажи, что в БД одна корректная запись. Добавь отдельный отчёт о permanent failures.</div>
+<div class="callout"><b>Критерий:</b> ты умеешь масштабировать работу горизонтально без потери контроля над дубликатами, нагрузкой и повторными попытками.</div>
+</section><section class="panel" id="pipeline-orchestration"><h2>67. Оркестрация ETL: Prefect, Apache Airflow и Dagster</h2>
+<p>Оркестратор управляет зависимостями между этапами, расписанием, параметрами запуска, повторным выполнением и наблюдаемостью. Он не заменяет HTTP-клиент, crawler или очередь задач. Выбирай его по устройству процесса:</p>
+<table class="table"><tr><th>Инструмент</th><th>Основная модель</th><th>Когда рассматривать</th></tr>
+<tr><td>Prefect</td><td>Python flows/tasks, deployments, work pools</td><td>Python-first ETL и сравнительно гибкая оркестрация</td></tr>
+<tr><td>Apache Airflow</td><td>DAGs, operators, sensors, executors</td><td>Плановые batch pipelines, много зависимостей и интеграций</td></tr>
+<tr><td>Dagster</td><td>Assets, jobs, sensors, schedules, partitions</td><td>Data platform, lineage и явное управление производными данными</td></tr></table>
+<h3>67.1. Оркестрация не равна исполнителю</h3>
+<p>В DAG можно вызвать Scrapy job, HTTP batch, SQL transformation и quality check. Тяжёлые browser tasks запускай в подходящем worker/container. Оркестратор хранит состояние процесса и запускает нужный этап; сами результаты должны лежать в надёжном хранилище, а не в памяти scheduler.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code># Prefect 3.x: простой Python flow (сверь deployment API своей версии)
+from prefect import flow, task
+
+@task(retries=2, retry_delay_seconds=30)
+def discover_sources() -&gt; list[str]:
+    return ["source-a", "source-b"]
+
+@task
+def collect_one(source_id: str) -&gt; dict:
+    # В реальном проекте вызвать адаптер, проверить результат и сохранить.
+    return {"source_id": source_id, "records": 0}
+
+@task
+def validate_batch(results: list[dict]) -&gt; None:
+    if not results:
+        raise ValueError("No source results")
+
+@flow(name="daily-public-data-collection")
+def daily_collection():
+    sources = discover_sources()
+    results = [collect_one(source) for source in sources]
+    validate_batch(results)
+
+if __name__ == "__main__":
+    daily_collection()</code></pre></div>
+<h3>67.2. Обязательно добавь</h3>
+<ul><li>Параметры запуска и переменные окружения без секретов в исходном коде.</li><li>Раздельные retry для сетевого, парсерного и data-quality этапа.</li><li>Backfill за исторический интервал и повтор одного partition.</li><li>Data quality gate: остановить публикацию, если полнота резко упала.</li><li>Уведомления о сбое, длительности, объёме и количестве ошибок.</li><li>Версионирование схемы и миграции результата.</li></ul>
+<div class="callout warn"><b>Не усложняй заранее.</b> Для одного запуска по расписанию может быть достаточно Task Scheduler/cron. Airflow, Prefect или Dagster оправданы, когда реально нужны граф зависимостей, retries, state, backfill, управление ресурсами и наблюдаемость.</div>
+<div class="exercise"><strong>Практика.</strong> Построй ETL из трёх этапов: загрузка → нормализация → проверка качества. Запусти его по расписанию и затем повторно выполни только провалившийся диапазон данных.</div>
+<div class="callout"><b>Критерий:</b> ты можешь выбрать между cron, Prefect, Airflow и Dagster, объяснив требования, а не популярность инструмента.</div>
+</section><section class="panel" id="source-discovery-archives"><h2>68. Обнаружение источников, Common Crawl, Wayback и открытые данные</h2>
+<p>Иногда задача начинается не с известного сайта, а с вопроса «где вообще могут находиться эти данные?». Это отдельная дисциплина: обнаружение открытых каталогов, официальных API, sitemap, RSS/Atom, архивных копий и bulk download. Архив не является источником гарантированно актуальной информации: он фиксирует доступные на момент обхода версии страниц.</p>
+<h3>68.1. Где искать источники</h3>
+<table class="table"><tr><th>Источник</th><th>Что даёт</th><th>Ограничение</th></tr>
+<tr><td>Официальный API / developer portal</td><td>Документированные данные и условия доступа</td><td>Квоты, ключи, неполный охват</td></tr>
+<tr><td>Sitemap / RSS / Atom</td><td>Список страниц или обновлений</td><td>Может быть неполным или устаревшим</td></tr>
+<tr><td>Common Crawl</td><td>Большие открытые веб-архивы, индексы URL, WARC/WAT/WET</td><td>Срезы по времени; огромные объёмы; не весь интернет</td></tr>
+<tr><td>Internet Archive / Wayback</td><td>Исторические снимки URL</td><td>Нет гарантии, что каждый ресурс сохранён или доступен</td></tr>
+<tr><td>Государственные open-data порталы</td><td>CSV, JSON, геоданные и тематические наборы</td><td>Лицензии, схемы и качество различаются</td></tr>
+<tr><td>Научные и отраслевые каталоги</td><td>Метаданные и специализированные API</td><td>Разные идентификаторы и правила цитирования/повторного использования</td></tr></table>
+<h3>68.2. Поиск в индексе Common Crawl</h3>
+<p>Сначала выбери опубликованный индекс из каталога Common Crawl, затем запроси URL-index. Индексный ответ указывает на WARC-файл и диапазон байтов; для отдельных записей можно запросить конкретный диапазон, а не скачивать весь архив. Уважай лимиты сервиса и для массовой работы используй bulk/columnar index рекомендации владельца.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>import requests
+
+# Подставь реальный индекс из списка доступных коллекций Common Crawl.
+index_id = "CC-MAIN-YYYY-NN"
+endpoint = f"https://index.commoncrawl.org/{index_id}-index"
+params = {
+    "url": "example.org/*",
+    "output": "json",
+    "filter": "status:200",
+}
+response = requests.get(endpoint, params=params, timeout=30)
+response.raise_for_status()
+
+for line in response.text.splitlines():
+    if not line.strip():
+        continue
+    record = __import__("json").loads(line)
+    print(record.get("url"), record.get("timestamp"),
+          record.get("filename"), record.get("offset"), record.get("length"))</code></pre></div>
+<h3 id="warc-range-example">68.2.1. Скачать один WARC record по диапазону</h3>
+<p>Поля <code>filename</code>, <code>offset</code> и <code>length</code> позволяют запросить конкретный byte range. Всегда ограничивай размер, проверяй HTTP 206 и Content-Range. Для чтения WARC используй библиотеку <code>warcio</code>, а не пытайся декодировать gzip/record вручную.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>from io import BytesIO
+import requests
+from warcio.archiveiterator import ArchiveIterator
+
+# record — объект JSON из ответа Common Crawl Index.
+max_record_size = 20 * 1024 * 1024
+length = int(record["length"])
+offset = int(record["offset"])
+if length &lt;= 0 or length &gt; max_record_size:
+    raise ValueError("WARC record size outside configured limit")
+
+warc_url = "https://data.commoncrawl.org/" + record["filename"]
+headers = {"Range": f"bytes={offset}-{offset + length - 1}"}
+response = requests.get(warc_url, headers=headers, timeout=60)
+if response.status_code != 206:
+    raise RuntimeError(f"Expected 206 Partial Content, got {response.status_code}")
+if len(response.content) != length:
+    raise ValueError("Downloaded range length does not match index")
+
+for warc_record in ArchiveIterator(BytesIO(response.content)):
+    if warc_record.rec_type == "response":
+        payload = warc_record.content_stream().read()
+        print(warc_record.rec_headers.get_header("WARC-Target-URI"))
+        print("payload bytes:", len(payload))
+        break</code></pre></div>
+<h3>68.3. Wayback и исторические данные</h3>
+<p>CDX index позволяет искать сохранённые captures по URL-шаблону, времени и mime/status-фильтрам. Используй его, чтобы ответить на вопросы об истории страницы, изменении публичных описаний и доступности URL. Не путай timestamp capture с датой события на самой странице. Проверяй конечный URL, статус и содержимое снимка.</p>
+<h3>68.4. Метаданные происхождения и лицензия</h3>
+<p>Для каждой записи сохраняй source URL, исходный identifier, время извлечения UTC, время обновления источника (если есть), архивный timestamp, имя коллекции/индекса, лицензию, attribution и метод получения. Архивная копия не отменяет авторские права, условия повторного использования, персональные данные и ограничения на распространение.</p>
+<div class="callout danger"><b>Проверка перед массовым сбором.</b> Не сканируй бесконечно индексный endpoint и не скачивай целые WARC-файлы без необходимости. Используй диапазоны, лимиты и официальные инструкции по bulk access. Не пытайся извлекать удалённые закрытые или приватные данные из архивов.</div>
+<div class="exercise"><strong>Практика.</strong> Найди один публичный домен в Common Crawl и Wayback. Сравни две архивные даты, сохрани метаданные происхождения и объясни, почему результат нельзя автоматически считать текущим состоянием сайта.</div>
+<div class="callout"><b>Критерий:</b> ты умеешь находить не только страницы, но и каталоги/архивы данных, а также сохранять происхождение и временную точность результата.</div>
+</section><section class="panel refs" id="references">
 <h2>Материалы для дальнейшего изучения</h2>
 <p>Ссылки ведут на документацию и руководства, на которых основаны подходы в этом курсе.</p>
 <ul>
-<li><a href="https://requests.readthedocs.io/en/latest/" target="_blank" rel="noopener">Requests — официальная документация</a>: HTTP-запросы, Session, redirects, timeouts, streaming.</li>
-<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" target="_blank" rel="noopener">Beautiful Soup — официальная документация</a>: CSS-селекторы, дерево HTML, поиск элементов и атрибутов.</li>
-<li><a href="https://playwright.dev/python/docs/intro" target="_blank" rel="noopener">Playwright for Python</a>: браузерная автоматизация, локаторы, ожидания, сетевые события.</li>
-<li><a href="https://playwright.dev/python/docs/api/class-request" target="_blank" rel="noopener">Playwright Request API</a>: события request/response и цепочки перенаправлений.</li>
-<li><a href="https://docs.python.org/3/library/urllib.parse.html" target="_blank" rel="noopener">urllib.parse — Python</a>: join URL, разбор URL и query parameters.</li>
-<li><a href="https://docs.python.org/3/library/urllib.robotparser.html" target="_blank" rel="noopener">urllib.robotparser — Python</a>: чтение robots.txt.</li>
-<li><a href="https://realpython.com/beautiful-soup-web-scraper-python/" target="_blank" rel="noopener">Real Python: Beautiful Soup Web Scraping</a>: практическое введение и различие статических/динамических страниц.</li>
-<li><a href="https://cuinfoscience.github.io/Web-Data-Science-Book/ch-08-dynamic-pages.html" target="_blank" rel="noopener">Web Data Science: Dynamic Web Pages</a>: DevTools, Selenium, Playwright, infinite scroll, логины и диагностика.</li>
-<li><a href="https://docs.python.org/3/library/asyncio.html" target="_blank" rel="noopener">Python asyncio</a>: корутины, задачи, семафоры и асинхронный ввод-вывод.</li>
-<li><a href="https://www.python-httpx.org/async/" target="_blank" rel="noopener">HTTPX Async Support</a>: асинхронные HTTP-клиенты и управление соединениями.</li>
-<li><a href="https://docs.scrapy.org/en/latest/topics/concepts.html" target="_blank" rel="noopener">Scrapy: основные компоненты</a>: spiders, requests, responses, items и pipelines.</li>
-<li><a href="https://docs.scrapy.org/en/latest/topics/architecture.html" target="_blank" rel="noopener">Scrapy: архитектура</a>: engine, scheduler, downloader и middleware.</li>
-<li><a href="https://docs.scrapy.org/en/latest/topics/settings.html" target="_blank" rel="noopener">Scrapy: settings и robots.txt</a>: настройки crawler и политика обхода.</li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview" target="_blank" rel="noopener">MDN: HTTP overview</a>: модель запросов, ответов и ресурсов.</li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" target="_blank" rel="noopener">MDN: WebSocket API</a>: двусторонние соединения в браузере.</li>
-<li><a href="https://www.rfc-editor.org/rfc/rfc9309.html" target="_blank" rel="noopener">RFC 9309: Robots Exclusion Protocol</a>: стандарт robots.txt.</li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching" target="_blank" rel="noopener">MDN: HTTP caching</a>: Cache-Control, freshness, ETag и revalidation.</li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Range_requests" target="_blank" rel="noopener">MDN: HTTP Range requests</a>: частичные ответы 206, Content-Range и возобновление загрузок.</li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Content_negotiation" target="_blank" rel="noopener">MDN: Content negotiation</a>: варианты ответа и заголовки Accept.</li>
-<li><a href="https://playwright.dev/python/docs/locators" target="_blank" rel="noopener">Playwright: Locators</a>: рекомендуемые локаторы и auto-waiting.</li>
-<li><a href="https://playwright.dev/python/docs/network" target="_blank" rel="noopener">Playwright: Network</a>: наблюдение HTTP, XHR/fetch и mock API.</li>
-<li><a href="https://playwright.dev/python/docs/trace-viewer" target="_blank" rel="noopener">Playwright: Trace Viewer</a>: снимки DOM, действия, консоль и Network в одной трассе.</li>
-<li><a href="https://docs.scrapy.org/en/latest/topics/concepts.html" target="_blank" rel="noopener">Scrapy: building blocks</a>: spider, scheduler, middleware, item pipeline и feed export.</li>
-<li><a href="https://docs.scrapy.org/en/latest/topics/autothrottle.html" target="_blank" rel="noopener">Scrapy: AutoThrottle</a>: адаптивное управление скоростью обхода.</li>
-<li><a href="https://pymupdf.readthedocs.io/en/latest/ocr/index.html" target="_blank" rel="noopener">PyMuPDF: OCR</a>: распознавание сканированных PDF и гибридный подход.</li>
-<li><a href="https://www.sitemaps.org/protocol.html" target="_blank" rel="noopener">Sitemaps protocol</a>: формат sitemap XML.</li>
-<li><a href="https://schema.org/docs/gs.html" target="_blank" rel="noopener">Schema.org: Getting started</a>: семантическая разметка сущностей.</li>
-<li><a href="https://docs.python.org/3/library/asyncio.html" target="_blank" rel="noopener">Python asyncio</a>: задачи, очереди и асинхронный ввод-вывод.</li>
-<li><a href="https://docs.python.org/3/library/logging.html" target="_blank" rel="noopener">Python logging</a>: структурированное журналирование.</li>
-<li><a href="https://docs.python.org/3/library/argparse.html" target="_blank" rel="noopener">Python argparse</a>: CLI-интерфейсы для инструментов.</li>
-
-</ul>
+<li><a href="https://requests.readthedocs.io/en/latest/" rel="noopener" target="_blank">Requests — официальная документация</a>: HTTP-запросы, Session, redirects, timeouts, streaming.</li>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" rel="noopener" target="_blank">Beautiful Soup — официальная документация</a>: CSS-селекторы, дерево HTML, поиск элементов и атрибутов.</li>
+<li><a href="https://playwright.dev/python/docs/intro" rel="noopener" target="_blank">Playwright for Python</a>: браузерная автоматизация, локаторы, ожидания, сетевые события.</li>
+<li><a href="https://playwright.dev/python/docs/api/class-request" rel="noopener" target="_blank">Playwright Request API</a>: события request/response и цепочки перенаправлений.</li>
+<li><a href="https://docs.python.org/3/library/urllib.parse.html" rel="noopener" target="_blank">urllib.parse — Python</a>: join URL, разбор URL и query parameters.</li>
+<li><a href="https://docs.python.org/3/library/urllib.robotparser.html" rel="noopener" target="_blank">urllib.robotparser — Python</a>: чтение robots.txt.</li>
+<li><a href="https://realpython.com/beautiful-soup-web-scraper-python/" rel="noopener" target="_blank">Real Python: Beautiful Soup Web Scraping</a>: практическое введение и различие статических/динамических страниц.</li>
+<li><a href="https://cuinfoscience.github.io/Web-Data-Science-Book/ch-08-dynamic-pages.html" rel="noopener" target="_blank">Web Data Science: Dynamic Web Pages</a>: DevTools, Selenium, Playwright, infinite scroll, логины и диагностика.</li>
+<li><a href="https://docs.python.org/3/library/asyncio.html" rel="noopener" target="_blank">Python asyncio</a>: корутины, задачи, семафоры и асинхронный ввод-вывод.</li>
+<li><a href="https://www.python-httpx.org/async/" rel="noopener" target="_blank">HTTPX Async Support</a>: асинхронные HTTP-клиенты и управление соединениями.</li>
+<li><a href="https://docs.scrapy.org/en/latest/topics/concepts.html" rel="noopener" target="_blank">Scrapy: основные компоненты</a>: spiders, requests, responses, items и pipelines.</li>
+<li><a href="https://docs.scrapy.org/en/latest/topics/architecture.html" rel="noopener" target="_blank">Scrapy: архитектура</a>: engine, scheduler, downloader и middleware.</li>
+<li><a href="https://docs.scrapy.org/en/latest/topics/settings.html" rel="noopener" target="_blank">Scrapy: settings и robots.txt</a>: настройки crawler и политика обхода.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview" rel="noopener" target="_blank">MDN: HTTP overview</a>: модель запросов, ответов и ресурсов.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" rel="noopener" target="_blank">MDN: WebSocket API</a>: двусторонние соединения в браузере.</li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc9309.html" rel="noopener" target="_blank">RFC 9309: Robots Exclusion Protocol</a>: стандарт robots.txt.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching" rel="noopener" target="_blank">MDN: HTTP caching</a>: Cache-Control, freshness, ETag и revalidation.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Range_requests" rel="noopener" target="_blank">MDN: HTTP Range requests</a>: частичные ответы 206, Content-Range и возобновление загрузок.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Content_negotiation" rel="noopener" target="_blank">MDN: Content negotiation</a>: варианты ответа и заголовки Accept.</li>
+<li><a href="https://playwright.dev/python/docs/locators" rel="noopener" target="_blank">Playwright: Locators</a>: рекомендуемые локаторы и auto-waiting.</li>
+<li><a href="https://playwright.dev/python/docs/network" rel="noopener" target="_blank">Playwright: Network</a>: наблюдение HTTP, XHR/fetch и mock API.</li>
+<li><a href="https://playwright.dev/python/docs/trace-viewer" rel="noopener" target="_blank">Playwright: Trace Viewer</a>: снимки DOM, действия, консоль и Network в одной трассе.</li>
+<li><a href="https://docs.scrapy.org/en/latest/topics/concepts.html" rel="noopener" target="_blank">Scrapy: building blocks</a>: spider, scheduler, middleware, item pipeline и feed export.</li>
+<li><a href="https://docs.scrapy.org/en/latest/topics/autothrottle.html" rel="noopener" target="_blank">Scrapy: AutoThrottle</a>: адаптивное управление скоростью обхода.</li>
+<li><a href="https://pymupdf.readthedocs.io/en/latest/ocr/index.html" rel="noopener" target="_blank">PyMuPDF: OCR</a>: распознавание сканированных PDF и гибридный подход.</li>
+<li><a href="https://www.sitemaps.org/protocol.html" rel="noopener" target="_blank">Sitemaps protocol</a>: формат sitemap XML.</li>
+<li><a href="https://schema.org/docs/gs.html" rel="noopener" target="_blank">Schema.org: Getting started</a>: семантическая разметка сущностей.</li>
+<li><a href="https://docs.python.org/3/library/asyncio.html" rel="noopener" target="_blank">Python asyncio</a>: задачи, очереди и асинхронный ввод-вывод.</li>
+<li><a href="https://docs.python.org/3/library/logging.html" rel="noopener" target="_blank">Python logging</a>: структурированное журналирование.</li>
+<li><a href="https://docs.python.org/3/library/argparse.html" rel="noopener" target="_blank">Python argparse</a>: CLI-интерфейсы для инструментов.</li>
+<li><a href="https://www.selenium.dev/documentation/" rel="noopener" target="_blank">Selenium documentation</a>: WebDriver, Grid и автоматизация браузера.</li>
+<li><a href="https://www.selenium.dev/documentation/webdriver/bidi/" rel="noopener" target="_blank">Selenium WebDriver BiDi</a>: двунаправленные браузерные события и сетевые возможности; проверяй статус реализации.</li>
+<li><a href="https://pptr.dev/" rel="noopener" target="_blank">Puppeteer</a>: браузерная автоматизация для Node.js/TypeScript.</li>
+<li><a href="https://chromedevtools.github.io/devtools-protocol/" rel="noopener" target="_blank">Chrome DevTools Protocol</a>: низкоуровневый протокол Chromium.</li>
+<li><a href="https://crawlee.dev/python/docs/" rel="noopener" target="_blank">Crawlee for Python</a>: HTTP- и браузерные crawler с общей архитектурой.</li>
+<li><a href="https://parsel.readthedocs.io/en/stable/" rel="noopener" target="_blank">Parsel</a>: CSS, XPath и JMESPath.</li>
+<li><a href="https://selectolax.readthedocs.io/en/latest/" rel="noopener" target="_blank">Selectolax</a>: HTML5-парсер с CSS-селекторами.</li>
+<li><a href="https://trafilatura.readthedocs.io/en/latest/" rel="noopener" target="_blank">Trafilatura</a>: извлечение основного текста и метаданных.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API" rel="noopener" target="_blank">MDN IndexedDB API</a>: браузерное хранилище структурированных данных.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API" rel="noopener" target="_blank">MDN Service Worker API</a>: жизненный цикл Service Worker и перехват запросов.</li>
+<li><a href="https://playwright.dev/python/docs/api/class-browsercontext" rel="noopener" target="_blank">Playwright BrowserContext</a>: storage state, HAR, browser contexts и Service Workers.</li>
+<li><a href="https://grpc.io/docs/" rel="noopener" target="_blank">gRPC documentation</a>: RPC, контракты и клиентские библиотеки.</li>
+<li><a href="https://protobuf.dev/getting-started/pythontutorial/" rel="noopener" target="_blank">Protocol Buffers — Python tutorial</a>: .proto-схемы, генерация классов и сериализация.</li>
+<li><a href="https://www.odata.org/documentation/" rel="noopener" target="_blank">OData documentation</a>: протокол, URL conventions и формат JSON.</li>
+<li><a href="https://www.w3.org/TR/soap12-part1/" rel="noopener" target="_blank">W3C SOAP 1.2</a>: спецификация SOAP.</li>
+<li><a href="https://openid.net/developers/how-connect-works/" rel="noopener" target="_blank">OpenID Connect</a>: аутентификация и ID Token.</li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc9700" rel="noopener" target="_blank">OAuth 2.0 Security Best Current Practice (RFC 9700)</a>: современные рекомендации безопасности OAuth.</li>
+<li><a href="https://www.w3.org/TR/webauthn-3/" rel="noopener" target="_blank">W3C Web Authentication</a>: WebAuthn и passkeys.</li>
+<li><a href="https://docs.mitmproxy.org/stable/" rel="noopener" target="_blank">mitmproxy documentation</a>: локальная диагностика HTTP, HTTPS и WebSocket.</li>
+<li><a href="https://docs.pola.rs/" rel="noopener" target="_blank">Polars user guide</a>: DataFrame и lazy query.</li>
+<li><a href="https://duckdb.org/docs/stable/" rel="noopener" target="_blank">DuckDB documentation</a>: аналитические SQL-запросы к CSV, JSON, Parquet и DataFrame.</li>
+<li><a href="https://arrow.apache.org/docs/python/" rel="noopener" target="_blank">Apache Arrow / PyArrow</a>: колонночные структуры и обмен данными.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Source_Extensions_API" rel="noopener" target="_blank">MDN Media Source Extensions</a>: сегментированная передача медиа в браузере.</li>
+<li><a href="https://ffmpeg.org/documentation.html" rel="noopener" target="_blank">FFmpeg documentation</a>: обработка аудио- и видеопотоков.</li>
+<li><a href="https://www.python-httpx.org/async/" rel="noopener" target="_blank">HTTPX async documentation</a>: AsyncClient, pooling, timeouts и асинхронная работа.</li><li><a href="https://docs.aiohttp.org/en/stable/client_quickstart.html" rel="noopener" target="_blank">aiohttp Client Quickstart</a>: ClientSession, streaming, загрузки и WebSocket.</li><li><a href="https://curl-cffi.readthedocs.io/en/stable/" rel="noopener" target="_blank">curl_cffi documentation</a>: Возможности libcurl, протоколы и совместимость transport fingerprint.</li><li><a href="https://nextjs.org/docs/app/getting-started/server-and-client-components" rel="noopener" target="_blank">Next.js Server and Client Components</a>: RSC payload, SSR, hydration и клиентские компоненты.</li><li><a href="https://react.dev/reference/rsc/server-components" rel="noopener" target="_blank">React Server Components</a>: Модель серверных компонентов и streaming.</li><li><a href="https://nuxt.com/docs/guide/concepts/rendering" rel="noopener" target="_blank">Nuxt rendering concepts</a>: SSR, CSR и гибридный рендеринг Nuxt.</li><li><a href="https://spec.openapis.org/oas/v3.2.1.html" rel="noopener" target="_blank">OpenAPI Specification 3.2.1</a>: Описание HTTP API и схем.</li><li><a href="https://www.asyncapi.com/docs/reference/specification/v3.1.0" rel="noopener" target="_blank">AsyncAPI 3.1</a>: Описание асинхронных API и каналов сообщений.</li><li><a href="https://spec.openapis.org/arazzo/latest.html" rel="noopener" target="_blank">Arazzo Specification 1.1.0</a>: Машиночитаемые последовательности API-вызовов.</li><li><a href="https://www.jsonrpc.org/specification" rel="noopener" target="_blank">JSON-RPC 2.0</a>: Формат запросов, ответов, batch и ошибок.</li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport_API" rel="noopener" target="_blank">MDN WebTransport API</a>: Потоки и datagrams поверх HTTP/3.</li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API" rel="noopener" target="_blank">MDN WebRTC API</a>: Peer connections, media streams и data channels.</li><li><a href="https://github.com/browser-use/browser-use" rel="noopener" target="_blank">Browser Use Python</a>: Python browser agent и быстрый старт.</li><li><a href="https://docs.stagehand.dev/" rel="noopener" target="_blank">Stagehand documentation</a>: AI-powered browser automation и смешение AI с кодом.</li><li><a href="https://docs.celeryq.dev/en/latest/" rel="noopener" target="_blank">Celery documentation</a>: Распределённые задачи, worker и retry.</li><li><a href="https://redis.io/docs/latest/integrate/celery/" rel="noopener" target="_blank">Redis with Celery</a>: Redis broker и result backend.</li><li><a href="https://docs.prefect.io/" rel="noopener" target="_blank">Prefect documentation</a>: Python flows, tasks и deployments.</li><li><a href="https://airflow.apache.org/docs/apache-airflow/stable/" rel="noopener" target="_blank">Apache Airflow documentation</a>: DAG, TaskFlow, operators, sensors и executors.</li><li><a href="https://dagster.io/docs" rel="noopener" target="_blank">Dagster documentation</a>: Assets, schedules, sensors и data lineage.</li><li><a href="https://index.commoncrawl.org/" rel="noopener" target="_blank">Common Crawl Index Server</a>: Поиск URL в индексах веб-архива.</li><li><a href="https://commoncrawl.org/get-started" rel="noopener" target="_blank">Common Crawl: Get Started</a>: Доступ к WARC/WAT/WET и bulk data.</li><li><a href="https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server" rel="noopener" target="_blank">Internet Archive Wayback CDX Server</a>: Исторические captures и формат CDX.</li><li><a href="https://www.data.europa.eu/" rel="noopener" target="_blank">European Data Portal</a>: Обнаружение европейских открытых данных.</li></ul>
 <div class="callout good"><b>Рекомендуемый маршрут обучения:</b> сначала доведите до уверенного уровня Requests + BeautifulSoup, затем научитесь находить JSON в Network, после этого осваивайте Playwright. Не начинайте каждый проект с браузерной автоматизации — она сложнее, медленнее и требует более тщательной поддержки.</div>
 </section>
 </div>
-<div class="footer">Учебная страница подготовлена для личного изучения. Примеры нужно адаптировать под реальную структуру каждого сайта и его правила доступа.</div>
+<div class="footer">Учебная страница подготовлена для последовательного изучения. Проверка актуальности ссылок и технологических разделов: 22 ноября 2026 года. Примеры нужно адаптировать под реальную структуру каждого сайта, установленные версии библиотек и правила доступа.</div>
 </main>
 </div>
 <a class="topbtn" href="#top">Наверх ↑</a>
