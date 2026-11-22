@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111827"><title>Практический курс: извлечение данных с сайтов на Python</title>
+<style>
+:root{--bg:#f3f6fa;--paper:#fff;--ink:#182334;--muted:#5e6c7d;--line:#dce4ed;--blue:#1769aa;--blue2:#e8f3fb;--code:#101a29;--green:#eaf7ef;--amber:#fff6df;--red:#fff0ee;--shadow:0 10px 30px rgba(21,43,68,.07)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.68 Inter,Segoe UI,Arial,sans-serif}.layout{max-width:1440px;margin:0 auto;display:grid;grid-template-columns:280px minmax(0,1fr);gap:30px;padding:26px}.sidebar{position:sticky;top:20px;align-self:start;max-height:calc(100vh - 40px);overflow:auto;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow)}.brand{font-weight:850;font-size:19px;line-height:1.2}.brand small{display:block;margin-top:8px;color:var(--muted);font-size:11px;font-weight:500;line-height:1.5}.progress{height:6px;border-radius:99px;background:#e8edf3;margin:16px 0 17px;overflow:hidden}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#1685c7,#4f7bd9);transition:width .2s}.nav-title{font-size:10px;font-weight:800;letter-spacing:.14em;color:#8190a1;text-transform:uppercase;margin:17px 0 7px}.sidebar a{display:block;text-decoration:none;color:#405167;font-size:12px;padding:6px 8px;border-radius:8px}.sidebar a:hover,.sidebar a.active{color:var(--blue);background:var(--blue2)}.main{min-width:0}.hero{background:linear-gradient(120deg,#10263c,#174e76 60%,#236e91);color:#fff;border-radius:22px;padding:38px 42px;box-shadow:var(--shadow)}.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:10px;font-weight:800;color:#a8dcfa}.hero h1{font-size:clamp(30px,4vw,46px);line-height:1.08;letter-spacing:-.04em;margin:10px 0 14px}.hero p{max-width:820px;color:#d6e9f5;margin:0}.hero .meta{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}.chip{font-size:11px;border:1px solid rgba(255,255,255,.24);color:#e5f4ff;border-radius:99px;padding:5px 9px}.content{margin-top:20px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px 30px;margin-bottom:17px;box-shadow:var(--shadow);scroll-margin-top:18px}.panel h2{margin:0 0 12px;font-size:24px;line-height:1.25;letter-spacing:-.025em}.panel h3{margin:25px 0 8px;font-size:17px}.panel p{margin:10px 0}.panel ul,.panel ol{padding-left:22px}.panel li{margin:5px 0}.muted{color:var(--muted)}.callout{border-left:4px solid var(--blue);background:var(--blue2);padding:13px 15px;border-radius:0 10px 10px 0;margin:16px 0}.callout.good{border-color:#31945a;background:var(--green)}.callout.warn{border-color:#d59a20;background:var(--amber)}.callout.danger{border-color:#d55b4c;background:var(--red)}.codewrap{position:relative;margin:13px 0 18px}.codewrap pre{overflow:auto;margin:0;border-radius:13px;background:var(--code);color:#e8f0fb;padding:17px 18px;font:12px/1.65 Consolas,Monaco,monospace;tab-size:4}.copy{position:absolute;top:9px;right:9px;background:#26384e;color:#eaf3fc;border:1px solid #49627f;border-radius:7px;padding:5px 9px;font-size:10px}.inline{background:#eef2f6;border:1px solid #e0e6ed;border-radius:5px;padding:1px 5px;font: .9em Consolas,monospace}.table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}.table th,.table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}.table th{background:#f4f7fa}.steps{counter-reset:step;list-style:none;padding:0!important}.steps li{counter-increment:step;position:relative;padding-left:39px;margin:13px 0;min-height:28px}.steps li:before{content:counter(step);position:absolute;left:0;top:0;width:25px;height:25px;border-radius:50%;background:#e6f2fb;color:#12669b;text-align:center;font-weight:800;font-size:12px;line-height:25px}.exercise{border:1px solid #cfe1ef;background:#f7fbfe;border-radius:13px;padding:15px 17px;margin:17px 0}.exercise strong{color:#145f8f}.checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0}.checklist label{background:#f6f8fb;border:1px solid var(--line);border-radius:9px;padding:9px 11px;font-size:13px}.checklist input{margin-right:7px}.refs a{color:var(--blue);overflow-wrap:anywhere}.footer{color:var(--muted);font-size:12px;text-align:center;padding:20px}.topbtn{position:fixed;right:22px;bottom:22px;background:#173e5c;color:#fff;text-decoration:none;padding:9px 12px;border-radius:10px;box-shadow:var(--shadow);font-size:12px}
+@media(max-width:950px){.layout{display:block;padding:14px}.sidebar{position:relative;top:0;max-height:none;margin-bottom:15px}.sidebar nav{columns:2}.hero{padding:28px 24px}.panel{padding:22px 20px}.checklist{grid-template-columns:1fr}}@media(max-width:560px){.sidebar nav{columns:1}.hero{border-radius:16px}.panel{border-radius:14px;padding:19px 15px}.panel h2{font-size:21px}}
+</style>
+</head>
+<body>
+<div class="layout" id="top">
+<aside class="sidebar">
+  <div class="brand">Python Web Extraction<small>Практический курс от первой HTTP-загрузки до браузерной автоматизации, API и медиафайлов</small></div>
+  <div class="progress"><span id="progressBar"></span></div>
+  <div class="nav-title">Уроки</div>
+  <nav id="lessonNav">
+    <a href="#map">0. Карта процесса</a><a href="#inspect">1. Разведка сайта</a><a href="#static">2. Статическая страница</a><a href="#selectors">3. Извлечение элементов</a><a href="#media">4. Аудио, изображения, файлы</a><a href="#redirects">5. Редиректы, сессии, cookies</a><a href="#dynamic">6. Динамические сайты</a><a href="#api">7. Поиск API в Network</a><a href="#pagination">8. Пагинация и infinite scroll</a><a href="#robust">9. Надёжный загрузчик</a><a href="#architecture">10. Архитектура проекта</a><a href="#ethics">11. Правила и безопасность</a><a href="#practice">12. Практикум</a><a href="#debug">13. Диагностика</a><a href="#references">Материалы</a>
+  </nav>
+</aside>
+<main class="main">
+<section class="hero">
+  <div class="eyebrow">Python · HTTP · HTML · JavaScript · APIs · Browser Automation</div>
+  <h1>Как извлекать данные с сайтов на Python</h1>
+  <p>Научитесь самостоятельно находить нужные данные, аудио, изображения и ссылки, разбираться в структуре страниц, работать с перенаправлениями, динамической загрузкой, API, пагинацией и браузером. Цель — не один хрупкий скрипт, а понимание того, как строить и отлаживать сборщики данных.</p>
+  <div class="meta"><span class="chip">14 разделов</span><span class="chip">Практические примеры</span><span class="chip">Requests + BeautifulSoup + Playwright</span><span class="chip">От новичка до уверенного скрипта</span></div>
+</section>
+<div class="content">
+<section class="panel" id="map">
+<h2>0. Карта процесса: что именно делает сборщик</h2>
+<p>Скрейпинг (web scraping) — это автоматизированное получение данных с веб-ресурсов. Типичная программа состоит из отдельных этапов. Не смешивайте их в одну длинную функцию: тогда непонятно, где возникла ошибка.</p>
+<ol class="steps"><li><b>Постановка задачи.</b> Определите конкретный набор полей: например, IPA-символ, название звука, пример слова, URL аудио.</li><li><b>Разведка.</b> Посмотрите страницу в браузере: HTML, DOM, запросы Network, источники медиа, правила сайта.</li><li><b>Получение.</b> Скачайте HTML или JSON через HTTP-клиент; при необходимости используйте настоящий браузер.</li><li><b>Разбор.</b> Извлеките нужные поля через CSS-селекторы, XPath, JSON-пути или анализ атрибутов.</li><li><b>Нормализация.</b> Приведите ссылки к абсолютным URL, удалите дубликаты, проверьте типы и пропуски.</li><li><b>Загрузка ресурсов.</b> Сохраните аудио и изображения, не перепутав HTML-страницу ошибки с бинарным файлом.</li><li><b>Экспорт и проверка.</b> Запишите JSON/CSV/TSV/БД, составьте отчёт и проверьте результат вручную.</li></ol>
+<div class="callout good"><b>Главный принцип:</b> сначала выясните, откуда браузер получает нужные данные. Самый надёжный путь часто не «распарсить весь сайт», а найти JSON API или прямую публичную ссылку на ресурс и аккуратно использовать её.</div>
+<p>Сборщик не угадывает содержимое страницы. Он получает конкретный HTTP-ответ или состояние браузера и затем извлекает из него данные.</p>
+</section>
+
+<section class="panel" id="inspect">
+<h2>1. Разведка сайта до написания кода</h2>
+<p>Самая важная привычка — не начинать сразу с Python. Сначала откройте страницу в браузере и выясните, где реально лежат интересующие данные.</p>
+<h3>1.1. View Source и Elements — не одно и то же</h3>
+<ul><li><b>View page source / Просмотр кода страницы</b> показывает исходный HTML, который сервер прислал первоначально.</li><li><b>Elements / Элементы</b> показывает текущий DOM после выполнения JavaScript, кликов, подгрузки данных и изменений страницы.</li><li>Если в Elements звук присутствует, а в исходном HTML его нет, значит данные могли быть добавлены JavaScript-кодом.</li></ul>
+<h3>1.2. Инструменты разработчика</h3>
+<ol><li>Откройте страницу и нажмите <span class="inline">F12</span> или <span class="inline">Ctrl+Shift+I</span>.</li><li>Перейдите во вкладку <b>Network</b> и включите <b>Preserve log</b>, чтобы не терять запросы при переходах и редиректах.</li><li>Очистите журнал, перезагрузите страницу.</li><li>Отфильтруйте запросы по <b>Media</b>, <b>Fetch/XHR</b>, затем при необходимости по <b>Img</b>.</li><li>Нажмите кнопку звука на странице и посмотрите, какой новый запрос появился. Откройте его: изучите Request URL, Status, Headers, Response и Initiator.</li><li>Нажмите правой кнопкой по запросу → Copy → Copy URL или Copy as cURL. Не публикуйте скопированные запросы, если там присутствуют cookies или токены.</li></ol>
+<div class="callout warn"><b>Важно:</b> запрос с типом <i>media</i> не обязательно содержит весь файл. Сайт может использовать поток, несколько фрагментов, blob URL или внутренний API. Смотрите на Content-Type, Response и Initiator.</div>
+<h3>1.3. Какие признаки искать</h3>
+<table class="table"><tr><th>Признак</th><th>Что проверить</th></tr><tr><td>Кнопка воспроизведения</td><td><span class="inline">button</span>, <span class="inline">audio</span>, <span class="inline">onclick</span>, <span class="inline">data-audio</span>, aria-label, class/id.</td></tr><tr><td>Звук загружается после клика</td><td>Network → Media/Fetch/XHR; какой URL запрашивается после нажатия.</td></tr><tr><td>Символ есть визуально, но не копируется</td><td>Elements: текстовый узел, SVG, псевдоэлемент CSS, иконочный шрифт или картинка.</td></tr><tr><td>Список карточек пополняется при прокрутке</td><td>Network → Fetch/XHR; повторяющиеся запросы с offset/page/cursor.</td></tr><tr><td>Адрес меняется несколько раз</td><td>Preserve log, Status 301/302/303/307/308, Location, Initiator.</td></tr></table>
+<div class="exercise"><strong>Практика 1.</strong> Откройте целевую страницу транскрипции. Найдите хотя бы одну кнопку воспроизведения. Запишите: HTML-элемент кнопки, где хранится символ, какой запрос выполняется при клике, какой Content-Type у ответа. Не начинайте массовую загрузку, пока не поняли эту связь.</div>
+</section>
+
+<section class="panel" id="static">
+<h2>2. Статическая страница: requests + BeautifulSoup</h2>
+<p>Если нужная информация присутствует в исходном HTML, используйте обычные HTTP-запросы. Это быстрее и легче браузерной автоматизации.</p>
+<h3>2.1. Установка</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>python -m venv .venv
+
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+
+# macOS / Linux
+source .venv/bin/activate
+
+python -m pip install requests beautifulsoup4 lxml</code></pre></div>
+<h3>2.2. Первая загрузка HTML</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>import requests
+from bs4 import BeautifulSoup
+
+url = "https://example.com/page"
+headers = {
+    "User-Agent": "Mozilla/5.0 (compatible; PersonalStudyBot/1.0)"
+}
+
+response = requests.get(url, headers=headers, timeout=(8, 20))
+response.raise_for_status()  # остановиться на HTTP 4xx/5xx
+
+print("Финальный URL:", response.url)
+print("Код ответа:", response.status_code)
+print("Тип содержимого:", response.headers.get("Content-Type"))
+
+soup = BeautifulSoup(response.content, "html.parser")
+print(soup.title.get_text(strip=True) if soup.title else "Без title")</code></pre></div>
+<p><span class="inline">requests</span> получает ответ сервера. <span class="inline">BeautifulSoup</span> ничего не загружает из интернета: он только разбирает уже полученный HTML/XML. Такое разделение полезно для отладки.</p>
+<h3>2.3. Почему используется response.content</h3>
+<p><span class="inline">response.content</span> возвращает байты, а BeautifulSoup пытается определить кодировку по самому документу. <span class="inline">response.text</span> уже является строкой, декодированной Requests. Оба подхода работают часто, но при проблемах с кодировкой важно сравнить объявленную кодировку, заголовки ответа и результат декодирования.</p>
+<h3>2.4. Сессия</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>import requests
+
+session = requests.Session()
+session.headers.update({
+    "User-Agent": "Mozilla/5.0 (compatible; PersonalStudyBot/1.0)",
+    "Accept-Language": "en-US,en;q=0.9",
+})
+
+page = session.get("https://example.com", timeout=20)
+page.raise_for_status()
+
+# Повторные запросы в той же Session переиспользуют соединения
+# и автоматически сохраняют cookies, присланные сервером.
+other = session.get("https://example.com/next", timeout=20)
+other.raise_for_status()</code></pre></div>
+<div class="callout"><b>Проверка:</b> если в браузере видно десять карточек, а в <span class="inline">response.text</span> их нет, проблема не в BeautifulSoup. Значит, нужен другой endpoint или браузер, исполняющий JavaScript.</div>
+</section>
+
+<section class="panel" id="selectors">
+<h2>3. Как извлекать нужные элементы из HTML</h2>
+<p>Не выбирайте элементы «по номеру», например третий <span class="inline">div</span> на странице. Ищите стабильные признаки: id, класс, семантические теги, data-атрибуты, aria-label или связь с известным текстом.</p>
+<h3>3.1. CSS-селекторы</h3>
+<table class="table"><tr><th>Селектор</th><th>Значение</th></tr><tr><td><span class="inline">#player</span></td><td>Элемент с id="player".</td></tr><tr><td><span class="inline">.sound-card</span></td><td>Все элементы с классом sound-card.</td></tr><tr><td><span class="inline">audio source</span></td><td>Вложенный source внутри audio.</td></tr><tr><td><span class="inline">[data-audio]</span></td><td>Элементы с атрибутом data-audio.</td></tr><tr><td><span class="inline">button[aria-label]</span></td><td>Кнопки с атрибутом доступного названия.</td></tr></table>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>from bs4 import BeautifulSoup
+
+html = """&lt;div class='sound-card'&gt;
+  &lt;span class='ipa'&gt;/θ/&lt;/span&gt;
+  &lt;span class='example'&gt;think&lt;/span&gt;
+  &lt;audio controls&gt;&lt;source src='/audio/think.mp3' type='audio/mpeg'&gt;&lt;/audio&gt;
+&lt;/div&gt;"""
+
+soup = BeautifulSoup(html, "html.parser")
+
+for card in soup.select(".sound-card"):
+    symbol = card.select_one(".ipa")
+    example = card.select_one(".example")
+    source = card.select_one("audio source")
+
+    record = {
+        "symbol": symbol.get_text(strip=True) if symbol else None,
+        "example": example.get_text(strip=True) if example else None,
+        "audio": source.get("src") if source else None,
+    }
+    print(record)</code></pre></div>
+<h3>3.2. Относительные ссылки</h3>
+<p>Из HTML можно получить адрес вроде <span class="inline">/media/phonemes/th.mp3</span>. Это не полный URL. Преобразуйте его через <span class="inline">urllib.parse.urljoin</span>, используя адрес страницы, на которой нашли ссылку.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>from urllib.parse import urljoin
+
+page_url = "https://example.com/pronunciation/english"
+relative = "../media/th.mp3"
+absolute = urljoin(page_url, relative)
+print(absolute)
+# https://example.com/media/th.mp3</code></pre></div>
+<h3>3.3. Атрибуты, а не только теги</h3>
+<p>Источник аудио может храниться не в <span class="inline">src</span>, а в <span class="inline">data-src</span>, <span class="inline">data-audio</span>, <span class="inline">data-file</span>, <span class="inline">onclick</span> или внутри JSON в <span class="inline">script</span>. Исследуйте DOM: универсального имени атрибута не существует.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>for element in soup.select("[data-audio], [data-src], audio, source"):
+    print(element.name, element.attrs)
+
+# Inline JavaScript тоже иногда содержит адрес ресурса:
+for script in soup.find_all("script"):
+    script_text = script.string or script.get_text()
+    if ".mp3" in script_text or ".ogg" in script_text:
+        print(script_text[:1000])</code></pre></div>
+<div class="callout warn"><b>Не полагайтесь на один CSS-селектор.</b> Дизайн сайта может измениться. Лучше выделить отдельную функцию <span class="inline">parse_card()</span> и проверять, что извлечённые значения имеют ожидаемый формат.</div>
+</section>
+
+<section class="panel" id="media">
+<h2>4. Аудио, изображения и другие файлы</h2>
+<p>Загрузить HTML и сохранить MP3 — две разные операции. Медиафайл является бинарным содержимым HTTP-ответа; не записывайте его через <span class="inline">response.text</span>.</p>
+<h3>4.1. Найти известные типы источников</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>from bs4 import BeautifulSoup
+from urllib.parse import urljoin
+
+soup = BeautifulSoup(html, "html.parser")
+
+media_urls = []
+for tag in soup.select("audio[src], audio source[src], video[src], img[src]"):
+    media_urls.append(urljoin(page_url, tag["src"]))
+
+# Не забудьте варианты с data-src и srcset.
+for tag in soup.select("img[data-src], source[srcset]"):
+    if tag.has_attr("data-src"):
+        media_urls.append(urljoin(page_url, tag["data-src"]))
+    if tag.has_attr("srcset"):
+        # srcset содержит несколько кандидатов с указанием ширины/density.
+        print("srcset:", tag["srcset"])</code></pre></div>
+<h3>4.2. Безопасное сохранение бинарного файла</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>from pathlib import Path
+from urllib.parse import urlparse
+import requests
+
+url = "https://example.com/media/phoneme.mp3"
+out = Path("downloads/phoneme.mp3")
+out.parent.mkdir(parents=True, exist_ok=True)
+
+with requests.get(url, stream=True, timeout=(10, 30)) as response:
+    response.raise_for_status()
+    content_type = response.headers.get("Content-Type", "")
+    if "text/html" in content_type.lower():
+        raise ValueError("Сервер вернул HTML, а не аудио")
+
+    total = 0
+    with out.open("wb") as file:
+        for chunk in response.iter_content(128 * 1024):
+            if not chunk:
+                continue
+            total += len(chunk)
+            if total > 30 * 1024 * 1024:
+                raise ValueError("Файл превысил допустимый размер")
+            file.write(chunk)
+
+print("Сохранено:", out, "байт:", out.stat().st_size)</code></pre></div>
+<h3>4.3. Почему расширение файла не гарантирует формат</h3>
+<p>URL может не иметь расширения, а сервер способен вернуть HTML-страницу с HTTP 200. Проверяйте HTTP-статус, Content-Type и сигнатуру файла. Например, MP3 часто начинается с ID3 или MPEG frame sync; WAV — с RIFF/WAVE; Ogg — с OggS. Для массового импорта полезно вести отчёт: URL, MIME-тип, размер, результат проверки.</p>
+<h3>4.4. Символы транскрипции</h3>
+<p>Большинство IPA-символов — это символы Unicode, а не отдельные изображения. Их лучше хранить как текст в UTF-8: например <span class="inline">θ</span>, <span class="inline">ð</span>, <span class="inline">ʃ</span>, <span class="inline">ŋ</span>. Отдельный SVG/PNG нужен только если на исходном сайте символ представлен рисунком или специальным спрайтом. В таком случае сначала проверьте Elements: может быть это SVG, CSS-псевдоэлемент либо web-font.</p>
+<div class="exercise"><strong>Практика 2.</strong> Скачайте один MP3-файл и проверьте его: размер больше нуля, браузер его открывает, начало файла не содержит HTML. Только после этого масштабируйте загрузку на весь список.</div>
+</section>
+
+<section class="panel" id="redirects">
+<h2>5. Редиректы, сессии, cookies и HTTP-заголовки</h2>
+<p>Перенаправление — обычный ответ HTTP, который сообщает клиенту, куда отправить следующий запрос. Несколько последовательных редиректов — это цепочка, а не ошибка сама по себе.</p>
+<table class="table"><tr><th>Код</th><th>Общее назначение</th><th>Практический смысл</th></tr><tr><td>301</td><td>Постоянное перенаправление</td><td>Ресурс перемещён; клиент получает новый адрес.</td></tr><tr><td>302</td><td>Временное перенаправление</td><td>Часто используется после старого URL или входа.</td></tr><tr><td>303</td><td>Переход к другому ресурсу через GET</td><td>Часто встречается после отправки формы.</td></tr><tr><td>307/308</td><td>Перенаправление с сохранением метода</td><td>Клиент не должен произвольно превращать POST в GET.</td></tr></table>
+<h3>5.1. Посмотреть цепочку Requests</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>response = session.get(url, allow_redirects=True, timeout=20)
+response.raise_for_status()
+
+for hop in response.history:
+    print(hop.status_code, hop.url, "→", hop.headers.get("Location"))
+
+print("Финальный адрес:", response.url)
+print("Финальный статус:", response.status_code)</code></pre></div>
+<h3>5.2. Зачем нужны заголовки</h3>
+<ul><li><b>User-Agent</b> идентифицирует HTTP-клиент. Указывайте честный, понятный идентификатор; не выдавайте себя за браузер для обхода запретов.</li><li><b>Referer</b> сообщает страницу, с которой пришёл запрос. Некоторые сайты проверяют его при отдаче медиафайлов.</li><li><b>Accept / Accept-Language</b> описывают желаемые типы ответа и язык.</li><li><b>Cookie</b> хранит состояние сессии. Используйте <span class="inline">requests.Session()</span>, а не копируйте cookies в публичный код.</li><li><b>Authorization</b> может содержать секретный токен. Не публикуйте его и не помещайте в репозиторий.</li></ul>
+<h3>5.3. Сессия и куки</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>import requests
+
+session = requests.Session()
+response = session.get("https://example.com/start", timeout=20)
+response.raise_for_status()
+
+# Сервер может установить cookies; Session хранит их сам.
+print(session.cookies.get_dict())
+
+next_response = session.get("https://example.com/account", timeout=20)
+next_response.raise_for_status()</code></pre></div>
+<div class="callout danger"><b>Граница автоматизации:</b> не используйте код для обхода платной подписки, CAPTCHA, блокировок доступа, аутентификации, ограничений частоты или технических средств защиты. Если ресурс требует входа, работайте только с собственным аккаунтом, разрешённым способом и в рамках условий сервиса.</div>
+</section>
+
+<section class="panel" id="dynamic">
+<h2>6. Динамические сайты: Playwright</h2>
+<p>Если содержимое появляется после выполнения JavaScript, обычный запрос может вернуть «пустой каркас». Тогда используйте настоящий браузер — например, Playwright. Он исполняет JavaScript, ждёт элементы, кликает, прокручивает страницу и позволяет получить итоговый DOM.</p>
+<h3>6.1. Установка Playwright</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>python -m pip install playwright
+python -m playwright install chromium</code></pre></div>
+<h3>6.2. Получить страницу после выполнения JavaScript</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>import asyncio
+from playwright.async_api import async_playwright
+from bs4 import BeautifulSoup
+
+async def main():
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        page = await browser.new_page()
+
+        response = await page.goto(
+            "https://example.com/dynamic",
+            wait_until="domcontentloaded",
+            timeout=45000,
+        )
+        print("HTTP:", response.status if response else None)
+        print("После редиректов:", page.url)
+
+        # Предпочтительнее ждать конкретный элемент, чем спать фиксированное время.
+        await page.locator(".sound-card").first.wait_for(timeout=15000)
+        html = await page.content()
+        soup = BeautifulSoup(html, "html.parser")
+        print("Карточек:", len(soup.select(".sound-card")))
+
+        await browser.close()
+
+asyncio.run(main())</code></pre></div>
+<h3>6.3. Типы ожидания</h3>
+<table class="table"><tr><th>Режим</th><th>Когда применять</th><th>Ограничения</th></tr><tr><td><span class="inline">domcontentloaded</span></td><td>DOM разобран; часто достаточно для начала.</td><td>Часть сетевых запросов ещё может выполняться.</td></tr><tr><td><span class="inline">load</span></td><td>Загружены основные ресурсы документа.</td><td>Не означает, что поздняя динамическая подгрузка завершена.</td></tr><tr><td><span class="inline">networkidle</span></td><td>Полезно для некоторых страниц, когда сеть затихает.</td><td>Сайты с аналитикой, WebSocket или polling могут не достичь idle.</td></tr><tr><td><span class="inline">locator.wait_for()</span></td><td>Предпочтительно, если известен конкретный элемент.</td><td>Нужно выбрать устойчивый селектор.</td></tr></table>
+<h3>6.4. Нажать кнопку и получить новое состояние</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>button = page.get_by_role("button", name="Play sound")
+await button.click()
+
+# Ждём изменения страницы или появления audio.
+await page.locator("audio source").wait_for(timeout=8000)
+source = await page.locator("audio source").get_attribute("src")
+print("Audio source:", source)</code></pre></div>
+<p>Если точный текст кнопки неизвестен, изучите HTML и используйте подходящий CSS-локатор. Не кликайте все элементы подряд: часть кнопок может отправлять формы, менять настройки, начинать загрузку или переходить на другую страницу.</p>
+<h3>6.5. Перехват сетевых ответов</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>async def main():
+    async with async_playwright() as p:
+        browser = await p.chromium.launch()
+        page = await browser.new_page()
+
+        async def log_response(response):
+            headers = await response.all_headers()
+            content_type = headers.get("content-type", "")
+            if content_type.startswith("audio/") or ".mp3" in response.url:
+                print(response.status, content_type, response.url)
+
+        page.on("response", log_response)
+        await page.goto("https://example.com", wait_until="domcontentloaded")
+        await page.get_by_role("button", name="Play sound").click()
+        await page.wait_for_timeout(1200)
+        await browser.close()</code></pre></div>
+<p>Playwright различает события запроса, ответа и завершения запроса. У перенаправления появляется новый запрос; его можно связать с предыдущим через <span class="inline">redirected_from</span>. HTTP-ответ 404 всё равно является завершившимся HTTP-обменом — проверяйте статус отдельно.</p>
+<div class="callout"><b>Когда браузер не нужен:</b> если Network показывает публичный JSON endpoint, часто проще запросить его напрямую. Playwright нужен для выполнения сценария браузера, а не как замена любому HTTP-запросу.</div>
+</section>
+
+<section class="panel" id="api">
+<h2>7. Найти API, через которое сайт получает данные</h2>
+<p>Многие страницы получают карточки, списки, профили и аудиоссылки из JSON API. Браузер посылает запрос, сервер возвращает JSON, JavaScript строит интерфейс. Часто это проще парсинга DOM.</p>
+<h3>7.1. Алгоритм поиска</h3>
+<ol><li>Откройте Network → Fetch/XHR.</li><li>Перезагрузите страницу и найдите запросы с JSON в Response.</li><li>Посмотрите URL, метод, Query String Parameters, Request Payload и заголовки.</li><li>Повторите действие на странице (поиск, следующая страница, выбор звука) и сравните запросы.</li><li>Проверьте, можно ли получить тот же публичный ответ через Requests без обхода авторизации или защиты.</li></ol>
+<h3>7.2. Запрос JSON</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>import requests
+
+api_url = "https://example.com/api/sounds"
+response = requests.get(api_url, timeout=20)
+response.raise_for_status()
+data = response.json()
+
+# Сначала изучите структуру объекта:
+print(type(data))
+print(data.keys() if isinstance(data, dict) else len(data))
+
+# Затем извлекайте конкретные поля, проверяя их наличие.
+for item in data.get("items", []):
+    print(item.get("symbol"), item.get("audioUrl"))</code></pre></div>
+<h3>7.3. Почему API лучше HTML</h3>
+<ul><li>Структурированные поля уже отделены друг от друга.</li><li>Меньше зависимости от дизайна и CSS-классов.</li><li>Обычно меньше объём ответа.</li><li>Проще пагинация, сортировка и проверка типов.</li></ul>
+<p>Но endpoint может быть внутренним, недокументированным или защищённым. Не считайте обнаружение URL разрешением на массовый сбор. Учитывайте условия сайта и ограничения использования API.</p>
+</section>
+
+<section class="panel" id="pagination">
+<h2>8. Пагинация, бесконечная прокрутка и несколько страниц</h2>
+<p>Данные редко ограничиваются одной страницей. Сайт может использовать обычные адреса <span class="inline">?page=2</span>, кнопки «Далее», API-параметры <span class="inline">offset</span>/<span class="inline">limit</span> или cursor pagination.</p>
+<h3>8.1. Обычная пагинация</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>from urllib.parse import urljoin
+from bs4 import BeautifulSoup
+import requests
+
+session = requests.Session()
+base = "https://example.com/catalog"
+page_url = base
+seen = set()
+
+for page_number in range(1, 51):  # жёсткий лимит
+    response = session.get(page_url, timeout=20)
+    response.raise_for_status()
+    soup = BeautifulSoup(response.content, "html.parser")
+
+    for card in soup.select(".item-card"):
+        item_id = card.get("data-id")
+        if item_id and item_id not in seen:
+            seen.add(item_id)
+            print(item_id)
+
+    next_link = soup.select_one("a.next[href]")
+    if not next_link:
+        break
+    next_url = urljoin(response.url, next_link["href"])
+    if next_url == page_url:
+        break
+    page_url = next_url</code></pre></div>
+<h3>8.2. API с offset/limit</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>offset = 0
+limit = 50
+all_items = []
+
+while offset < 5000:
+    response = session.get(
+        "https://example.com/api/items",
+        params={"offset": offset, "limit": limit},
+        timeout=20,
+    )
+    response.raise_for_status()
+    batch = response.json().get("items", [])
+    if not batch:
+        break
+    all_items.extend(batch)
+    offset += len(batch)</code></pre></div>
+<h3>8.3. Infinite scroll</h3>
+<p>Сначала изучите Network: часто прокрутка вызывает API, а не загружает данные из HTML. Если без браузера нельзя, прокручивайте небольшими порциями, ждите появления новых элементов и проверяйте, увеличилось ли количество карточек.</p>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>previous = 0
+for _ in range(20):
+    await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+    await page.wait_for_timeout(900)
+    current = await page.locator(".item-card").count()
+    if current == previous:
+        break
+    previous = current</code></pre></div>
+<div class="callout warn"><b>Обязательные ограничители:</b> максимальное число страниц, максимальное число элементов, дедупликация, таймаут, пауза между запросами и условие остановки. Бесконечный цикл в сборщике — это не мелкая ошибка: он может перегрузить сайт и ваш компьютер.</div>
+</section>
+
+<section class="panel" id="robust">
+<h2>9. Как сделать загрузчик устойчивым</h2>
+<p>Одноразовый скрипт может работать случайно. Надёжная программа должна переживать сетевые ошибки, временные блокировки, частично повреждённые данные и повторный запуск.</p>
+<h3>9.1. Retry и backoff</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>from requests import Session
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+
+retry = Retry(
+    total=4,
+    connect=4,
+    read=2,
+    status=3,
+    backoff_factor=1.5,
+    status_forcelist=[429, 500, 502, 503, 504],
+    allowed_methods=["GET", "HEAD"],
+    respect_retry_after_header=True,
+)
+
+session = Session()
+adapter = HTTPAdapter(max_retries=retry)
+session.mount("https://", adapter)
+session.mount("http://", adapter)</code></pre></div>
+<h3>9.2. Дедупликация</h3>
+<p>Один ресурс может встретиться как абсолютный и относительный URL, с разными fragment-частями или в нескольких карточках. Нормализуйте адреса, но не удаляйте query-параметры без понимания: иногда это токен или идентификатор файла.</p>
+<h3>9.3. Контроль целостности</h3>
+<ul><li>Не сохраняйте файл, если ответ — HTML или JSON-ошибка.</li><li>Проверяйте размер и расширение по MIME/сигнатуре.</li><li>Считайте SHA-256, если важна идентичность файлов и повторная загрузка.</li><li>Сохраняйте промежуточный manifest: исходный URL, финальный URL, имя файла, тип, размер и связанный IPA-символ.</li><li>Ошибки отдельных элементов записывайте в журнал, не прекращая всю задачу.</li></ul>
+<h3>9.4. Лимиты и задержки</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>import time
+
+MAX_ITEMS = 100
+DELAY_SECONDS = 1.0
+
+for index, item in enumerate(items):
+    if index >= MAX_ITEMS:
+        break
+    process(item)
+    time.sleep(DELAY_SECONDS)</code></pre></div>
+<h3>9.5. Кеширование</h3>
+<p>Сохраняйте уже обработанные URL в JSON/SQLite. При повторном запуске не загружайте повторно то, что успешно скачано и прошло проверку. Для больших проектов используйте SQLite: уникальный ключ по нормализованному URL или ID источника.</p>
+</section>
+
+<section class="panel" id="architecture">
+<h2>10. Архитектура универсального проекта</h2>
+<p>Разделите программу на небольшие уровни. Тогда смена сайта не заставит переписывать загрузчик, обработку ошибок и экспорт.</p>
+<table class="table"><tr><th>Модуль</th><th>Задача</th></tr><tr><td><span class="inline">config.py</span></td><td>URL, лимиты, каталоги, таймауты, настройки запуска.</td></tr><tr><td><span class="inline">client.py</span></td><td>HTTP-сессия, заголовки, retry, редиректы.</td></tr><tr><td><span class="inline">browser.py</span></td><td>Playwright: навигация, ожидания, клики и перехват ответов.</td></tr><tr><td><span class="inline">extractor.py</span></td><td>Разбор HTML/JSON и извлечение полей.</td></tr><tr><td><span class="inline">downloader.py</span></td><td>Скачивание бинарных файлов, проверка MIME/сигнатуры, контроль размера.</td></tr><tr><td><span class="inline">models.py</span></td><td>Единая структура записи, например Sound(symbol, example, audio_url).</td></tr><tr><td><span class="inline">exporter.py</span></td><td>JSON, CSV, TSV для Anki, HTML-страница.</td></tr><tr><td><span class="inline">main.py</span></td><td>Сбор этапов, аргументы CLI, логирование и отчёт.</td></tr></table>
+<h3>10.1. Единая модель данных</h3>
+<div class="codewrap"><button class="copy">Копировать</button><pre><code>from dataclasses import dataclass
+
+@dataclass
+class Sound:
+    symbol: str
+    category: str
+    example: str | None
+    audio_url: str | None
+    audio_file: str | None = None
+
+# Независимо от того, откуда пришла запись (HTML, JSON или Playwright),
+# exporter получает один и тот же объект Sound.</code></pre></div>
+<h3>10.2. Как устроен созданный комплект IPA</h3>
+<p>Файл <span class="inline">download_ipa.py</span> использует этот принцип в компактном виде: сначала проверяет исходную страницу и редиректы, ищет аудио в HTML/атрибутах/скриптах, при необходимости запускает Playwright, скачивает обнаруженные публичные медиа, создаёт <span class="inline">audio-map.js</span> для локального сайта и формирует <span class="inline">anki_import.tsv</span>. Он не считает неизвестный HTML аудиофайлом и сохраняет отчёт о том, что удалось сопоставить.</p>
+</section>
+
+<section class="panel" id="ethics">
+<h2>11. Доступ, ограничения и безопасное обращение с данными</h2>
+<ul><li>Сначала ищите официальный API, открытые данные или кнопку экспорта.</li><li>Проверьте Terms of Service, лицензию, robots.txt и правила использования медиа. robots.txt — техническая подсказка о предпочтениях обхода, а не универсальная лицензия на сбор и не замена правовой оценке.</li><li>Ограничивайте скорость запросов. Не отправляйте десятки параллельных запросов к небольшому сайту без необходимости.</li><li>Не обходите paywall, CAPTCHA, аутентификацию, антибот-защиту или ограничения API.</li><li>Не собирайте персональные или чувствительные данные без законного основания и необходимости.</li><li>Не публикуйте cookies, access tokens, session IDs, личные данные и приватные URL с временными токенами.</li><li>Не загружайте и не распространяйте чужие аудио/изображения публично без разрешения или подходящей лицензии. Для личного использования всё равно проверяйте условия источника и применимое право.</li></ul>
+<div class="callout danger"><b>Уважайте отказ сервера.</b> Если сервер возвращает 403/429, просит войти или прямо блокирует автоматизированный доступ, не пытайтесь маскировать или обходить ограничения. Уменьшите частоту, найдите официальный канал доступа либо остановитесь.</div>
+</section>
+
+<section class="panel" id="practice">
+<h2>12. Практикум: от простого к самостоятельному</h2>
+<div class="exercise"><strong>Задание A — статическая страница.</strong><br>Откройте учебный ресурс с открытым HTML. Скачайте страницу Requests, найдите 5 заголовков через BeautifulSoup и сохраните их в JSON. Убедитесь, что у каждого объекта есть обязательное поле.</div>
+<div class="exercise"><strong>Задание B — загрузка картинок.</strong><br>Найдите все изображения на учебной странице. Преобразуйте относительные URL в абсолютные, скачайте в папку, проверьте Content-Type и исключите дубликаты.</div>
+<div class="exercise"><strong>Задание C — пагинация.</strong><br>Соберите первые 3 страницы тестового каталога. Добавьте лимит страниц, задержку, уникальный ключ и лог количества элементов.</div>
+<div class="exercise"><strong>Задание D — динамическая страница.</strong><br>Найдите элемент, который появляется после JavaScript. Сначала посмотрите Network. Если есть открытый JSON endpoint — запросите его; в противном случае откройте страницу Playwright и дождитесь конкретного локатора.</div>
+<div class="exercise"><strong>Задание E — аудиобиблиотека.</strong><br>Соберите только разрешённые звуковые файлы с одного учебного ресурса. Сопоставьте каждый URL с символом/словом. Экспортируйте CSV/TSV, создайте локальную HTML-страницу и отчёт по отсутствующим файлам.</div>
+<h3>Критерии готовности</h3>
+<div class="checklist"><label><input type="checkbox">У каждого URL есть источник и статус.</label><label><input type="checkbox">Редиректы и финальный URL записываются.</label><label><input type="checkbox">Ссылки нормализованы.</label><label><input type="checkbox">Дубликаты удалены.</label><label><input type="checkbox">HTML не сохраняется как MP3.</label><label><input type="checkbox">Есть таймауты и лимиты.</label><label><input type="checkbox">Повторный запуск не дублирует загрузки.</label><label><input type="checkbox">Экспорт проверен вручную.</label></div>
+</section>
+
+<section class="panel" id="debug">
+<h2>13. Типичные проблемы и диагностика</h2>
+<table class="table"><tr><th>Симптом</th><th>Вероятная причина</th><th>Что проверить</th></tr><tr><td>В браузере данные есть, Requests их не видит</td><td>JavaScript/API</td><td>View Source, Network → Fetch/XHR; затем Playwright или API.</td></tr><tr><td>Получен HTTP 200, но аудио не открывается</td><td>Ответ HTML/JSON, а не аудио; неправильный endpoint</td><td>Content-Type, первые байты, финальный URL, размер.</td></tr><tr><td>403 Forbidden</td><td>Нет доступа/неподходящий метод/ограничение</td><td>Документация и правила сайта; не обходить запрет.</td></tr><tr><td>429 Too Many Requests</td><td>Слишком частые запросы</td><td>Остановиться, уважить Retry-After, снизить частоту.</td></tr><tr><td>404 Not Found</td><td>Ссылка устарела или сформирована неверно</td><td>Относительный путь, кодирование URL, источник ссылки.</td></tr><tr><td>Timeout</td><td>Медленный сервер, слишком короткий таймаут, зависший браузер</td><td>Разделить connect/read timeout, локализовать этап и повторять ограниченно.</td></tr><tr><td>Playwright не видит элемент</td><td>Неверный селектор, iframe, shadow DOM, элемент ещё не появился</td><td>Проверьте DOM, frame, wait_for, доступность элемента.</td></tr><tr><td>Кириллица/IPA отображаются неверно</td><td>Кодировка или шрифт</td><td>UTF-8, meta charset, response encoding, шрифт с поддержкой IPA.</td></tr></table>
+<h3>Минимальный чек перед публикацией скрипта</h3>
+<ul><li>Нет секретов, cookies и токенов в исходниках.</li><li>Есть понятные ошибки и логирование.</li><li>Скрипт ограничивает объём запросов и скачивания.</li><li>Результаты имеют ожидаемую структуру и прошли проверку.</li><li>Пользователь знает, какие каталоги программа создаёт и что может перезаписать.</li></ul>
+</section>
+
+<section class="panel refs" id="references">
+<h2>Материалы для дальнейшего изучения</h2>
+<p>Ссылки ведут на документацию и руководства, на которых основаны подходы в этом курсе.</p>
+<ul>
+<li><a href="https://requests.readthedocs.io/en/latest/" target="_blank" rel="noopener">Requests — официальная документация</a>: HTTP-запросы, Session, redirects, timeouts, streaming.</li>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" target="_blank" rel="noopener">Beautiful Soup — официальная документация</a>: CSS-селекторы, дерево HTML, поиск элементов и атрибутов.</li>
+<li><a href="https://playwright.dev/python/docs/intro" target="_blank" rel="noopener">Playwright for Python</a>: браузерная автоматизация, локаторы, ожидания, сетевые события.</li>
+<li><a href="https://playwright.dev/python/docs/api/class-request" target="_blank" rel="noopener">Playwright Request API</a>: события request/response и цепочки перенаправлений.</li>
+<li><a href="https://docs.python.org/3/library/urllib.parse.html" target="_blank" rel="noopener">urllib.parse — Python</a>: join URL, разбор URL и query parameters.</li>
+<li><a href="https://docs.python.org/3/library/urllib.robotparser.html" target="_blank" rel="noopener">urllib.robotparser — Python</a>: чтение robots.txt.</li>
+<li><a href="https://realpython.com/beautiful-soup-web-scraper-python/" target="_blank" rel="noopener">Real Python: Beautiful Soup Web Scraping</a>: практическое введение и различие статических/динамических страниц.</li>
+<li><a href="https://cuinfoscience.github.io/Web-Data-Science-Book/ch-08-dynamic-pages.html" target="_blank" rel="noopener">Web Data Science: Dynamic Web Pages</a>: DevTools, Selenium, Playwright, infinite scroll, логины и диагностика.</li>
+</ul>
+<div class="callout good"><b>Рекомендуемый маршрут обучения:</b> сначала доведите до уверенного уровня Requests + BeautifulSoup, затем научитесь находить JSON в Network, после этого осваивайте Playwright. Не начинайте каждый проект с браузерной автоматизации — она сложнее, медленнее и требует более тщательной поддержки.</div>
+</section>
+</div>
+<div class="footer">Учебная страница подготовлена для личного изучения. Примеры нужно адаптировать под реальную структуру каждого сайта и его правила доступа.</div>
+</main>
+</div>
+<a class="topbtn" href="#top">Наверх ↑</a>
+<script>
+const navLinks=[...document.querySelectorAll('#lessonNav a')];const sections=navLinks.map(a=>document.querySelector(a.getAttribute('href')));function updateNav(){let best=0;sections.forEach((s,i)=>{if(s&&s.getBoundingClientRect().top<140)best=i});navLinks.forEach((a,i)=>a.classList.toggle('active',i===best));const pct=Math.min(100,Math.max(0,(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight||1))*100));document.getElementById('progressBar').style.width=pct+'%'}window.addEventListener('scroll',updateNav,{passive:true});updateNav();
+document.querySelectorAll('.copy').forEach(btn=>btn.addEventListener('click',async()=>{const text=btn.nextElementSibling.innerText;try{await navigator.clipboard.writeText(text);btn.textContent='Скопировано';setTimeout(()=>btn.textContent='Копировать',1200)}catch{btn.textContent='Не удалось';setTimeout(()=>btn.textContent='Копировать',1200)}}));
+</script>
+</body></html>
